@@ -11,7 +11,8 @@ const PostsIndexContainer = props => {
         key={post.id}
         id={post.id}
         tile={post.title}
-        description={game.description}
+        description={post.description}
+        datetime={post.datetime}
       />
     )
   })
