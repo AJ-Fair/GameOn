@@ -4,8 +4,10 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1 do
-      resources :posts, only: [:index]
+      resources :posts, only: [:index, :show]
+    end
   end
 
-  get "/index", to: 'homes#index'
+  get "/posts", to: 'homes#index'
+  get "/posts/:id" to: 'homes#index'
 end
