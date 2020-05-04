@@ -6,8 +6,9 @@
   <%= stylesheet_link_tag 'application', media: 'all' %>
   <%= csrf_meta_tags %>
 </head>
-<body>
-  
+<body class='background-white'>
+<div class="custom-header">
+  <div class="grid-x grid-padding-x align-middle">
   <nav class="top-bar">
     <h1><a href="/">GameOn</a></h1>
 
@@ -22,7 +23,8 @@
       </ul>
     </section>
   </nav>
-
+  </div>
+</div>
   <%- flash.each do |key, value| -%>
     <div class="flash flash-<%= key %>">
       <%= value %>
@@ -32,14 +34,14 @@
   <%= yield %>
 
   <%= javascript_include_tag 'application' %>
-  
-  <%- if Rails.env.development? || Rails.env.test? -%> 
+
+  <%- if Rails.env.development? || Rails.env.test? -%>
     <%= javascript_tag do %>
       window.railsEnv = '<%= Rails.env %>'
     <%- end -%>
   <%- end -%>
   <%= javascript_pack_tag 'application' %>
-  
+
   <%= yield :extra_footer %>
 </body>
 </html>
