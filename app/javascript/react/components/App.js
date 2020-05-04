@@ -1,7 +1,17 @@
 import React from 'react'
+import {BrowserRouter, Route, Switch} from 'react-router-dom'
+
+import PostsIndexContainer from './PostsIndexContainer'
 
 export const App = (props) => {
-  return (<h1>Make It So React</h1>)
+  return (
+    <BrowserRouter>
+      <Switch>
+        <Route exact path='/' component={PostsIndexContainer} />
+        <Route exact path='/index' component={PostsIndexContainer} />
+      </Switch>
+    </BrowserRouter>
+  )
 }
 
 export default App

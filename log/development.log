@@ -1,0 +1,4 @@
+  [1m[35m (2187.0ms)[0m  [1m[35mCREATE DATABASE "GameOn_development" ENCODING = 'unicode'[0m
+  ↳ /Users/ajfair/.gem/ruby/2.6.5/bin/rake:23
+  [1m[35m (403.5ms)[0m  [1m[35mCREATE DATABASE "GameOn_test" ENCODING = 'unicode'[0m
+  ↳ /Users/ajfair/.gem/ruby/2.6.5/bin/rake:23
