@@ -1,7 +1,7 @@
 import React from 'react'
 
 const PostShowTile = props => {
-  const {title, game, description, datetime, id, currentUser} = props
+  const {title, game, description, date, id, time, currentUser} = props
 
   return (
     <div>
@@ -13,7 +13,8 @@ const PostShowTile = props => {
         <p><strong>Game:</strong>{game}</p>
       </div>
       <div className='cell small 12 datetime'>
-        <p><strong>{datetime}</strong></p>
+        <p><strong>{date}</strong></p>
+        <p><stron>{time}</stron></p>
       </div>
       <div className='cell small-12 body'>
         <p>{description}</p>

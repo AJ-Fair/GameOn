@@ -31,7 +31,8 @@ const PostIndexContainer = props => {
         title={post.title}
         game={post.game}
         description={post.description}
-        datetime={post.datetime}
+        date={post.date}
+        time={post.time}
       />
     )
   })

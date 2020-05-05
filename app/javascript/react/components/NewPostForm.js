@@ -81,7 +81,7 @@ const NewGameForm = props => {
               onChange={handleChange}
             />
 
-            <label htmlFor="date"  className="text-black">Date:</label>
+            <label htmlFor="date" className="text-black">Date:</label>
             <input
               type="text"
               name="date"
@@ -89,7 +89,7 @@ const NewGameForm = props => {
               onChange={handleChange}
             />
 
-            <label htmlFor="time"  className="text-black">Time:</label>
+            <label htmlFor="time" className="text-black">Time:</label>
             <input
               type="text"
               name="time"

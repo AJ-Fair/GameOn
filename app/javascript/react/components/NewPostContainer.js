@@ -1,6 +1,8 @@
 import React, {useState} from 'react'
 import { Redirect } from 'react-router-dom'
 
+import NewPostForm from './NewPostForm'
+
 const NewPostContainer = props => {
   const [shouldRedirect, setShouldRedirect] = useState(false)
   const [newPost, setNewPost] = useState({})

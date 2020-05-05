@@ -3,6 +3,7 @@ import {BrowserRouter, Route, Switch} from 'react-router-dom'
 
 import PostIndexContainer from './PostIndexContainer'
 import PostShowContainer from './PostShowContainer'
+import NewPostContainer from './NewPostContainer'
 
 export const App = (props) => {
   return (
@@ -11,6 +12,7 @@ export const App = (props) => {
         <Route exact path='/' component={PostIndexContainer} />
         <Route exact path='/post' component={PostIndexContainer} />
         <Route exact path='/post/:id' component={PostShowContainer} />
+        <Route exact path='post/new' component={NewPostContainer} />
       </Switch>
     </BrowserRouter>
   )
