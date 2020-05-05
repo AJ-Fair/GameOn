@@ -9,5 +9,5 @@ Rails.application.routes.draw do
   end
 
   get "/posts", to: 'homes#index'
-  get "/posts/:id" to: 'homes#index'
+  get "/posts/:id", to: 'homes#index'
 end
