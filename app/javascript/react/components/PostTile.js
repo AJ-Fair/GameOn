@@ -1,5 +1,5 @@
 import React from 'react'
-import import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 const PostTile = props => {
   const title = props.title
@@ -10,7 +10,7 @@ const PostTile = props => {
 
   return (
     <div className='callout bg-white cell small-12 medium-4 text-center post-tile'>
-      <Link to={`/posts/${:id}`}>
+      <Link to={`/posts/${id}`}>
         <h4 className='title link-black'>{name}</h4>
       </Link>
       <p className='body'>{datetime}</p>
