@@ -23,12 +23,9 @@ const NewGameForm = props => {
 
   const validateForm = () => {
     let newErrors = {}
-    const requiredFields = ["title", "description", "datetime", "game"]
+    const requiredFields = ["title", "description", "date", "time", "game"]
     requiredFields.forEach((field) => {
       if(formVals[field].trim() === "") {
-        if(field === "datetime"){
-          field = "Date and Time"
-        }
         newErrors = {
           ...newErrors,
           [field]: "is blank"
@@ -83,7 +80,7 @@ const NewGameForm = props => {
 
             <label htmlFor="date" className="text-black">Date:</label>
             <input
-              type="text"
+              type="date"
               name="date"
               id="date"
               onChange={handleChange}
@@ -91,7 +88,7 @@ const NewGameForm = props => {
 
             <label htmlFor="time" className="text-black">Time:</label>
             <input
-              type="text"
+              type="time"
               name="time"
               id="time"
               onChange={handleChange}

@@ -6,13 +6,17 @@
   <%= stylesheet_link_tag 'application', media: 'all' %>
   <%= csrf_meta_tags %>
 </head>
-<body class='background-white'>
+<body class='background-deepblue'>
 <div class="custom-header">
   <div class="grid-x grid-padding-x align-middle">
-  <nav class="top-bar">
+    <div class="cell small-3">
+      <%= link_to 'Add A Post', "/posts/new" %>
+    </div>
+  <div class="cell auto text-center logo-text">
     <h1><a href="/">GameOn</a></h1>
+  </div>
 
-    <section class="top-bar-section">
+    <div class="top-bar-section">
       <ul class="right">
         <%- if current_user -%>
           <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
@@ -21,8 +25,7 @@
           <li><%= link_to 'Sign In', new_user_session_path %></li>
         <%- end -%>
       </ul>
-    </section>
-  </nav>
+    </div>
   </div>
 </div>
   <%- flash.each do |key, value| -%>

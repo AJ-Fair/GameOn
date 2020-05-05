@@ -10,9 +10,9 @@ export const App = (props) => {
     <BrowserRouter>
       <Switch>
         <Route exact path='/' component={PostIndexContainer} />
-        <Route exact path='/post' component={PostIndexContainer} />
-        <Route exact path='/post/:id' component={PostShowContainer} />
-        <Route exact path='post/new' component={NewPostContainer} />
+        <Route exact path='/posts' component={PostIndexContainer} />
+        <Route exact path='/posts/:id' component={PostShowContainer} />
+        <Route exact path='posts/new' component={NewPostContainer} />
       </Switch>
     </BrowserRouter>
   )
