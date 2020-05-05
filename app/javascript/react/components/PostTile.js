@@ -1,5 +1,5 @@
 import React from 'react'
-import import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 const PostTile = props => {
   const title = props.title
