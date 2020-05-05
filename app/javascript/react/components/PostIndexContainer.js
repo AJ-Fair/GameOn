@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
 
 import PostTile from './PostTile'
-const PostsIndexContainer = props => {
+const PostIndexContainer = props => {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
@@ -28,7 +28,8 @@ const PostsIndexContainer = props => {
       <PostTile
         key={post.id}
         id={post.id}
-        tile={post.title}
+        title={post.title}
+        game={post.game}
         description={post.description}
         datetime={post.datetime}
       />
