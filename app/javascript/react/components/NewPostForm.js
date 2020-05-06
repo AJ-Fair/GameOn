@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import _ from 'lodash'
+import DateTimePicker from 'react-datetime-picker/dist/entry.nostyle';
 
 import ErrorList from './ErrorList'
 
@@ -10,8 +11,7 @@ const NewGameForm = props => {
     title: "",
     description: "",
     game: "",
-    date: 0,
-    time: 0,
+    datetime: new Date()
   })
 
   const handleChange = event => {
@@ -78,22 +78,13 @@ const NewGameForm = props => {
               onChange={handleChange}
             />
 
-            <label htmlFor="date" className="text-black">Date:</label>
-            <input
-              type="date"
-              name="date"
-              id="date"
-              onChange={handleChange}
-            />
-
-            <label htmlFor="time" className="text-black">Time:</label>
-            <input
-              type="time"
-              name="time"
-              id="time"
-              onChange={handleChange}
-            />
-
+            <label htmlFor="date" className="text-black">Date & Time:</label>
+              <div>
+                <DateTimePicker
+                  onChange={this.handleChange}
+                  value={this.state.date}
+                />
+              </div>
             <input className="button" type="submit" />
           </form>
         </div>

@@ -5,8 +5,7 @@ class CreatePosts < ActiveRecord::Migration[5.2]
       t.string :title, null: false
       t.string :game, null: false
       t.string :description, null: false
-      t.date :date, null: false
-      t.time :time, null: false
+      t.datetime :datetime, null: false
       t.timestamps null: false
     end
   end

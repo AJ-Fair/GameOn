@@ -5,7 +5,6 @@ import ReactDOM from 'react-dom'
 import PostIndexContainer from './PostIndexContainer'
 import PostShowContainer from './PostShowContainer'
 import NewPostContainer from './NewPostContainer'
-import Calendar from './Calendar'
 
 export const App = (props) => {
   return (

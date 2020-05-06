@@ -7,8 +7,7 @@ const PostShowContainer = props => {
     id: null,
     title: "",
     description: "",
-    date: 0,
-    time: 0,
+    datetime: null,
     game: "",
     current_user: {},
   })
