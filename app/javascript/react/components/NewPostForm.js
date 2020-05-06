@@ -4,7 +4,7 @@ import DateTimePicker from 'react-datetime-picker/dist/entry.nostyle';
 
 import ErrorList from './ErrorList'
 
-const NewGameForm = props => {
+const NewPostForm = props => {
   const [errors, setErrors] = useState({})
 
   const [formVals, setFormVals] = useState({

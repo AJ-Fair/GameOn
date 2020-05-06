@@ -10,5 +10,5 @@ Rails.application.routes.draw do
 
   get "/posts", to: 'homes#index'
   get "/posts/:id", to: 'homes#index'
-  get "posts/new", to: 'homes#index'
+  get "/posts/new", to: 'homes#index'
 end

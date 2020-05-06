@@ -5,5 +5,5 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-Post.create({title:'1v1 360 no-scope only tournament', game:'Warpeople: Desert Fight' datetime: (2020, 4, 20, 4, 20)
-  description: 'Cash prize of $42,000 and lifetime supply of Mountain Dew and Doritos'})
+
+Post.create({title:'1v1 360 no-scope only tournament', game:'Warpeople: Desert Fight', datetime: DateTime.new(2020, 4, 20, 4, 20), description: 'Cash prize of $42,000 and lifetime supply of Mountain Dew and Doritos'})

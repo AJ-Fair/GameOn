@@ -18,7 +18,7 @@ const PostIndexContainer = props => {
     .then(response => response.json())
     .then(postBody => {
       const postsArr = postBody
-      setGames(postsArr)
+      setPosts(postsArr)
     })
     .catch(error => console.error(`Error in fetch: ${error.message}`))
   }, [])
@@ -45,4 +45,4 @@ const PostIndexContainer = props => {
   )
 }
 
-export default PostsIndexContainer
+export default PostIndexContainer
