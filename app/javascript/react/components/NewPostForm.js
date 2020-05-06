@@ -101,3 +101,5 @@ const NewGameForm = props => {
     </div>
   )
 }
+
+export default NewPostForm
