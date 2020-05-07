@@ -17,10 +17,8 @@ const PostIndexContainer = props => {
     })
     .then(response => response.json())
     .then(postBody => {
-      debugger
       const postsArr = postBody
       setPosts(postsArr)
-      debugger
     })
     .catch(error => console.error(`Error in fetch: ${error.message}`))
   }, [])

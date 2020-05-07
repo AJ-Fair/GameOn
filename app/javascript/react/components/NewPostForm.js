@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import _ from 'lodash'
-import DateTimePicker from 'react-datetime-picker/dist/entry.nostyle';
+import DateTime from 'react-datetime'
 
 import ErrorList from './ErrorList'
 
@@ -11,21 +11,25 @@ const NewPostForm = props => {
     title: "",
     description: "",
     game: "",
-    datetime: new Date()
-  })
+    datetime: {}
+  });
+
+  const handleDate = event => {
+    setFormVals({datetime: Date._d});
+  };
 
   const handleChange = event => {
     setFormVals({
       ...formVals,
       [event.currentTarget.id]: event.currentTarget.value
     })
-  }
+  };
 
   const validateForm = () => {
     let newErrors = {}
-    const requiredFields = ["title", "description", "date", "time", "game"]
+    const requiredFields = ["title", "description", "game"]
     requiredFields.forEach((field) => {
-      if(formVals[field].trim() === "") {
+      if(formVals[field] === "" || formVals[field] === null) {
         newErrors = {
           ...newErrors,
           [field]: "is blank"
@@ -34,16 +38,16 @@ const NewPostForm = props => {
     })
     setErrors(newErrors)
     return _.isEmpty(newErrors)
-  }
+  };
 
   const handleSubmit = event => {
     event.preventDefault();
     if(validateForm()){
       props.handleFormSubmit(formVals)
     }
-  }
+  };
 
-  eturn (
+  return (
     <div className="grid-container">
       <div className="grid-x grid-margin-x align-center">
         <div className="cell small-12 medium-10">
@@ -78,11 +82,11 @@ const NewPostForm = props => {
               onChange={handleChange}
             />
 
-            <label htmlFor="date" className="text-black">Date & Time:</label>
+          <label htmlFor="datetime" className="text-black">Date & Time:</label>
               <div>
-                <DateTimePicker
-                  onChange={this.handleChange}
-                  value={this.state.date}
+                <DateTime
+                  onChange={handleDate}
+                  value={formVals.datetime}
                 />
               </div>
             <input className="button" type="submit" />
@@ -91,6 +95,6 @@ const NewPostForm = props => {
       </div>
     </div>
   )
-}
+};
 
 export default NewPostForm

@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   root 'homes#index'
+
   devise_for :users
 
   namespace :api do
@@ -8,7 +9,7 @@ Rails.application.routes.draw do
     end
   end
 
-  get "/posts", to: 'homes#index'
-  get "/posts/:id", to: 'homes#index'
-  get "/posts/new", to: 'homes#index'
+  get '/posts', to: 'homes#index'
+  get '/posts/new', to: 'homes#index'
+  get '/posts/:id', to: 'homes#index'
 end
