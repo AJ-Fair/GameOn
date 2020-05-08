@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import _ from 'lodash'
 import DateTime from 'react-datetime'
+import moment from 'moment'
 
 import ErrorList from './ErrorList'
 
@@ -11,11 +12,15 @@ const NewPostForm = props => {
     title: "",
     description: "",
     game: "",
-    datetime: {}
+    datetime: null
   });
 
-  const handleDate = event => {
-    setFormVals({datetime: Date._d});
+  const handleDate = date => {
+    const valueOfInput = date.format();
+    setFormVals({
+      ...formVals,
+      ['datetime']: valueOfInput
+    })
   };
 
   const handleChange = event => {
@@ -86,7 +91,6 @@ const NewPostForm = props => {
               <div>
                 <DateTime
                   onChange={handleDate}
-                  value={formVals.datetime}
                 />
               </div>
             <input className="button" type="submit" />

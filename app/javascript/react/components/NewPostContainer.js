@@ -8,7 +8,7 @@ const NewPostContainer = props => {
   const [newPost, setNewPost] = useState({})
 
   const handleFormSubmit = formData => {
-    fetch('api/v1/posts', {
+    fetch('/api/v1/posts', {
       credentials: "same-origin",
       method: 'POST',
       body: JSON.stringify(formData),

@@ -19,4 +19,9 @@ class Api::V1::PostsController < ApplicationController
   def show
     render json: Post.find(params[:id])
   end
+
+  private
+  def post_params
+    params.require(:post).permit(:title, :game, :description, :datetime)
+  end
 end
