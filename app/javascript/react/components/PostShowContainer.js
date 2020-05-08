@@ -7,7 +7,7 @@ const PostShowContainer = props => {
     id: null,
     title: "",
     description: "",
-    datetime: "",
+    datetime: null,
     game: "",
     current_user: {},
   })
@@ -42,7 +42,7 @@ const PostShowContainer = props => {
       <div className="grid-container">
         <div className='grid-x grid-margin-x'>
           <div className="cell small-12 medium-10 align-center">
-            <GameShowTile
+            <PostShowTile
               key={post.id}
               id={post.id}
               title={post.name}
