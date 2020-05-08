@@ -21,3 +21,5 @@ const PostShowTile = props => {
     </div>
   )
 }
+
+export default PostShowTile
