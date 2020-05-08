@@ -5,11 +5,18 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1 do
-      resources :posts, only: [:index, :show, :create]
+      resources :posts, only: [:index, :show, :create] do
+        resources :comments, only: [:index, :create]
+      end
+      resources :users, only: [:show]
+      resources :comments, only: [:edit, :update, :destroy]
     end
   end
 
   get '/posts', to: 'homes#index'
   get '/posts/new', to: 'homes#index'
   get '/posts/:id', to: 'homes#index'
+  get '/users/:id', to: 'homes#index'
+  get '/posts/:id/comments/new', to: 'homes#index'
+  get '/comments/:id/edit', to: 'homes#index'
 end

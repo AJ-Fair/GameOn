@@ -2782,3 +2782,28 @@ Processing by Api::V1::PostsController#create as JSON
 Completed 422 Unprocessable Entity in 11ms (Views: 0.3ms | ActiveRecord: 1.0ms)
 
 
+Started POST "/api/v1/posts" for ::1 at 2020-05-08 10:56:13 -0400
+Processing by Api::V1::PostsController#create as JSON
+  Parameters: {"title"=>"Fighter, Rogue, and Wizard", "description"=>"game", "game"=>"Wizard Game Great Job!", "datetime"=>"2020-05-13T00:00:00-04:00", "post"=>{"title"=>"Fighter, Rogue, and Wizard", "game"=>"Wizard Game Great Job!", "description"=>"game", "datetime"=>"2020-05-13T00:00:00-04:00"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/posts_controller.rb:11
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/posts_controller.rb:11
+Completed 422 Unprocessable Entity in 68ms (Views: 0.6ms | ActiveRecord: 73.3ms)
+
+
+Started GET "/posts/new" for ::1 at 2020-05-08 11:14:12 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 49ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/ajfair/Documents/GitHub/GameOn/app/views/layouts/application.html.erb:61: syntax error, unexpected ensure, expecting end
+          ensure
+          ^~~~~~
+/Users/ajfair/Documents/GitHub/GameOn/app/views/layouts/application.html.erb:63: syntax error, unexpected end-of-input, expecting end):
+  
+app/views/layouts/application.html.erb:61: syntax error, unexpected ensure, expecting end
+app/views/layouts/application.html.erb:63: syntax error, unexpected end-of-input, expecting end
