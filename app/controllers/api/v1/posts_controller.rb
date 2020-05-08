@@ -7,7 +7,8 @@ class Api::V1::PostsController < ApplicationController
 
   def create
     new_post = Post.new(post_params)
-
+    new_post.user = current_user
+    binding.pry
     if new_post.save
       render json: new_post
     else
