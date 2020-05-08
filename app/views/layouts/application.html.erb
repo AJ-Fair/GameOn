@@ -15,15 +15,23 @@
   <div class="cell auto text-center logo-text">
     <h1><a href="/">GameOn</a></h1>
   </div>
+  <div class="cell small-3 text-right">
+      <%- if current_user -%>
+        <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
+        <a href='/users/<%= current_user['id'] %>'>
+          <img src="https://game-grades-production.s3.amazonaws.com/uploads/user/profile_photo/<%= current_user['id'] %>/<%= current_user['profile_photo']%>" class="profile-photo">
+        </a>
 
-    <div class="top-bar-section">
-      <ul class="right">
-        <%- if current_user -%>
-          <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
-        <%- else -%>
-          <li><%= link_to 'Sign Up', new_user_registration_path %></li>
-          <li><%= link_to 'Sign In', new_user_session_path %></li>
-        <%- end -%>
+        <div class="cell small-3 text-right">
+          <%- if current_user -%>
+            <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
+            <a href='/users/<%= current_user['id'] %>'>
+              <img src="https://game-grades-production.s3.amazonaws.com/uploads/user/profile_photo/<%= current_user['id'] %>/<%= current_user['profile_photo']%>" class="profile-photo">
+            </a>
+          <%- else -%>
+            <%= link_to 'Sign Up', new_user_registration_path %> |
+            <%= link_to 'Sign In', new_user_session_path %>
+          <%- end -%>
       </ul>
     </div>
   </div>
