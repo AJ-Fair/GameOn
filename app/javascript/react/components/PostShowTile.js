@@ -9,10 +9,9 @@ const PostShowTile = props => {
 
   return (
     <div>
-      <h1 className='cell small-12 title text-black'>
+      <h4 className='cell small-12 title text-black'>
         {title}
-      </h1>
-      <br />
+      </h4>
       <div className='cell small-12 game'>
         <p><strong>Game:</strong> {game}</p>
       </div>

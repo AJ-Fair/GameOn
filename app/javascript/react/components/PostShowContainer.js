@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react'
+import { Link } from 'react-router-dom'
 
 import PostShowTile from './PostShowTile'
 import NewCommentContainer from './NewCommentContainer'
@@ -12,7 +13,7 @@ const PostShowContainer = props => {
     datetime: null,
     game: "",
     comments: [],
-    current_user: {},
+    user: {},
   })
 
   let getPostPageInfo = () => {
@@ -38,7 +39,7 @@ const PostShowContainer = props => {
     getPostPageInfo()}, [])
 
     let showCommentContainer
-    if (post.current_user) {
+    if (post.user) {
       showCommentContainer =
       <NewCommentContainer
         postId={post.id}
@@ -66,14 +67,14 @@ const PostShowContainer = props => {
             <PostShowTile
               key={post.id}
               id={post.id}
-              title={post.name}
+              title={post.title}
               description={post.description}
               comments={post.comments}
               game={post.game}
-              currentUser={post.current_user}
+              currentUser={post.user}
               getPostPageInfo={getPostPageInfo}
             />
-            {NewCommentContainer}
+            {showCommentContainer}
           </div>
         </div>
       </div>
