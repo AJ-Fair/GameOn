@@ -2,10 +2,7 @@ import React from 'react'
 import Moment from 'react-moment'
 
 const PostShowTile = props => {
-  const title = props.title
-  const game = props.game
-  const datetime = props.datetime
-  const description = props.description
+  const {title, game, datetime, currentUser, comments, getPostPageInfo} = props
 
   return (
     <div>
@@ -20,6 +17,14 @@ const PostShowTile = props => {
       </div>
       <div className='cell small-12 body text-black'>
         <p>{description}</p>
+      </div>
+      <div className='cell small-12'>
+        <strong>Comments:</strong>
+        <CommentsIndexContainer
+          comments={comments}
+          currentUser={props.currentUser}
+          getPostPageInfo={props.getGamePageInfo}
+        />
       </div>
     </div>
   )
