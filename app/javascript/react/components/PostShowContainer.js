@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
 
 import PostShowTile from './PostShowTile'
-import NewReviewContainer from './NewReviewContainer'
+import NewCommentContainer from './NewCommentContainer'
 
 const PostShowContainer = props => {
   const [post, setPost] = useState({
@@ -32,16 +32,16 @@ const PostShowContainer = props => {
       setPost(postBody)
     })
     .catch(error => console.error(`Error in fetch: ${error.message}`))
-  })
+  }
 
   useEffect(() => {
-    getGamePageInfo()}, [])
+    getPostPageInfo()}, [])
 
     let showCommentContainer
     if (post.current_user) {
       showCommentContainer =
       <NewCommentContainer
-        postId={game.id}
+        postId={post.id}
         getPostPageInfo={getPostPageInfo}
       />
     } else {
@@ -73,7 +73,7 @@ const PostShowContainer = props => {
               currentUser={post.current_user}
               getPostPageInfo={getPostPageInfo}
             />
-            {newCommentContainer}
+            {NewCommentContainer}
           </div>
         </div>
       </div>

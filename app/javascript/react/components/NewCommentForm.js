@@ -27,7 +27,7 @@ const NewCommentForm = props => {
           ...newErrors,
           [field]: "is blank"
         }
-      } 
+      }
     })
     setErrors(newErrors)
     return _.isEmpty(newErrors)
@@ -64,4 +64,4 @@ return (
   )
 };
 
-export default NewReviewForm
+export default NewCommentForm

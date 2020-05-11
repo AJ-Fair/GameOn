@@ -1,8 +1,11 @@
 import React from 'react'
-import moment from 'moment'
+import Moment from 'react-moment'
 
 const PostShowTile = props => {
-  const {title, game, description, datetime, id, currentUser} = props
+  const title = props.title
+  const game = props.game
+  const datetime = props.datetime
+  const description = props.description
 
   return (
     <div>
@@ -11,10 +14,10 @@ const PostShowTile = props => {
       </h1>
       <br />
       <div className='cell small-12 game'>
-        <p><strong>Game:</strong>{game}</p>
+        <p><strong>Game:</strong> {game}</p>
       </div>
       <div className='cell small 12 datetime'>
-        <p><strong>{moment({datetime})}</strong></p>
+        <p><strong><Moment>{datetime}</Moment></strong></p>
       </div>
       <div className='cell small-12 body'>
         <p>{description}</p>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-import NewReviewForm from './NewCommentForm'
+import NewCommentForm from './NewCommentForm'
 
 const NewCommentContainer = props => {
   const post_id = props.post_id
@@ -45,3 +45,5 @@ const NewCommentContainer = props => {
     </div>
   )
 }
+
+export default NewCommentContainer
