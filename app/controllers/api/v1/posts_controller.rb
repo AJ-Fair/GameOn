@@ -17,9 +17,7 @@ class Api::V1::PostsController < ApplicationController
   end
 
   def show
-    found_post = Post.find(params[:id])
-    found_post.user = current_user
-    render json: found_post
+    render json: Post.find(params[:id])
   end
 
   private

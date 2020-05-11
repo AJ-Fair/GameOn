@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import { Link } from 'react-router-dom'
+import _ from 'lodash'
 
 import PostShowTile from './PostShowTile'
 import NewCommentContainer from './NewCommentContainer'
@@ -13,7 +14,7 @@ const PostShowContainer = props => {
     datetime: null,
     game: "",
     comments: [],
-    user: {},
+    currentUser: props.current_user,
   })
 
   let getPostPageInfo = () => {
@@ -39,18 +40,18 @@ const PostShowContainer = props => {
     getPostPageInfo()}, [])
 
     let showCommentContainer
-    if (post.user) {
-      showCommentContainer =
-      <NewCommentContainer
-        postId={post.id}
-        getPostPageInfo={getPostPageInfo}
-      />
-    } else {
+    if (_.isEmpty(post.currentUser) === true) {
       showCommentContainer = (
         <div>
           <h3 className='title'>Please <a href="/users/sign_in">Log In</a> to Leave a Comment</h3>
         </div>
       )
+    } else {
+      showCommentContainer =
+      <NewCommentContainer
+        postId={post.id}
+        getPostPageInfo={getPostPageInfo}
+      />
     }
 
   if (post.id === null) {
@@ -71,7 +72,7 @@ const PostShowContainer = props => {
               description={post.description}
               comments={post.comments}
               game={post.game}
-              currentUser={post.user}
+              currentUser={post.currentUser}
               getPostPageInfo={getPostPageInfo}
             />
             {showCommentContainer}

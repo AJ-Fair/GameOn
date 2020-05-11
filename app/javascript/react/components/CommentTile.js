@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import {Link, Redirect} from 'react-router-dom'
 
-const commentTile = props => {
+const CommentTile = props => {
   const [shouldRedirect, setShouldRedirect] = useState(false)
   const ign = props.ign
   const body = props.body
@@ -62,4 +62,4 @@ const commentTile = props => {
   )
 }
 
-export default ReviewTile
+export default CommentTile

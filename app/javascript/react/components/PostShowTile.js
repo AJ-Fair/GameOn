@@ -1,8 +1,11 @@
 import React from 'react'
 import Moment from 'react-moment'
+import _ from 'lodash'
+
+import CommentsIndexContainer from './CommentsIndexContainer'
 
 const PostShowTile = props => {
-  const {title, game, datetime, currentUser, comments, getPostPageInfo} = props
+  const {title, game, datetime, currentUser, comments, getPostPageInfo, description} = props
 
   return (
     <div>
@@ -18,14 +21,7 @@ const PostShowTile = props => {
       <div className='cell small-12 body text-black'>
         <p>{description}</p>
       </div>
-      <div className='cell small-12'>
-        <strong>Comments:</strong>
-        <CommentsIndexContainer
-          comments={comments}
-          currentUser={props.currentUser}
-          getPostPageInfo={props.getGamePageInfo}
-        />
-      </div>
+
     </div>
   )
 }

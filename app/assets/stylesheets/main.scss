@@ -78,3 +78,9 @@ $deepskyblue: #00a8e8;
 .background-deepblue {
   background-color: $deepblue;
 }
+
+.callout.secondary {
+  background-color: $white;
+  border: 1px solid $deepskyblue;
+  border-radius: 0.5rem;
+}
