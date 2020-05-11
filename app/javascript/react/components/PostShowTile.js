@@ -1,4 +1,5 @@
 import React from 'react'
+import moment from 'moment'
 
 const PostShowTile = props => {
   const {title, game, description, datetime, id, currentUser} = props
@@ -13,7 +14,7 @@ const PostShowTile = props => {
         <p><strong>Game:</strong>{game}</p>
       </div>
       <div className='cell small 12 datetime'>
-        <p><strong>{datetime}</strong></p>
+        <p><strong>{moment({datetime})}</strong></p>
       </div>
       <div className='cell small-12 body'>
         <p>{description}</p>
