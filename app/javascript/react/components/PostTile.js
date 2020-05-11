@@ -10,7 +10,7 @@ const PostTile = props => {
   const id = props.id
 
   return (
-    <div className='callout bg-white cell small-12 medium-4 text-center post-tile'>
+    <div className='callout bg-white cell small-12 medium-4 text-center post-tile text-black'>
       <Link to={`/posts/${id}`}>
         <h4 className='title link-black'>{title}</h4>
       </Link>
