@@ -5,6 +5,7 @@ import ReactDOM from 'react-dom'
 import PostIndexContainer from './PostIndexContainer'
 import PostShowContainer from './PostShowContainer'
 import NewPostContainer from './NewPostContainer'
+import UserShowContainer from './UserShowContainer'
 
 export const App = (props) => {
   return (
@@ -14,6 +15,7 @@ export const App = (props) => {
         <Route exact path='/posts' component={PostIndexContainer} />
         <Route exact path='/posts/new' component={NewPostContainer} />
         <Route exact path='/posts/:id' component={PostShowContainer} />
+        <Route exact path='/users/:id' component={UserShowContainer} />
       </Switch>
     </BrowserRouter>
   )

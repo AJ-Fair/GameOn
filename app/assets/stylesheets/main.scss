@@ -8,7 +8,7 @@ $deepskyblue: #00a8e8;
 @import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
 
 .custom-header {
-  background-color: $cerulean;
+  background-color: $deepblue;
   color: $white;
 
   a {
@@ -49,6 +49,9 @@ $deepskyblue: #00a8e8;
 
 .bg-white {
   background-color: $white;
+  border: 1px solid $deepskyblue;
+  border-radius: 0.5rem;
+  padding: 1rem;
 }
 
 .body, p, label {
@@ -75,8 +78,8 @@ $deepskyblue: #00a8e8;
   object-fit: cover;
 }
 
-.background-deepblue {
-  background-color: $deepblue;
+.background-cerulean {
+  background-color: $cerulean;
 }
 
 .callout.secondary {

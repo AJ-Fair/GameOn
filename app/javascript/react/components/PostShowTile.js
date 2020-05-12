@@ -21,7 +21,6 @@ const PostShowTile = props => {
       <div className='cell small-12 body text-black'>
         <p>{description}</p>
       </div>
-
     </div>
   )
 }
