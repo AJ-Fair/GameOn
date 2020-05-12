@@ -39,7 +39,6 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-
 gem 'pry-rails', group: [:development, :test]
 gem 'jquery-rails'
 gem 'dotenv-rails', group: [:development, :test]
@@ -54,3 +53,4 @@ gem 'devise'
 gem 'foundation-rails', '~> 6.5'
 gem 'webpacker', '~> 3.3'
 gem 'carrierwave'
+gem 'active_model_serializers', require: true

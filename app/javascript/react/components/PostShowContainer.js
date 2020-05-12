@@ -14,7 +14,7 @@ const PostShowContainer = props => {
     datetime: null,
     game: "",
     comments: [],
-    currentUser: props.current_user,
+    currentUser: {},
   })
 
   let getPostPageInfo = () => {
@@ -40,10 +40,10 @@ const PostShowContainer = props => {
     getPostPageInfo()}, [])
 
     let showCommentContainer
-    if (_.isEmpty(post.currentUser) === true) {
+    if (_.isEmpty(post.currentUser)) {
       showCommentContainer = (
         <div>
-          <h3 className='title'>Please <a href="/users/sign_in">Log In</a> to Leave a Comment</h3>
+          <h3 className='title bg-white'>Please <a href="/users/sign_in">Log In</a> to Leave a Comment</h3>
         </div>
       )
     } else {

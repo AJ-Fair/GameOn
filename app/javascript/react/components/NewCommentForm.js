@@ -34,14 +34,14 @@ const NewCommentForm = props => {
   }
 
 return (
-  <div>
-    <h4>Add a comment!</h4>
+  <div className='bg-white'>
+    <h4 className='title'>Add a comment!</h4>
     <form onSubmit={handleSubmit}>
       <ErrorList
         errors={errors}
       />
 
-      <label htmlFor="ign">In-game name:</label>
+    <label className='text-black' htmlFor="ign">In-game name:</label>
       <input
         type="text"
         name="ign"
@@ -50,7 +50,7 @@ return (
         value={comment.ign}
       />
 
-      <label htmlFor="body">Your comment:</label>
+      <label className='text-black' htmlFor="body">Your comment:</label>
       <textarea
         name="body"
         id="body"
