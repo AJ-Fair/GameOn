@@ -40,7 +40,6 @@ const PostShowContainer = props => {
     getPostPageInfo()}, [])
 
     let showCommentContainer
-    debugger
     if (_.isEmpty(post.currentUser)) {
       showCommentContainer = (
         <div>
