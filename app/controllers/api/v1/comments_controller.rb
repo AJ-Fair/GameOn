@@ -1,6 +1,10 @@
-class Api::V1::ReviewsController < ApplicationController
+class Api::V1::CommentsController < ApplicationController
   protect_from_forgery unless: -> { request.format.json? }
 
+  def index
+    render json: Comment.where(post_id: params[:post_id]).to_a
+  end
+  
   def create
     new_comment = Comment.new(comment_params)
     new_comment.user = current_user
@@ -17,6 +21,15 @@ class Api::V1::ReviewsController < ApplicationController
     render json: Comment.find(params[:id])
   end
 
+  def update
+    updated_comment = Comment.find(params[:id])
+    if updated_comment.update(comment_params)
+      render json: updated_coment
+    else
+      render json: { errors: updated_comment.errors.full_messages.to_sentence }, status: :unprocessable_entity
+    end
+  end
+
   def destroy
     deleted_comment = Comment.find(params[:id]).delete
     render json: deleted_comment
@@ -24,7 +37,7 @@ class Api::V1::ReviewsController < ApplicationController
 
   private
 
-  def review_params
+  def comment_params
     params.require(:comment).permit(:ign, :body)
   end
 end

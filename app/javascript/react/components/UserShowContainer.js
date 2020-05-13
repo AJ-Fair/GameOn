@@ -10,7 +10,13 @@ const UserShowContainer = props => {
 
   useEffect(() => {
     let userId = props.match.params.id
-    fetch('/api/v1/users/' + userId)
+    fetch('/api/v1/users/' + userId, {
+      credentials: "same-origin",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json"
+      }
+    })
     .then(response => {
       if(response.ok) {
         return response

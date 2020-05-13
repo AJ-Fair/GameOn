@@ -40,7 +40,7 @@ const PostShowContainer = props => {
     getPostPageInfo()}, [])
 
     let showCommentContainer
-    if (_.isEmpty(post.currentUser)) {
+    if (post.currentUser) {
       showCommentContainer = (
         <div>
           <h3 className='title bg-white'>Please <a href="/users/sign_in">Log In</a> to Leave a Comment</h3>
@@ -67,7 +67,7 @@ const PostShowContainer = props => {
           <div className="cell small-12 medium-10 align-center">
             <PostShowTile
               key={post.id}
-              id={post.id}
+              Postd={post.id}
               title={post.title}
               description={post.description}
               comments={post.comments}

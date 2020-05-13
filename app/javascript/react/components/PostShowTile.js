@@ -5,7 +5,7 @@ import _ from 'lodash'
 import CommentsIndexContainer from './CommentsIndexContainer'
 
 const PostShowTile = props => {
-  const {title, game, datetime, currentUser, comments, getPostPageInfo, description} = props
+  const {title, game, datetime, currentUser, comments, getPostPageInfo, description, postId} = props
 
   return (
     <div className='bg-white'>
@@ -20,6 +20,14 @@ const PostShowTile = props => {
       </div>
       <div className='cell small-12 body text-black'>
         <p>{description}</p>
+      </div>
+      <div className='cell small-12'>
+        <strong>Comments:</strong>
+        <CommentsIndexContainer
+          comments={comments}
+          postId={postId}
+          currentUser={currentUser}
+        />
       </div>
     </div>
   )

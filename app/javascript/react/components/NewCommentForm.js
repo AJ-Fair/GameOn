@@ -3,7 +3,8 @@ import React, { useState } from 'react'
 import ErrorList from './ErrorList'
 
 const NewCommentForm = props => {
-  const post_id = props.post_id
+  const postId = props.postId
+  const handleFormSubmit = props.handleFormSubmit
   const [comment, setComment] = useState({
     ign: "",
     body: "",
@@ -17,12 +18,19 @@ const NewCommentForm = props => {
       })
     }
 
+  const formCheck = event => {
+    debugger
+    event.preventDefault()
+    if (validateForm()) {
+      handleFormSubmit(comment)
+    }
+  }
 
   const validateForm = () => {
     let newErrors = {}
     let requiredFields = ["ign"]
     requiredFields.forEach((field) => {
-      if(review[field].trim() === "") {
+      if(comment[field].trim() === "") {
         newErrors = {
           ...newErrors,
           [field]: "is blank"
@@ -36,7 +44,7 @@ const NewCommentForm = props => {
 return (
   <div className='bg-white'>
     <h4 className='title'>Add a comment!</h4>
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={formCheck}>
       <ErrorList
         errors={errors}
       />
