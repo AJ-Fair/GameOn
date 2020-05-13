@@ -1,7 +1,9 @@
 import React, {useState, useEffect} from 'react'
+import { Link } from 'react-router-dom'
+import _ from 'lodash'
 
 import PostShowTile from './PostShowTile'
-import NewReviewContainer from './NewReviewContainer'
+import NewCommentContainer from './NewCommentContainer'
 
 const PostShowContainer = props => {
   const [post, setPost] = useState({
@@ -12,7 +14,7 @@ const PostShowContainer = props => {
     datetime: null,
     game: "",
     comments: [],
-    current_user: {},
+    currentUser: {},
   })
 
   let getPostPageInfo = () => {
@@ -32,24 +34,24 @@ const PostShowContainer = props => {
       setPost(postBody)
     })
     .catch(error => console.error(`Error in fetch: ${error.message}`))
-  })
+  }
 
   useEffect(() => {
-    getGamePageInfo()}, [])
+    getPostPageInfo()}, [])
 
     let showCommentContainer
-    if (post.current_user) {
-      showCommentContainer =
-      <NewCommentContainer
-        postId={game.id}
-        getPostPageInfo={getPostPageInfo}
-      />
-    } else {
+    if (post.currentUser) {
       showCommentContainer = (
         <div>
-          <h3 className='title'>Please <a href="/users/sign_in">Log In</a> to Leave a Comment</h3>
+          <h3 className='title bg-white'>Please <a href="/users/sign_in">Log In</a> to Leave a Comment</h3>
         </div>
       )
+    } else {
+      showCommentContainer =
+      <NewCommentContainer
+        postId={post.id}
+        getPostPageInfo={getPostPageInfo}
+      />
     }
 
   if (post.id === null) {
@@ -65,15 +67,15 @@ const PostShowContainer = props => {
           <div className="cell small-12 medium-10 align-center">
             <PostShowTile
               key={post.id}
-              id={post.id}
-              title={post.name}
+              Postd={post.id}
+              title={post.title}
               description={post.description}
               comments={post.comments}
               game={post.game}
-              currentUser={post.current_user}
+              currentUser={post.currentUser}
               getPostPageInfo={getPostPageInfo}
             />
-            {newCommentContainer}
+            {showCommentContainer}
           </div>
         </div>
       </div>

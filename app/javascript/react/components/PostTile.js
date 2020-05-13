@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import Moment from 'react-moment'
 
 const PostTile = props => {
   const title = props.title
@@ -9,11 +10,11 @@ const PostTile = props => {
   const id = props.id
 
   return (
-    <div className='callout bg-white cell small-12 medium-4 text-center post-tile'>
+    <div className='callout bg-white cell small-12 medium-4 text-center post-tile text-black'>
       <Link to={`/posts/${id}`}>
-        <h4 className='title link-black'>{name}</h4>
+        <h4 className='title link-black'>{title}</h4>
       </Link>
-      <p className='body'>{datetime}</p>
+      <p className='body'><Moment>{datetime}</Moment></p>
     </div>
   )
 }

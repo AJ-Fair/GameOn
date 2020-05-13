@@ -6,7 +6,9 @@
   <%= stylesheet_link_tag 'application', media: 'all' %>
   <%= csrf_meta_tags %>
 </head>
-<body class='background-deepblue'>
+
+<body class='background-cerulean'>
+
 <div class="custom-header">
   <div class="grid-x grid-padding-x align-middle">
     <div class="cell small-3">
@@ -29,7 +31,7 @@
   </div>
 </div>
   <%- flash.each do |key, value| -%>
-    <div class="flash flash-<%= key %>">
+    <div class="flash flash-<%= key %>" className='bg-white'>
       <%= value %>
     </div>
   <%- end -%>

@@ -1,18 +1,20 @@
 import React, { useState } from 'react'
+import { Redirect } from 'react-router-dom'
 
-import NewReviewForm from './NewCommentForm'
+import NewCommentForm from './NewCommentForm'
 
 const NewCommentContainer = props => {
-  const post_id = props.post_id
+  const postId = props.postId
   const getPostPageInfo = props.getPostPageInfo
+  const [shouldRedirect, setShouldRedirect] = useState(false)
 
   const handleFormSubmit = formData => {
-    fetch(`/api/v1/posts/${post_id}/comments`, {
+    fetch(`/api/v1/posts/${postId}/comments`, {
       credentials: "same-origin",
       method: "POST",
       body: JSON.stringify(formData),
       headers: {
-        Accept: "application/json",
+        'Accept': "application/json",
         "Content-Type": "application/json"
       }
     })
@@ -30,18 +32,24 @@ const NewCommentContainer = props => {
       if (parsedData.errors){
       setErrors(parsedData.errors)
       } else {
-        getGamePageInfo()
+        setShouldRedirect(true)
       }
     })
     .catch(error => console.error(`Error in fetch: ${error.message}`))
+  }
+
+  if(shouldRedirect) {
+    return <Redirect to={`/posts/`} />
   }
 
   return(
     <div>
       <NewCommentForm
         handleFormSubmit={handleFormSubmit}
-        post_id={post_id}
+        postId={postId}
       />
     </div>
   )
 }
+
+export default NewCommentContainer

@@ -3,7 +3,8 @@ import React, { useState } from 'react'
 import ErrorList from './ErrorList'
 
 const NewCommentForm = props => {
-  const post_id = props.post_id
+  const postId = props.postId
+  const handleFormSubmit = props.handleFormSubmit
   const [comment, setComment] = useState({
     ign: "",
     body: "",
@@ -17,31 +18,38 @@ const NewCommentForm = props => {
       })
     }
 
+  const formCheck = event => {
+    debugger
+    event.preventDefault()
+    if (validateForm()) {
+      handleFormSubmit(comment)
+    }
+  }
 
   const validateForm = () => {
     let newErrors = {}
     let requiredFields = ["ign"]
     requiredFields.forEach((field) => {
-      if(review[field].trim() === "") {
+      if(comment[field].trim() === "") {
         newErrors = {
           ...newErrors,
           [field]: "is blank"
         }
-      } 
+      }
     })
     setErrors(newErrors)
     return _.isEmpty(newErrors)
   }
 
 return (
-  <div>
-    <h4>Add a comment!</h4>
-    <form onSubmit={handleSubmit}>
+  <div className='bg-white'>
+    <h4 className='title'>Add a comment!</h4>
+    <form onSubmit={formCheck}>
       <ErrorList
         errors={errors}
       />
 
-      <label htmlFor="ign">In-game name:</label>
+    <label className='text-black' htmlFor="ign">In-game name:</label>
       <input
         type="text"
         name="ign"
@@ -50,7 +58,7 @@ return (
         value={comment.ign}
       />
 
-      <label htmlFor="body">Your comment:</label>
+      <label className='text-black' htmlFor="body">Your comment:</label>
       <textarea
         name="body"
         id="body"
@@ -64,4 +72,4 @@ return (
   )
 };
 
-export default NewReviewForm
+export default NewCommentForm

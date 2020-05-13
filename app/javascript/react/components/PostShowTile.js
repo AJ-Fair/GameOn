@@ -1,23 +1,33 @@
 import React from 'react'
-import moment from 'moment'
+import Moment from 'react-moment'
+import _ from 'lodash'
+
+import CommentsIndexContainer from './CommentsIndexContainer'
 
 const PostShowTile = props => {
-  const {title, game, description, datetime, id, currentUser} = props
+  const {title, game, datetime, currentUser, comments, getPostPageInfo, description, postId} = props
 
   return (
-    <div>
-      <h1 className='cell small-12 title text-black'>
+    <div className='bg-white'>
+      <h4 className='cell small-12 title text-black'>
         {title}
-      </h1>
-      <br />
-      <div className='cell small-12 game'>
-        <p><strong>Game:</strong>{game}</p>
+      </h4>
+      <div className='cell small-12 body game text-black'>
+        <p><strong>Game:</strong> {game}</p>
       </div>
-      <div className='cell small 12 datetime'>
-        <p><strong>{moment({datetime})}</strong></p>
+      <div className='cell small 12 body datetime text-black'>
+        <p><strong><Moment>{datetime}</Moment></strong></p>
       </div>
-      <div className='cell small-12 body'>
+      <div className='cell small-12 body text-black'>
         <p>{description}</p>
+      </div>
+      <div className='cell small-12'>
+        <strong>Comments:</strong>
+        <CommentsIndexContainer
+          comments={comments}
+          postId={postId}
+          currentUser={currentUser}
+        />
       </div>
     </div>
   )

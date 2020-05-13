@@ -5,12 +5,18 @@ const UserShowContainer = props => {
   const [user, setUser] = useState({
     email: "",
     profile_photo: {url: ""},
-    posts: []
+    posts: [],
   })
 
   useEffect(() => {
     let userId = props.match.params.id
-    fetch('/api/v1/users/' + userId);
+    fetch('/api/v1/users/' + userId, {
+      credentials: "same-origin",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json"
+      }
+    })
     .then(response => {
       if(response.ok) {
         return response
@@ -34,10 +40,10 @@ const UserShowContainer = props => {
   })
 
   return (
-    <div className="grid-container">
+    <div className="grid-container bg-white">
       <div className="grid-x grid-margin-x grid-padding-y">
         <div className="cell small-3">
-          <img className="user-show-profile-photo" src={user.profile_photo.url} />
+          <img className="user-show-profile-photo" src={user.profile_photo} />
         </div>
         <div className="cell auto">
           <h2>{user.email}</h2>
@@ -51,5 +57,6 @@ const UserShowContainer = props => {
       </div>
     </div>
   )
-
 }
+
+export default UserShowContainer
