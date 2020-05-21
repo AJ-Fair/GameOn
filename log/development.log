@@ -9594,3 +9594,49 @@ Processing by Api::V1::PostsController#index as JSON
 Completed 200 OK in 763ms (Views: 756.4ms | ActiveRecord: 6.5ms)
 
 
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ajfair/.gem/ruby/2.6.5/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ajfair/.gem/ruby/2.6.5/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ajfair/.gem/ruby/2.6.5/bin/rake:23
+  [1m[35m (16.6ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4954522541969800800)[0m
+  ↳ /Users/ajfair/.gem/ruby/2.6.5/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ajfair/.gem/ruby/2.6.5/bin/rake:23
+Migrating to AddProfilePhotoDefault (20200512150511)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/ajfair/.gem/ruby/2.6.5/bin/rake:23
+  [1m[35m (373.8ms)[0m  [1m[35mALTER TABLE "users" ALTER COLUMN "profile_photo" TYPE character varying[0m
+  ↳ db/migrate/20200512150511_add_profile_photo_default.rb:6
+  [1m[36mActiveRecord::SchemaMigration Destroy (20.5ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20200512150511"]]
+  ↳ /Users/ajfair/.gem/ruby/2.6.5/bin/rake:23
+  [1m[35m (17.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/ajfair/.gem/ruby/2.6.5/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(4954522541969800800)[0m
+  ↳ /Users/ajfair/.gem/ruby/2.6.5/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ajfair/.gem/ruby/2.6.5/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4954522541969800800)[0m
+  ↳ /Users/ajfair/.gem/ruby/2.6.5/bin/rake:23
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ajfair/.gem/ruby/2.6.5/bin/rake:23
+Migrating to AddProfilePhotoDefault (20200512150511)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/ajfair/.gem/ruby/2.6.5/bin/rake:23
+  [1m[35m (9.0ms)[0m  [1m[35mALTER TABLE "users" ALTER COLUMN "profile_photo" TYPE character varying, ALTER COLUMN "profile_photo" SET DEFAULT 'https://i.kym-cdn.com/entries/icons/original/000/011/743/metal-gear-alert.jpg'[0m
+  ↳ db/migrate/20200512150511_add_profile_photo_default.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200512150511"]]
+  ↳ /Users/ajfair/.gem/ruby/2.6.5/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/ajfair/.gem/ruby/2.6.5/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (47.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/ajfair/.gem/ruby/2.6.5/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/ajfair/.gem/ruby/2.6.5/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/ajfair/.gem/ruby/2.6.5/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(4954522541969800800)[0m
+  ↳ /Users/ajfair/.gem/ruby/2.6.5/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ajfair/.gem/ruby/2.6.5/bin/rake:23
