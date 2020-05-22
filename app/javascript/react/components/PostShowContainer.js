@@ -14,7 +14,7 @@ const PostShowContainer = props => {
     datetime: null,
     game: "",
     comments: [],
-    currentUser: {},
+    current_user: {},
   })
 
   let getPostPageInfo = () => {
@@ -72,7 +72,7 @@ const PostShowContainer = props => {
               description={post.description}
               comments={post.comments}
               game={post.game}
-              currentUser={post.currentUser}
+              currentUser={post.current_user}
               getPostPageInfo={getPostPageInfo}
             />
             {showCommentContainer}

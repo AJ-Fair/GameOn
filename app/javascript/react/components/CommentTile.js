@@ -42,10 +42,10 @@ const CommentTile = props => {
   if (currentUser && currentUser.id === commentUser) {
     editDelete =
     <div className="grid-x grid-margin-x">
-      <div className='button success cell small-2 text-center'>
+      <div className='button success cell small-3 text-center'>
         <Link to={`/comments/${props.id}/edit`}>Edit</Link>
       </div>
-      < div className='button success cell small-2 text-center' onClick={deleteComment}>
+      <div className='button success cell small-3 text-center' onClick={deleteComment}>
         Delete
       </div>
     </div>

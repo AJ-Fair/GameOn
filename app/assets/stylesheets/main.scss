@@ -80,10 +80,31 @@ $deepskyblue: #00a8e8;
 
 .background-cerulean {
   background-color: $cerulean;
+  border: 1px solid $deepskyblue;
+  border-radius: 0.5rem;
+  padding: 1rem;
 }
 
 .callout.secondary {
   background-color: $white;
   border: 1px solid $deepskyblue;
   border-radius: 0.5rem;
+}
+
+.button {
+  background-color: $deepblue;
+  font-family: "Noto Sans";
+  border-radius: 0.25rem;
+
+  &:hover {
+    background-color: $deepskyblue;
+  }
+
+  &.success {
+    background-color: $cerulean;
+
+    a {
+      color: $blackpearl
+    }
+  }
 }
