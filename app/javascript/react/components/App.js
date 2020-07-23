@@ -19,7 +19,7 @@ export const App = (props) => {
         <Route exact path='/posts/:id' component={PostShowContainer} />
         <Route exact path='/users/:id' component={UserShowContainer} />
         <Route exact path='/posts/:id/comments/new' component={NewCommentContainer} />
-        <Route exact path='/users/search' component={UserSearchContainer} />
+        <Route exact path='/search/users' component={UserSearchContainer} />
       </Switch>
     </BrowserRouter>
   )

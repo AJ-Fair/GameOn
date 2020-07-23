@@ -8,7 +8,7 @@ Rails.application.routes.draw do
       resources :posts, only: [:index, :show, :create] do
         resources :comments, only: [:index, :create]
       end
-      resources :users, only: [:show, :edit, :update]
+      resources :users, only: [:index, :show, :edit, :update]
       resources :comments, only: [:edit, :update, :destroy]
     end
   end
@@ -19,5 +19,5 @@ Rails.application.routes.draw do
   get '/users/:id', to: 'homes#index'
   get '/posts/:id/comments', to: 'homes#index'
   get '/comments/:id/edit', to: 'homes#index'
-  get '/users/search', to: 'homes#index'
+  get '/search/users', to: 'homes#index'
 end
