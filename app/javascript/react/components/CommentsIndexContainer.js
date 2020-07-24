@@ -4,6 +4,7 @@ import CommentTile from './CommentTile'
 
 const CommentsIndexContainer = props => {
   const comments = props.comments
+  const currentUser = props.currentUser
   let commentTiles = comments.map((comment) => {
     return (
       <CommentTile

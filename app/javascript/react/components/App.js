@@ -8,6 +8,7 @@ import NewPostContainer from './NewPostContainer'
 import UserShowContainer from './UserShowContainer'
 import NewCommentContainer from './NewCommentContainer'
 import UserIndexContainer from './UserIndexContainer'
+import CommentEditForm from './CommentEditForm'
 
 export const App = (props) => {
   return (
@@ -19,6 +20,7 @@ export const App = (props) => {
         <Route exact path='/posts/:id' component={PostShowContainer} />
         <Route exact path='/users/:id' component={UserShowContainer} />
         <Route exact path='/posts/:id/comments/new' component={NewCommentContainer} />
+        <Route exact path='/comments/:id/edit' component={CommentEditForm} />
         <Route exact path='/users' component={UserIndexContainer} />
       </Switch>
     </BrowserRouter>
