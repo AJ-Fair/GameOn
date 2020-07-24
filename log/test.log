@@ -1,0 +1,37 @@
+  [1m[35m (286.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "GameOn_test"[0m
+  [1m[35m (1394.6ms)[0m  [1m[35mCREATE DATABASE "GameOn_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (35.8ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (82.7ms)[0m  [1m[35mDROP TABLE IF EXISTS "comments" CASCADE[0m
+  [1m[35m (164.1ms)[0m  [1m[35mCREATE TABLE "comments" ("id" bigserial primary key, "user_id" bigint NOT NULL, "post_id" bigint NOT NULL, "body" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "ign" character varying NOT NULL)[0m
+  [1m[35m (20.0ms)[0m  [1m[35mCREATE  INDEX  "index_comments_on_post_id" ON "comments"  ("post_id")[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE  INDEX  "index_comments_on_user_id" ON "comments"  ("user_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "joined_posts" CASCADE[0m
+  [1m[35m (4.9ms)[0m  [1m[35mCREATE TABLE "joined_posts" ("id" bigserial primary key, "user_id" bigint NOT NULL, "post_id" bigint NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE  INDEX  "index_joined_posts_on_post_id" ON "joined_posts"  ("post_id")[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE  INDEX  "index_joined_posts_on_user_id" ON "joined_posts"  ("user_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "posts" CASCADE[0m
+  [1m[35m (6.5ms)[0m  [1m[35mCREATE TABLE "posts" ("id" bigserial primary key, "user_id" bigint NOT NULL, "title" character varying NOT NULL, "game" character varying NOT NULL, "description" character varying NOT NULL, "datetime" timestamp NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE  INDEX  "index_posts_on_user_id" ON "posts"  ("user_id")[0m
+  [1m[35m (0.6ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (45.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "profile_photo" character varying DEFAULT 'https://i.kym-cdn.com/entries/icons/original/000/011/743/metal-gear-alert.jpg')[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  [1m[35m (6.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (27.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200512150511)[0m
+  [1m[35m (1.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200504121121),
+(20200504131939),
+(20200506200253),
+(20200508175134);
+
+[0m
+  [1m[35m (47.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (18.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (26.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "test"], ["created_at", "2020-07-23 13:17:57.341763"], ["updated_at", "2020-07-23 13:17:57.341763"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (3.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
