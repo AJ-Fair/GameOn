@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import {Link} from 'react-router-dom'
 
+import UserShowTile from './UserShowTile'
+
 const UserShowContainer = props => {
   const [user, setUser] = useState({
     email: "",

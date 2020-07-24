@@ -25,8 +25,19 @@ useEffect(() => {
   .catch(error => console.error(`Error in fetch: ${error.message}`))
 }, [])
 
+let userTiles = users.map((user) => {
   return (
-    <h1>This is a test line</h1>
+    <UserTile
+      key={user.id}
+      id={user.id}
+      email={user.email}
+      profilePhoto={user.profile_photo}
+    />
+  )
+})
+
+  return (
+    <h1>{userTiles}</h1>
   )
 }
 
