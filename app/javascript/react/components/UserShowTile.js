@@ -1,4 +1,4 @@
-import React from 'React'
+import React from 'react'
 import { Link } from 'react-router-dom'
 
 const UserShowTile = props => {
@@ -12,7 +12,7 @@ const UserShowTile = props => {
         <div className="cell small-4">
           <img src={profilePhoto} />
         </div>
-        <Link to={`/users/${id}`}
+        <Link to={`/users/${id}`}>
         <div className="cell auto">
           {email}
         </div>

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
+import UserShowTile from './UserShowTile'
 
 const UserIndexContainer = props => {
 const [users, setUsers] = useState([]);
@@ -27,7 +28,7 @@ useEffect(() => {
 
 let userTiles = users.map((user) => {
   return (
-    <UserTile
+    <UserShowTile
       key={user.id}
       id={user.id}
       email={user.email}
@@ -37,7 +38,11 @@ let userTiles = users.map((user) => {
 })
 
   return (
-    <h1>{userTiles}</h1>
+    <div className='grid-container'>
+      <div className='grid-x grid-margin-x grid-padding-y'>
+        {userTiles}
+      </div>
+    </div>
   )
 }
 
