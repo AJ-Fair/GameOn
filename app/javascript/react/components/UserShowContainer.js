@@ -5,8 +5,7 @@ const UserShowContainer = props => {
   const [user, setUser] = useState({
     email: "",
     profile_photo: {url: ''},
-    posts: [],
-    current_user: props.current_user
+    posts: []
   })
 
 

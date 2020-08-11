@@ -14,7 +14,7 @@ const PostShowContainer = props => {
     datetime: null,
     game: "",
     comments: [],
-    current_user: {},
+    current_user: {}
   })
 
   let getPostPageInfo = () => {
@@ -40,18 +40,19 @@ const PostShowContainer = props => {
     getPostPageInfo()}, [])
 
     let showCommentContainer
-    if (post.currentUser) {
-      showCommentContainer = (
-        <div>
-          <h3 className='title bg-white'>Please <a href="/users/sign_in">Log In</a> to Leave a Comment</h3>
-        </div>
-      )
-    } else {
+
+    if (post.currentUser !== {}) {
       showCommentContainer =
       <NewCommentContainer
         postId={post.id}
         getPostPageInfo={getPostPageInfo}
       />
+    } else {
+      showCommentContainer = (
+        <div>
+          <h3 className='title bg-white'>Please <a href="/users/sign_in">Log In</a> to Leave a Comment</h3>
+        </div>
+      )
     }
 
   if (post.id === null) {
