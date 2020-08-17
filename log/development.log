@@ -12120,3 +12120,241 @@ Processing by Api::V1::PostsController#show as JSON
 Completed 200 OK in 93ms (Views: 38.4ms | ActiveRecord: 18.8ms)
 
 
+Started GET "/" for ::1 at 2020-08-17 08:59:54 -0400
+Processing by HomesController#index as HTML
+Completed 401 Unauthorized in 42ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-08-17 08:59:56 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (133.0ms)
+Completed 200 OK in 634ms (Views: 487.6ms | ActiveRecord: 133.3ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2020-08-17 09:00:02 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wtVz+lINCxb9xG79TTivPd80lGJUO5dqrO9XtVshVyEP6mBz3QWHNlDw15KpfrW0uMgzj7nZzsjnEX/Lug+m8Q==", "user"=>{"email"=>"fair.arthur.iv@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  [1m[36mUser Load (171.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "fair.arthur.iv@gmail.com"], ["LIMIT", 1]]
+  ↳ /Users/ajfair/.gem/ruby/2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/ajfair/.gem/ruby/2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Update (27.2ms)[0m  [1m[33mUPDATE "users" SET "remember_created_at" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["remember_created_at", "2020-08-17 13:00:03.934018"], ["updated_at", "2020-08-17 13:00:03.935734"], ["id", 1]]
+  ↳ /Users/ajfair/.gem/ruby/2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (63.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/ajfair/.gem/ruby/2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 1097ms (ActiveRecord: 263.6ms)
+
+
+Started GET "/" for ::1 at 2020-08-17 09:00:04 -0400
+Processing by HomesController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/ajfair/.gem/ruby/2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 109ms (Views: 80.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/posts.json" for ::1 at 2020-08-17 09:00:05 -0400
+  
+SyntaxError (/Users/ajfair/Documents/GitHub/GameOn/app/controllers/api/v1/posts_controller.rb:25: syntax error, unexpected ':', expecting '}'
+        target: serialized_data(Post.find(pa...
+              ^
+/Users/ajfair/Documents/GitHub/GameOn/app/controllers/api/v1/posts_controller.rb:25: syntax error, unexpected ',', expecting end
+...(params[:id]), PostSerializer),
+...                              ^
+/Users/ajfair/Documents/GitHub/GameOn/app/controllers/api/v1/posts_controller.rb:27: syntax error, unexpected '}', expecting end
+      }
+      ^
+/Users/ajfair/Documents/GitHub/GameOn/app/controllers/api/v1/posts_controller.rb:41: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/api/v1/posts_controller.rb:25: syntax error, unexpected ':', expecting '}'
+app/controllers/api/v1/posts_controller.rb:25: syntax error, unexpected ',', expecting end
+app/controllers/api/v1/posts_controller.rb:27: syntax error, unexpected '}', expecting end
+app/controllers/api/v1/posts_controller.rb:41: syntax error, unexpected end-of-input, expecting end
+Started GET "/" for ::1 at 2020-08-17 09:00:08 -0400
+Processing by HomesController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/ajfair/.gem/ruby/2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 55ms (Views: 49.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/posts.json" for ::1 at 2020-08-17 09:00:10 -0400
+  
+SyntaxError (/Users/ajfair/Documents/GitHub/GameOn/app/controllers/api/v1/posts_controller.rb:25: syntax error, unexpected ':', expecting '}'
+        target: serialized_data(Post.find(pa...
+              ^
+/Users/ajfair/Documents/GitHub/GameOn/app/controllers/api/v1/posts_controller.rb:25: syntax error, unexpected ',', expecting end
+...(params[:id]), PostSerializer),
+...                              ^
+/Users/ajfair/Documents/GitHub/GameOn/app/controllers/api/v1/posts_controller.rb:27: syntax error, unexpected '}', expecting end
+      }
+      ^
+/Users/ajfair/Documents/GitHub/GameOn/app/controllers/api/v1/posts_controller.rb:41: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/api/v1/posts_controller.rb:25: syntax error, unexpected ':', expecting '}'
+app/controllers/api/v1/posts_controller.rb:25: syntax error, unexpected ',', expecting end
+app/controllers/api/v1/posts_controller.rb:27: syntax error, unexpected '}', expecting end
+app/controllers/api/v1/posts_controller.rb:41: syntax error, unexpected end-of-input, expecting end
+Started GET "/" for ::1 at 2020-08-17 09:04:16 -0400
+Processing by HomesController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/ajfair/.gem/ruby/2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 163ms (Views: 104.7ms | ActiveRecord: 11.1ms)
+
+
+Started GET "/api/v1/posts.json" for ::1 at 2020-08-17 09:04:19 -0400
+Processing by Api::V1::PostsController#index as JSON
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/ajfair/.gem/ruby/2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+[active_model_serializers]   [1m[36mPost Load (1.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/posts_controller.rb:5
+[active_model_serializers]   [1m[36mComment Load (37.9ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/v1/posts_controller.rb:5
+[active_model_serializers]   [1m[36mComment Load (0.7ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 4]]
+[active_model_serializers]   ↳ app/controllers/api/v1/posts_controller.rb:5
+[active_model_serializers]   [1m[36mComment Load (0.8ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 5]]
+[active_model_serializers]   ↳ app/controllers/api/v1/posts_controller.rb:5
+[active_model_serializers]   [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/posts_controller.rb:5
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (134.82ms)
+[active_model_serializers]   [1m[36mPost Load (16.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/posts_controller.rb:5
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (24.57ms)
+[active_model_serializers]   [1m[36mCACHE Comment Load (0.0ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/v1/posts_controller.rb:5
+[active_model_serializers]   [1m[36mCACHE Comment Load (0.0ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 5]]
+[active_model_serializers]   ↳ app/controllers/api/v1/posts_controller.rb:5
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (198.65ms)
+Completed 200 OK in 327ms (Views: 188.6ms | ActiveRecord: 77.9ms)
+
+
+Started GET "/" for ::1 at 2020-08-17 09:05:08 -0400
+Processing by HomesController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/ajfair/.gem/ruby/2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 236ms (Views: 202.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/v1/posts.json" for ::1 at 2020-08-17 09:05:11 -0400
+Processing by Api::V1::PostsController#index as JSON
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/ajfair/.gem/ruby/2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+[active_model_serializers]   [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/posts_controller.rb:5
+[active_model_serializers]   [1m[36mComment Load (0.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/v1/posts_controller.rb:5
+[active_model_serializers]   [1m[36mComment Load (0.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 4]]
+[active_model_serializers]   ↳ app/controllers/api/v1/posts_controller.rb:5
+[active_model_serializers]   [1m[36mComment Load (0.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 5]]
+[active_model_serializers]   ↳ app/controllers/api/v1/posts_controller.rb:5
+[active_model_serializers]   [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/posts_controller.rb:5
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (11.95ms)
+[active_model_serializers]   [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/posts_controller.rb:5
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (4.4ms)
+[active_model_serializers]   [1m[36mCACHE Comment Load (0.0ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/v1/posts_controller.rb:5
+[active_model_serializers]   [1m[36mCACHE Comment Load (0.0ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 5]]
+[active_model_serializers]   ↳ app/controllers/api/v1/posts_controller.rb:5
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (24.46ms)
+Completed 200 OK in 29ms (Views: 21.1ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/" for ::1 at 2020-08-17 09:07:23 -0400
+Processing by HomesController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/ajfair/.gem/ruby/2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 161ms (Views: 116.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2020-08-17 09:07:33 -0400
+Processing by HomesController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/ajfair/.gem/ruby/2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 72ms (Views: 66.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/v1/posts.json" for ::1 at 2020-08-17 09:07:35 -0400
+Processing by Api::V1::PostsController#index as JSON
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/ajfair/.gem/ruby/2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+[active_model_serializers]   [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/posts_controller.rb:5
+[active_model_serializers]   [1m[36mComment Load (0.7ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/v1/posts_controller.rb:5
+[active_model_serializers]   [1m[36mComment Load (1.8ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 4]]
+[active_model_serializers]   ↳ app/controllers/api/v1/posts_controller.rb:5
+[active_model_serializers]   [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 5]]
+[active_model_serializers]   ↳ app/controllers/api/v1/posts_controller.rb:5
+[active_model_serializers]   [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/posts_controller.rb:5
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (50.15ms)
+[active_model_serializers]   [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/posts_controller.rb:5
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (4.65ms)
+[active_model_serializers]   [1m[36mCACHE Comment Load (0.0ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/v1/posts_controller.rb:5
+[active_model_serializers]   [1m[36mCACHE Comment Load (0.0ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 5]]
+[active_model_serializers]   ↳ app/controllers/api/v1/posts_controller.rb:5
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (61.65ms)
+Completed 200 OK in 66ms (Views: 57.3ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/" for ::1 at 2020-08-17 09:08:24 -0400
+Processing by HomesController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/ajfair/.gem/ruby/2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 50ms (Views: 45.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2020-08-17 09:08:36 -0400
+Processing by HomesController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/ajfair/.gem/ruby/2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 74ms (Views: 70.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/v1/posts.json" for ::1 at 2020-08-17 09:08:39 -0400
+Processing by Api::V1::PostsController#index as JSON
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/ajfair/.gem/ruby/2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+[active_model_serializers]   [1m[36mPost Load (0.9ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/posts_controller.rb:5
+[active_model_serializers]   [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/v1/posts_controller.rb:5
+[active_model_serializers]   [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 4]]
+[active_model_serializers]   ↳ app/controllers/api/v1/posts_controller.rb:5
+[active_model_serializers]   [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 5]]
+[active_model_serializers]   ↳ app/controllers/api/v1/posts_controller.rb:5
+[active_model_serializers]   [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/posts_controller.rb:5
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (11.65ms)
+[active_model_serializers]   [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/posts_controller.rb:5
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (4.15ms)
+[active_model_serializers]   [1m[36mCACHE Comment Load (0.0ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/v1/posts_controller.rb:5
+[active_model_serializers]   [1m[36mCACHE Comment Load (0.0ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 5]]
+[active_model_serializers]   ↳ app/controllers/api/v1/posts_controller.rb:5
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (21.55ms)
+Completed 200 OK in 26ms (Views: 18.2ms | ActiveRecord: 4.7ms)
+
+

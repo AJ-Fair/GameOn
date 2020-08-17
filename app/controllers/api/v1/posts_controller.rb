@@ -21,7 +21,7 @@ class Api::V1::PostsController < ApplicationController
   end
 
   def show
-    render json {
+    render json: {
         target: serialized_data(Post.find(params[:id]), PostSerializer),
         current: serialized_data(current_user, PostSerializer)
       }

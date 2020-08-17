@@ -31,6 +31,7 @@ const PostShowContainer = props => {
     })
     .then(response => response.json())
     .then(postBody => {
+      debugger
       setPost(postBody)
     })
     .catch(error => console.error(`Error in fetch: ${error.message}`))

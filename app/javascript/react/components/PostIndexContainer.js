@@ -18,12 +18,14 @@ const PostIndexContainer = props => {
     .then(response => response.json())
     .then(postBody => {
       const postsArr = postBody
+      debugger
       setPosts(postsArr)
     })
     .catch(error => console.error(`Error in fetch: ${error.message}`))
   }, [])
 
-  let postTiles = posts.map((post) => {
+  let mapArr = posts.posts
+  let postTiles = mapArr.map((post) => {
     return (
       <PostTile
         key={post.id}
@@ -32,6 +34,7 @@ const PostIndexContainer = props => {
         game={post.game}
         description={post.description}
         datetime={post.datetime}
+        currentUser={posts.current}
       />
     )
   })
