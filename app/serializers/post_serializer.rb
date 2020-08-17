@@ -1,9 +1,5 @@
 class PostSerializer < ActiveModel::Serializer
-  attributes :id, :title, :description, :datetime, :current_user, :game, :comments
-
-  def current_user
-    scope
-  end
+  attributes :id, :title, :description, :datetime, :game, :comments
 
   has_many :comments
 end

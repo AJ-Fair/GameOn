@@ -17,11 +17,21 @@ class Api::V1::PostsController < ApplicationController
   end
 
   def show
-    render json: Post.find(params[:id])
+    render json {
+        target: serialized_data(Post.find(params[:id]), PostSerializer),
+        current: serialized_data(current_user, PostSerializer)
+      }
   end
 
   private
+
   def post_params
     params.require(:post).permit(:title, :game, :description, :datetime)
+  end
+
+  protected
+
+  def serialized_data(data, serializer)
+    ActiveModelSerializers::SerializableResource.new(data, each_serializer: serializer)
   end
 end
