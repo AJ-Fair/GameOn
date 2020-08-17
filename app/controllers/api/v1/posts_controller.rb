@@ -2,12 +2,16 @@ class Api::V1::PostsController < ApplicationController
   protect_from_forgery unless: -> { request.format.json? }
 
   def index
-    render json: Post.all
+    render json: {
+      posts: serialized_data(Post.all, PostSerializer),
+      current: serialized_data(current_user, PostSerializer)
+    }
   end
 
   def create
     new_post = Post.new(post_params)
     new_post.user = current_user
+
     if new_post.save
       render json: new_post
     else

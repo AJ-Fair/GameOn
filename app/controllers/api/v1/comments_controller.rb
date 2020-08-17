@@ -39,6 +39,8 @@ class Api::V1::CommentsController < ApplicationController
     if author_id === current_user.id
       comment.delete
       render json: post
+    else
+      ender json: {error: "You are not authorized to delete this comment!"}
     end
   end
 
