@@ -38,7 +38,6 @@ const PostShowContainer = props => {
     })
     .then(response => response.json())
     .then(postBody => {
-      debugger
       setPost(postBody.target)
       setCurrentUser(postBody.current)
     })
@@ -50,7 +49,7 @@ const PostShowContainer = props => {
 
     let showCommentContainer
 
-    if (post.currentUser !== null) {
+    if (currentUser.id !== null) {
       showCommentContainer =
       <NewCommentContainer
         postId={post.id}
