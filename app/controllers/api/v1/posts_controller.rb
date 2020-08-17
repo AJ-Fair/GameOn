@@ -3,7 +3,7 @@ class Api::V1::PostsController < ApplicationController
 
   def index
     render json: {
-      posts: serialized_data(Post.all, PostSerializer),
+      target: serialized_data(Post.all, PostSerializer),
       current: serialized_data(current_user, PostSerializer)
     }
   end
