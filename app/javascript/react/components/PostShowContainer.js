@@ -81,7 +81,7 @@ const PostShowContainer = props => {
               description={post.description}
               comments={post.comments}
               game={post.game}
-              currentUser={post.current_user_id}
+              currentUser={currentUser.id}
               getPostPageInfo={getPostPageInfo}
             />
             {showCommentContainer}
