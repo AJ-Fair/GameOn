@@ -1,9 +1,4 @@
 {
-<<<<<<< HEAD
-  "application.js": "/packs/application-26d7c2c40b4e381340a6.js",
-  "application.js.map": "/packs/application-26d7c2c40b4e381340a6.js.map"
-=======
-  "application.js": "/packs/application-13cb8514a4f3e6a0083b.js",
-  "application.js.map": "/packs/application-13cb8514a4f3e6a0083b.js.map"
->>>>>>> master
+  "application.js": "/packs/application-3bee1b32fa2ef2783aad.js",
+  "application.js.map": "/packs/application-3bee1b32fa2ef2783aad.js.map"
 }

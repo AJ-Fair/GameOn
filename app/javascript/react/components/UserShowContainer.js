@@ -4,9 +4,10 @@ import {Link} from 'react-router-dom'
 const UserShowContainer = props => {
   const [user, setUser] = useState({
     email: "",
-    profile_photo: {url: ""},
-    posts: [],
+    profile_photo: {url: ''},
+    posts: []
   })
+
 
   useEffect(() => {
     let userId = props.match.params.id
@@ -26,6 +27,7 @@ const UserShowContainer = props => {
         throw(error)
       }
     })
+
     .then(response => response.json())
     .then(parsedData => setUser(parsedData))
     .catch(error => console.error(`Error in fetch: ${error.message}`))
@@ -38,6 +40,21 @@ const UserShowContainer = props => {
       </li>
     )
   })
+
+  let currentUser = user.current_user
+  let profileUser = user.user_id
+  let editProfile
+
+  if (currentUser && currentUser.id === profileUser) {
+    debugger
+    editProfile =
+    <div className='grid-x grid-margin-x'>
+      <div className='button success cell small-3 text-center'>
+        <Link to={`/users/${props.id}/edit`}>Edit Profile</Link>
+      </div>
+    </div>
+  }
+
 
   return (
     <div className="grid-container bg-white">

@@ -39,7 +39,7 @@ const CommentTile = props => {
 
   let editDelete
 
-  if (currentUser && currentUser.id === commentUser) {
+  if (currentUser === commentUser) {
     editDelete =
     <div className="grid-x grid-margin-x">
       <div className='button success cell small-3 text-center'>

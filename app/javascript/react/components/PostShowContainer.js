@@ -13,8 +13,15 @@ const PostShowContainer = props => {
     description: "",
     datetime: null,
     game: "",
-    comments: [],
-    current_user: {},
+    comments: []
+  })
+
+  const [currentUser, setCurrentUser] = useState({
+    key: 0,
+    id: null,
+    email: "",
+    profile_photo: "",
+    posts: []
   })
 
   let getPostPageInfo = () => {
@@ -31,7 +38,8 @@ const PostShowContainer = props => {
     })
     .then(response => response.json())
     .then(postBody => {
-      setPost(postBody)
+      setPost(postBody.target)
+      setCurrentUser(postBody.current)
     })
     .catch(error => console.error(`Error in fetch: ${error.message}`))
   }
@@ -40,18 +48,19 @@ const PostShowContainer = props => {
     getPostPageInfo()}, [])
 
     let showCommentContainer
-    if (post.currentUser) {
-      showCommentContainer = (
-        <div>
-          <h3 className='title bg-white'>Please <a href="/users/sign_in">Log In</a> to Leave a Comment</h3>
-        </div>
-      )
-    } else {
+
+    if (currentUser.id !== null) {
       showCommentContainer =
       <NewCommentContainer
         postId={post.id}
         getPostPageInfo={getPostPageInfo}
       />
+    } else {
+      showCommentContainer = (
+        <div>
+          <h3 className='title bg-white'>Please <a href="/users/sign_in">Log In</a> to Leave a Comment</h3>
+        </div>
+      )
     }
 
   if (post.id === null) {
@@ -72,7 +81,7 @@ const PostShowContainer = props => {
               description={post.description}
               comments={post.comments}
               game={post.game}
-              currentUser={post.current_user}
+              currentUser={currentUser.id}
               getPostPageInfo={getPostPageInfo}
             />
             {showCommentContainer}

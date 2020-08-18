@@ -95,6 +95,7 @@ GEM
     factory_bot (5.2.0)
       activesupport (>= 4.2.0)
     ffi (1.12.2)
+    ffi (1.12.2-x64-mingw32)
     fog-aws (3.6.3)
       fog-core (~> 2.1)
       fog-json (~> 1.1)
@@ -157,8 +158,11 @@ GEM
     nio4r (2.5.2)
     nokogiri (1.10.9)
       mini_portile2 (~> 2.4.0)
+    nokogiri (1.10.9-x64-mingw32)
+      mini_portile2 (~> 2.4.0)
     orm_adapter (0.5.0)
     pg (1.2.3)
+    pg (1.2.3-x64-mingw32)
     pry (0.13.1)
       coderay (~> 1.1)
       method_source (~> 1.0)
@@ -252,6 +256,8 @@ GEM
     tilt (2.0.10)
     tzinfo (1.2.7)
       thread_safe (~> 0.1)
+    tzinfo-data (1.2020.1)
+      tzinfo (>= 1.0.0)
     uglifier (4.2.0)
       execjs (>= 0.3.0, < 3)
     valid_attribute (2.0.0)
@@ -274,6 +280,7 @@ GEM
 
 PLATFORMS
   ruby
+  x64-mingw32
 
 DEPENDENCIES
   active_model_serializers
