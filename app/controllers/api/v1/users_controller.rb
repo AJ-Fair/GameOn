@@ -1,6 +1,11 @@
 class Api::V1::UsersController < ApplicationController
+  protect_from_forgery unless: -> { request.format.json? }
+  
   def index
-    render json: User.all
+    render json: {
+      target: serialized_data(User.all, UserSerializer),
+      current: serialized_data(current_user, UserSerializer),
+    }
   end
 
   def show
