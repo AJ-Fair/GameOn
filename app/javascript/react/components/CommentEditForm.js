@@ -6,7 +6,7 @@ import ErrorList from './ErrorList'
 const CommentEditForm = props => {
   const [comment, setComment] = useState({})
   const [errors, setErrors] = useState({})
-  const [shouldRedirect, setShouldRedirect] = usestate(false)
+  const [shouldRedirect, setShouldRedirect] = useState(false)
 
   useEffect(() => {
     fetch(`/api/v1/comments/${props.match.params.id}/edit`)
