@@ -20,7 +20,6 @@ const PostIndexContainer = props => {
     .then(postBody => {
       const postsArr = postBody.target
       const currentUser = postBody.current
-      debugger
       setPosts(postsArr)
       setCurrent(currentUser)
     })
@@ -29,7 +28,6 @@ const PostIndexContainer = props => {
 
 
   let postTiles = posts.map((post) => {
-    debugger
     return (
       <PostTile
         key={post.id}
