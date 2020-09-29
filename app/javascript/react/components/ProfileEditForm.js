@@ -7,7 +7,9 @@ const ProfileEditForm = props => {
   const [formVals, setFormVals] = useState({
     email: "",
     profile_photo: "",
+
   })
+  const userId = props.id
   const [errors, setErrors] = useState({})
   const [shouldRedirect, setShouldRedirect] = useState(false)
 
@@ -59,9 +61,12 @@ const ProfileEditForm = props => {
         <div className="cell small-12 medium-10">
           <h2 className="text-black">Edit your profile</h2>
           <form onSubmit={handleSubmit}>
+            <label className='text-black' htmlFor="email">Email:</label>
           </form>
         </div>
       </div>
     </div>
   )
 }
+
+export default ProfileEditForm
