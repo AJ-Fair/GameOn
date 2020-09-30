@@ -9,7 +9,7 @@ const UserShowContainer = props => {
     id: null
   })
 
-  const [current, setCurrent] = useState({
+  const [currentUser, setCurrentUser] = useState({
     id: null,
     email: "",
     profile_photo: "",
@@ -39,7 +39,7 @@ const UserShowContainer = props => {
     .then(response => response.json())
     .then(parsedData => {
       setUser(parsedData.target)
-      setCurrent(parsedData.current)
+      setCurrentUser(parsedData.current)
     })
     .catch(error => console.error(`Error in fetch: ${error.message}`))
   }, [])
@@ -54,16 +54,14 @@ const UserShowContainer = props => {
 
   let editProfile
 
-  if (current.id === user.id) {
-    debugger
+  if (currentUser.id === user.id) {
     editProfile =
     <div className='grid-x grid-margin-x'>
-      <div className='button success cell small-3 text-center'>
+      <div className='button success cell small-12 text-center'>
         <Link to={`/users/${user.id}/edit`}>Edit Profile</Link>
       </div>
     </div>
   }
-
 
   return (
     <div className="grid-container bg-white">
@@ -79,6 +77,9 @@ const UserShowContainer = props => {
           <ul>
             {postLibrary}
           </ul>
+        </div>
+        <div>
+          {editProfile}
         </div>
       </div>
     </div>

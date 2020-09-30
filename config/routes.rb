@@ -20,4 +20,5 @@ Rails.application.routes.draw do
   get '/posts/:id/comments', to: 'homes#index'
   get '/comments/:id/edit', to: 'homes#index'
   get '/users', to: 'homes#index'
+  get '/users/:id/edit', to: 'homes#index'
 end
