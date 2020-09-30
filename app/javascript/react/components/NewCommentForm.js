@@ -19,7 +19,6 @@ const NewCommentForm = props => {
     }
 
   const formCheck = event => {
-    debugger
     event.preventDefault()
     if (validateForm()) {
       handleFormSubmit(comment)

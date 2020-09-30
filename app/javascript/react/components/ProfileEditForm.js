@@ -4,10 +4,9 @@ import {Redirect} from 'react-router-dom'
 import ErrorList from './ErrorList'
 
 const ProfileEditForm = props => {
-  const [formVals, setFormVals] = useState({
+  const [user, setUser] = useState({
     email: "",
     profile_photo: "",
-
   })
   const userId = props.id
   const [errors, setErrors] = useState({})
@@ -62,6 +61,21 @@ const ProfileEditForm = props => {
           <h2 className="text-black">Edit your profile</h2>
           <form onSubmit={handleSubmit}>
             <label className='text-black' htmlFor="email">Email:</label>
+            <input
+              type="text"
+              name="email"
+              id="email"
+              onChange={handleChange}
+              value={user.email}
+              />
+            <label className='text-black' htmlFor="profile_photo">Profile Photo:</label>
+            <input
+              type="file"
+              name="profile_photo"
+              id="profile_photo"
+              onChange={handleChange}
+              value={user.profile_photo}
+              />
           </form>
         </div>
       </div>
