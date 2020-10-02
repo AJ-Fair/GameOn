@@ -20,7 +20,7 @@ class Api::V1::UsersController < ApplicationController
   end
 
   def update
-    user = user.find(params[:id])
+    user = User.find(params[:id])
     profile_user = user.id
     if profile_user === current_user.id
       render json: user

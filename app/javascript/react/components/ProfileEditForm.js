@@ -9,30 +9,8 @@ const ProfileEditForm = props => {
     profile_photo: "",
     username: "",
   })
-  const userId = props.id
   const [errors, setErrors] = useState({})
   const [shouldRedirect, setShouldRedirect] = useState(false)
-
-  useEffect(() => {
-    fetch(`/api/v1/user/${props.match.params.id}/edit`)
-    .then(response => {
-      if(response.ok) {
-        return response
-      } else {
-        let errorMessage = `${response.status} (${response.statusText})`,
-        error = new Error(errorMessage)
-        throw error
-      }
-    })
-    .then(response => response.json())
-    .then(parsedData => {
-      if (parsedData.errors){
-      setErrors(parsedData.errors)
-    }
-      setUser(parsedData)
-    })
-    .catch(error => console.error(`Error in fetch: ${error.message}`))
-  }, [])
 
   const handleSubmit = event => {
     event.preventDefault()
@@ -66,7 +44,6 @@ const ProfileEditForm = props => {
   }
 
   const handleChange = event => {
-    debugger
     setUser({
       ...user,
       [event.currentTarget.id]: event.currentTarget.value
