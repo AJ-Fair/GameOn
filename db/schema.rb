@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_21_141610) do
+ActiveRecord::Schema.define(version: 2020_10_02_144333) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -62,6 +62,7 @@ ActiveRecord::Schema.define(version: 2020_05_21_141610) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "profile_photo", default: "https://i.kym-cdn.com/entries/icons/original/000/011/743/metal-gear-alert.jpg"
+    t.string "username"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

@@ -7,13 +7,15 @@ const UserShowContainer = props => {
     profile_photo: {url: ''},
     posts: [],
     id: null
+    username: ""
   })
 
   const [currentUser, setCurrentUser] = useState({
     id: null,
     email: "",
     profile_photo: "",
-    posts: []
+    posts: [],
+    username: ""
   })
 
 
@@ -70,7 +72,8 @@ const UserShowContainer = props => {
           <img className="user-show-profile-photo" src={user.profile_photo} />
         </div>
         <div className="cell auto">
-          <h2>{user.email}</h2>
+          <h2>{user.username}</h2>
+          <h4>{user.email}</h4>
         </div>
         <div className="cell small-12">
           <h2>Game Postings</h2>

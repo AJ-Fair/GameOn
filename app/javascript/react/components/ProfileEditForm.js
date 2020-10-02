@@ -7,6 +7,7 @@ const ProfileEditForm = props => {
   const [user, setUser] = useState({
     email: "",
     profile_photo: "",
+    username: "",
   })
   const userId = props.id
   const [errors, setErrors] = useState({})
@@ -75,6 +76,14 @@ const ProfileEditForm = props => {
               id="profile_photo"
               onChange={handleChange}
               value={user.profile_photo}
+              />
+            <label className='text-black' htmlFor="username">Username:</label>
+            <input
+              type="text"
+              name="username"
+              id="username"
+              onChange={handleChange}
+              value={user.username}
               />
           </form>
         </div>
