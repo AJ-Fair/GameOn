@@ -1,6 +1,6 @@
 class Api::V1::UsersController < ApplicationController
   protect_from_forgery unless: -> { request.format.json? }
-  
+
   def index
     render json: {
       target: serialized_data(User.all, UserSerializer),
@@ -17,6 +17,16 @@ class Api::V1::UsersController < ApplicationController
 
   def edit
     render json: User.find(params[:id])
+  end
+
+  def update
+    user = user.find(params[:id])
+    profile_user = user.id
+    if profile_user === current_user.id
+      render json: user
+    else
+      render json: { errors: updated_user.errors.full_messages.to_sentence }, status: :unprocessable_entity
+    end
   end
 
   protected

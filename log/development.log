@@ -15762,3 +15762,23 @@ Processing by Api::V1::UsersController#show as HTML
 Completed 200 OK in 37ms (Views: 24.7ms | ActiveRecord: 8.4ms)
 
 
+Started GET "/users/1/edit" for ::1 at 2020-10-02 12:22:31 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/ajfair/.gem/ruby/2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 424ms (Views: 408.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2020-10-02 13:21:47 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/ajfair/.gem/ruby/2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 228ms (Views: 95.5ms | ActiveRecord: 82.7ms)
+
+
