@@ -18,7 +18,7 @@ const ProfileEditForm = props => {
     fetch(`/api/v1/users/${props.match.params.id}`, {
       credentials: "same-origin",
       method: "PATCH",
-      body: JSON.stringify(formVals),
+      body: JSON.stringify(user),
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json"
@@ -45,8 +45,9 @@ const ProfileEditForm = props => {
   }
 
   const handleChange = event => {
-    setFormVals({
-      ...formVals,
+    debugger
+    setUser({
+      ...user,
       [event.currentTarget.id]: event.currentTarget.value
     })
   };
@@ -85,6 +86,7 @@ const ProfileEditForm = props => {
               onChange={handleChange}
               value={user.username}
               />
+            <input className='button' type='submit' />
           </form>
         </div>
       </div>
