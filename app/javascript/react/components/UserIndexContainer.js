@@ -33,6 +33,7 @@ let userTiles = users.map((user) => {
       id={user.id}
       email={user.email}
       profilePhoto={user.profile_photo}
+      username={user.username}
     />
   )
 })
