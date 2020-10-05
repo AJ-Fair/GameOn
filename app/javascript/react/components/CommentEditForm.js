@@ -75,7 +75,7 @@ const CommentEditForm = props => {
     <div className="grid-container">
       <div className='grid-x grid-margin-x align-center'>
         <div className="cell small-12 medium-10">
-          <h4>Edit your Review!</h4>
+          <h4>Edit your Comment!</h4>
           <form onSubmit={handleSubmit}>
             <ErrorList
               errors={errors}
@@ -95,7 +95,7 @@ const CommentEditForm = props => {
               name="body"
               id="body"
               onChange={handleChange}
-              value={review.body}
+              value={comment.body}
             />
 
             <input className="button" type="submit" />
