@@ -9,7 +9,6 @@ import UserShowContainer from './UserShowContainer'
 import NewCommentContainer from './NewCommentContainer'
 import UserIndexContainer from './UserIndexContainer'
 import CommentEditForm from './CommentEditForm'
-import ProfileEditForm from './ProfileEditForm'
 
 export const App = (props) => {
   return (
@@ -23,7 +22,7 @@ export const App = (props) => {
         <Route exact path='/posts/:id/comments/new' component={NewCommentContainer} />
         <Route exact path='/comments/:id/edit' component={CommentEditForm} />
         <Route exact path='/users' component={UserIndexContainer} />
-        <Route exact path='/users/:id/edit' component={ProfileEditForm} />
+        <Route exact path='/users/edit' />
       </Switch>
     </BrowserRouter>
   )

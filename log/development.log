@@ -16378,3 +16378,404 @@ Processing by HomesController#index as HTML
 Completed 200 OK in 166ms (Views: 161.6ms | ActiveRecord: 0.6ms)
 
 
+Started GET "/users/edit" for ::1 at 2020-10-05 10:02:34 -0400
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/ajfair/.gem/ruby/2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (0.9ms)
+  Rendered devise/registrations/edit.html.erb within layouts/application (50.5ms)
+Completed 200 OK in 424ms (Views: 420.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/1" for ::1 at 2020-10-05 10:03:50 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/ajfair/.gem/ruby/2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 231ms (Views: 186.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/[object%20Object]" for ::1 at 2020-10-05 10:03:51 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"id"=>"[object Object]"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/ajfair/.gem/ruby/2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 71ms (Views: 66.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2020-10-05 10:03:51 -0400
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"1", "user"=>{}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/ajfair/.gem/ruby/2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:13
+[active_model_serializers]   [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:12
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (5.16ms)
+[active_model_serializers]   [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:12
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (3.46ms)
+[active_model_serializers]   [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:12
+[active_model_serializers]   [1m[36mComment Load (0.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 5]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:12
+[active_model_serializers]   [1m[36mCACHE Comment Load (0.0ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:12
+[active_model_serializers]   [1m[36mCACHE Comment Load (0.0ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 5]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:12
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (68.99ms)
+Completed 200 OK in 143ms (Views: 67.9ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/users/[object%20Object]" for ::1 at 2020-10-05 10:03:52 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"id"=>"[object Object]"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/ajfair/.gem/ruby/2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 65ms (Views: 61.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/1" for ::1 at 2020-10-05 10:05:15 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/ajfair/.gem/ruby/2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 46ms (Views: 41.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/1" for ::1 at 2020-10-05 10:05:45 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/ajfair/.gem/ruby/2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 71ms (Views: 67.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/[object%20Object]" for ::1 at 2020-10-05 10:05:46 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"id"=>"[object Object]"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/ajfair/.gem/ruby/2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 118ms (Views: 113.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2020-10-05 10:05:47 -0400
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"1", "user"=>{}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/ajfair/.gem/ruby/2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:13
+[active_model_serializers]   [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:12
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (4.46ms)
+[active_model_serializers]   [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:12
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (63.42ms)
+[active_model_serializers]   [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:12
+[active_model_serializers]   [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 5]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:12
+[active_model_serializers]   [1m[36mCACHE Comment Load (0.0ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:12
+[active_model_serializers]   [1m[36mCACHE Comment Load (0.0ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 5]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:12
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (127.05ms)
+Completed 200 OK in 133ms (Views: 126.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/users/[object%20Object]" for ::1 at 2020-10-05 10:05:47 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"id"=>"[object Object]"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/ajfair/.gem/ruby/2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 163ms (Views: 158.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/edit" for ::1 at 2020-10-05 10:06:02 -0400
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/ajfair/.gem/ruby/2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (0.8ms)
+  Rendered devise/registrations/edit.html.erb within layouts/application (54.6ms)
+Completed 200 OK in 132ms (Views: 128.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/1" for ::1 at 2020-10-05 10:06:18 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/ajfair/.gem/ruby/2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 122ms (Views: 43.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/[object%20Object]" for ::1 at 2020-10-05 10:06:20 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"id"=>"[object Object]"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/ajfair/.gem/ruby/2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.6ms)
+Started GET "/api/v1/users/1" for ::1 at 2020-10-05 10:06:20 -0400
+Completed 200 OK in 206ms (Views: 202.3ms | ActiveRecord: 0.5ms)
+
+
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"1", "user"=>{}}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/ajfair/.gem/ruby/2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:13
+[active_model_serializers]   [1m[36mPost Load (1.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:12
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (5.44ms)
+[active_model_serializers]   [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:12
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (74.01ms)
+[active_model_serializers]   [1m[36mComment Load (1.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:12
+[active_model_serializers]   [1m[36mComment Load (0.8ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 5]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:12
+[active_model_serializers]   [1m[36mCACHE Comment Load (0.0ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:12
+[active_model_serializers]   [1m[36mCACHE Comment Load (0.0ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 5]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:12
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (166.81ms)
+Completed 200 OK in 175ms (Views: 164.5ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/users/[object%20Object]" for ::1 at 2020-10-05 10:06:20 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"id"=>"[object Object]"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/ajfair/.gem/ruby/2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 84ms (Views: 78.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users/edit" for ::1 at 2020-10-05 10:06:36 -0400
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/ajfair/.gem/ruby/2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (1.1ms)
+  Rendered devise/registrations/edit.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 64ms (Views: 58.5ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/users/edit" for ::1 at 2020-10-05 10:07:19 -0400
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/ajfair/.gem/ruby/2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (1.1ms)
+  Rendered devise/registrations/edit.html.erb within layouts/application (51.0ms)
+Completed 200 OK in 195ms (Views: 191.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/1" for ::1 at 2020-10-05 10:07:48 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/ajfair/.gem/ruby/2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 88ms (Views: 44.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/[object%20Object]" for ::1 at 2020-10-05 10:07:49 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"id"=>"[object Object]"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/ajfair/.gem/ruby/2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 76ms (Views: 72.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2020-10-05 10:07:49 -0400
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"1", "user"=>{}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/ajfair/.gem/ruby/2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:13
+[active_model_serializers]   [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:12
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (4.49ms)
+[active_model_serializers]   [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:12
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (3.58ms)
+[active_model_serializers]   [1m[36mComment Load (0.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:12
+[active_model_serializers]   [1m[36mComment Load (0.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 5]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:12
+[active_model_serializers]   [1m[36mCACHE Comment Load (0.0ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:12
+[active_model_serializers]   [1m[36mCACHE Comment Load (0.0ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 5]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:12
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (47.75ms)
+Completed 200 OK in 54ms (Views: 46.6ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/users/[object%20Object]" for ::1 at 2020-10-05 10:07:50 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"id"=>"[object Object]"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/ajfair/.gem/ruby/2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 157ms (Views: 153.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/1" for ::1 at 2020-10-05 10:08:34 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/ajfair/.gem/ruby/2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 157ms (Views: 113.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/[object%20Object]" for ::1 at 2020-10-05 10:08:35 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"id"=>"[object Object]"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/ajfair/.gem/ruby/2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 91ms (Views: 87.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2020-10-05 10:08:35 -0400
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"1", "user"=>{}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/ajfair/.gem/ruby/2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:13
+[active_model_serializers]   [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:12
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (5.61ms)
+[active_model_serializers]   [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:12
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (3.57ms)
+[active_model_serializers]   [1m[36mComment Load (1.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:12
+[active_model_serializers]   [1m[36mComment Load (0.9ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 5]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:12
+[active_model_serializers]   [1m[36mCACHE Comment Load (0.0ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:12
+[active_model_serializers]   [1m[36mCACHE Comment Load (0.0ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 5]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:12
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (317.4ms)
+Completed 200 OK in 443ms (Views: 434.6ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/users/[object%20Object]" for ::1 at 2020-10-05 10:08:36 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"id"=>"[object Object]"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/ajfair/.gem/ruby/2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 62ms (Views: 58.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/edit" for ::1 at 2020-10-05 10:08:45 -0400
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/ajfair/.gem/ruby/2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (1.0ms)
+  Rendered devise/registrations/edit.html.erb within layouts/application (75.8ms)
+Completed 200 OK in 157ms (Views: 154.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/edit" for ::1 at 2020-10-05 10:10:23 -0400
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/ajfair/.gem/ruby/2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (1.0ms)
+  Rendered devise/registrations/edit.html.erb within layouts/application (494.3ms)
+Completed 500 Internal Server Error in 537ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `username_field' for #<ActionView::Helpers::FormBuilder:0x00007fb6fbc54d10>):
+    14: 
+    15:   <div class="field">
+    16:     <%= f.label :username%><br />
+    17:     <%= f.username_field :username, autocomplete: "username" %>
+    18:   </div>
+    19:   
+    20:   <div class="field">
+  
+app/views/devise/registrations/edit.html.erb:17:in `block in _app_views_devise_registrations_edit_html_erb___1111867519304290268_70211942347720'
+app/views/devise/registrations/edit.html.erb:3:in `_app_views_devise_registrations_edit_html_erb___1111867519304290268_70211942347720'
+Started GET "/users/edit" for ::1 at 2020-10-05 10:12:56 -0400
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/ajfair/.gem/ruby/2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (0.9ms)
+  Rendered devise/registrations/edit.html.erb within layouts/application (626.1ms)
+Completed 500 Internal Server Error in 733ms (ActiveRecord: 70.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `username_field' for #<ActionView::Helpers::FormBuilder:0x00007fb6f355c948>):
+    14: 
+    15:   <div class="field">
+    16:     <%= f.label :username%><br />
+    17:     <%= f.username_field :username, autocomplete: "username" %>
+    18:   </div>
+    19:   
+    20:   <div class="field">
+  
+app/views/devise/registrations/edit.html.erb:17:in `block in _app_views_devise_registrations_edit_html_erb___1111867519304290268_70211871569540'
+app/views/devise/registrations/edit.html.erb:3:in `_app_views_devise_registrations_edit_html_erb___1111867519304290268_70211871569540'
+Started GET "/users/edit" for ::1 at 2020-10-05 10:14:39 -0400
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/ajfair/.gem/ruby/2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (0.8ms)
+  Rendered devise/registrations/edit.html.erb within layouts/application (410.3ms)
+Completed 500 Internal Server Error in 436ms (ActiveRecord: 9.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `username_field' for #<ActionView::Helpers::FormBuilder:0x00007fb6f357cdb0>):
+    14: 
+    15:   <div class="field">
+    16:     <%= f.label :username%><br />
+    17:     <%= f.username_field :username, autocomplete: "username" %>
+    18:   </div>
+    19:   
+    20:   <div class="field">
+  
+app/views/devise/registrations/edit.html.erb:17:in `block in _app_views_devise_registrations_edit_html_erb___1111867519304290268_70211871637000'
+app/views/devise/registrations/edit.html.erb:3:in `_app_views_devise_registrations_edit_html_erb___1111867519304290268_70211871637000'
