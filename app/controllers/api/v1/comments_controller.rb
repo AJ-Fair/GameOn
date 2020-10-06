@@ -25,7 +25,7 @@ class Api::V1::CommentsController < ApplicationController
     comment = Comment.find(params[:id])
     author_id = comment.user_id
     if author_id === current_user.id
-      render json: comment
+      comment.update(comment_params)
     else
       render json: { errors: updated_comment.errors.full_messages.to_sentence }, status: :unprocessable_entity
     end
@@ -48,5 +48,9 @@ class Api::V1::CommentsController < ApplicationController
 
   def comment_params
     params.require(:comment).permit(:ign, :body)
+  end
+
+  def serialized_data(data, serializer)
+    ActiveModelSerializers::SerializableResource.new(data, each_serializer: serializer)
   end
 end

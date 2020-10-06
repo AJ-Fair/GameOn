@@ -23,6 +23,7 @@ class Api::V1::UsersController < ApplicationController
     user = User.find(params[:id])
     profile_user = user.id
     if profile_user === current_user.id
+      @user = user.update(user_params)
       render json: user
     else
       render json: { errors: updated_user.errors.full_messages.to_sentence }, status: :unprocessable_entity
@@ -30,6 +31,9 @@ class Api::V1::UsersController < ApplicationController
   end
 
   protected
+  def user_params
+    params.require(:user).permit(:username, :email, :profile_photo)
+  end
 
   def serialized_data(data, serializer)
     ActiveModelSerializers::SerializableResource.new(data, each_serializer: serializer)

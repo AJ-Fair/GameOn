@@ -60,7 +60,7 @@ const UserShowContainer = props => {
     editProfile =
     <div className='grid-x grid-margin-x'>
       <div className='button success cell small-12 text-center'>
-        <Link to={`/users/edit`}>Edit Profile</Link>
+        <Link to={`/users/${user.id}/edit`}>Edit Profile</Link>
       </div>
     </div>
   }

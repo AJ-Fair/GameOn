@@ -44,6 +44,7 @@ const ProfileEditForm = props => {
   }
 
   const handleChange = event => {
+    event.preventDefault()
     setUser({
       ...user,
       [event.currentTarget.id]: event.currentTarget.value
