@@ -23,7 +23,7 @@ class Api::V1::UsersController < ApplicationController
     user = User.find(params[:id])
     profile_user = user.id
     if profile_user === current_user.id
-      @user = user.update(user_params)
+      user.update(user_params)
       render json: user
     else
       render json: { errors: updated_user.errors.full_messages.to_sentence }, status: :unprocessable_entity
