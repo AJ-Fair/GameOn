@@ -23,10 +23,14 @@ class Api::V1::UsersController < ApplicationController
     user = User.find(params[:id])
     profile_user = user.id
     if profile_user === current_user.id
-      user.update(user_params)
-      render json: user
+      user.update_attributes(user_params)
+      if user.save
+        render json: user
+      else
+        render json: { errors: user.errors.full_messages.to_sentence }, status: :unprocessable_entity
+      end
     else
-      render json: { errors: updated_user.errors.full_messages.to_sentence }, status: :unprocessable_entity
+      render json: { error: "You are not authorized to edit this profile!" }
     end
   end
 

@@ -18025,3 +18025,1039 @@ Processing by HomesController#index as HTML
 Completed 200 OK in 49ms (Views: 44.9ms | ActiveRecord: 0.7ms)
 
 
+Started GET "/users/1" for ::1 at 2020-10-06 11:22:05 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  â†³ /Users/ajfair/.gem/ruby/2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 407ms (Views: 366.0ms | ActiveRecord: 12.8ms)
+
+
+Started GET "/users/[object%20Object]" for ::1 at 2020-10-06 11:22:07 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"id"=>"[object Object]"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  â†³ /Users/ajfair/.gem/ruby/2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 61ms (Views: 56.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2020-10-06 11:22:09 -0400
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"1", "user"=>{}}
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  â†³ /Users/ajfair/.gem/ruby/2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  â†³ app/controllers/api/v1/users_controller.rb:13
+[active_model_serializers]   [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   â†³ app/controllers/api/v1/users_controller.rb:12
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (116.03ms)
+[active_model_serializers]   [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   â†³ app/controllers/api/v1/users_controller.rb:12
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (2.15ms)
+[active_model_serializers]   [1m[36mComment Load (1.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 3]]
+[active_model_serializers]   â†³ app/controllers/api/v1/users_controller.rb:12
+[active_model_serializers]   [1m[36mComment Load (0.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 5]]
+[active_model_serializers]   â†³ app/controllers/api/v1/users_controller.rb:12
+[active_model_serializers]   [1m[36mCACHE Comment Load (0.0ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 3]]
+[active_model_serializers]   â†³ app/controllers/api/v1/users_controller.rb:12
+[active_model_serializers]   [1m[36mCACHE Comment Load (0.0ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 5]]
+[active_model_serializers]   â†³ app/controllers/api/v1/users_controller.rb:12
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (146.29ms)
+Completed 200 OK in 173ms (Views: 135.5ms | ActiveRecord: 21.3ms)
+
+
+Started GET "/users/[object%20Object]" for ::1 at 2020-10-06 11:22:09 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"id"=>"[object Object]"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  â†³ /Users/ajfair/.gem/ruby/2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 45ms (Views: 42.4ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/api/v1/users/1" for ::1 at 2020-10-06 12:01:29 -0400
+  
+SyntaxError (/Users/ajfair/Documents/GitHub/GameOn/app/controllers/api/v1/users_controller.rb:30: syntax error, unexpected else, expecting end
+    else
+    ^~~~
+/Users/ajfair/Documents/GitHub/GameOn/app/controllers/api/v1/users_controller.rb:43: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/api/v1/users_controller.rb:30: syntax error, unexpected else, expecting end
+app/controllers/api/v1/users_controller.rb:43: syntax error, unexpected end-of-input, expecting end
+Started PATCH "/api/v1/users/1" for ::1 at 2020-10-06 12:02:30 -0400
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"email"=>"thesilentsovereign@gmail.com", "profile_photo"=>"C:\\fakepath\\mgs alert.jpg", "username"=>"EmptyE", "id"=>"1", "user"=>{"email"=>"thesilentsovereign@gmail.com", "profile_photo"=>"C:\\fakepath\\mgs alert.jpg", "username"=>"EmptyE"}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  â†³ /Users/ajfair/.gem/ruby/2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  â†³ app/controllers/api/v1/users_controller.rb:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  â†³ app/controllers/api/v1/users_controller.rb:26
+  [1m[36mUser Exists (1.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "thesilentsovereign@gmail.com"], ["id", 1], ["LIMIT", 1]]
+  â†³ app/controllers/api/v1/users_controller.rb:26
+  [1m[36mCACHE User Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "thesilentsovereign@gmail.com"], ["id", 1], ["LIMIT", 1]]
+  â†³ app/controllers/api/v1/users_controller.rb:26
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  â†³ app/controllers/api/v1/users_controller.rb:26
+Completed 500 Internal Server Error in 292ms (ActiveRecord: 16.5ms)
+
+
+  
+NameError (undefined local variable or method `updated_user' for #<Api::V1::UsersController:0x00007ffde1e1f7a8>):
+  
+app/controllers/api/v1/users_controller.rb:29:in `update'
+Started PATCH "/api/v1/users/1" for ::1 at 2020-10-06 12:02:35 -0400
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"email"=>"thesilentsovereign@gmail.com", "profile_photo"=>"C:\\fakepath\\mgs alert.jpg", "username"=>"EmptyE", "id"=>"1", "user"=>{"email"=>"thesilentsovereign@gmail.com", "profile_photo"=>"C:\\fakepath\\mgs alert.jpg", "username"=>"EmptyE"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  â†³ /Users/ajfair/.gem/ruby/2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  â†³ app/controllers/api/v1/users_controller.rb:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  â†³ app/controllers/api/v1/users_controller.rb:26
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "thesilentsovereign@gmail.com"], ["id", 1], ["LIMIT", 1]]
+  â†³ app/controllers/api/v1/users_controller.rb:26
+  [1m[36mCACHE User Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "thesilentsovereign@gmail.com"], ["id", 1], ["LIMIT", 1]]
+  â†³ app/controllers/api/v1/users_controller.rb:26
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  â†³ app/controllers/api/v1/users_controller.rb:26
+Completed 500 Internal Server Error in 319ms (ActiveRecord: 2.1ms)
+
+
+  
+NameError (undefined local variable or method `updated_user' for #<Api::V1::UsersController:0x00007ffde192c318>):
+  
+app/controllers/api/v1/users_controller.rb:29:in `update'
+Started PATCH "/api/v1/users/1" for ::1 at 2020-10-06 12:04:33 -0400
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"email"=>"thesilentsovereign@gmail.com", "profile_photo"=>"C:\\fakepath\\mgs alert.jpg", "username"=>"EmptyE", "id"=>"1", "user"=>{"email"=>"thesilentsovereign@gmail.com", "profile_photo"=>"C:\\fakepath\\mgs alert.jpg", "username"=>"EmptyE"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  â†³ /Users/ajfair/.gem/ruby/2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  â†³ app/controllers/api/v1/users_controller.rb:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  â†³ app/controllers/api/v1/users_controller.rb:26
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "thesilentsovereign@gmail.com"], ["id", 1], ["LIMIT", 1]]
+  â†³ app/controllers/api/v1/users_controller.rb:26
+  [1m[36mCACHE User Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "thesilentsovereign@gmail.com"], ["id", 1], ["LIMIT", 1]]
+  â†³ app/controllers/api/v1/users_controller.rb:26
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  â†³ app/controllers/api/v1/users_controller.rb:26
+Completed 500 Internal Server Error in 46ms (ActiveRecord: 10.5ms)
+
+
+  
+NoMethodError (undefined method `errors' for false:FalseClass):
+  
+app/controllers/api/v1/users_controller.rb:30:in `update'
+Started PATCH "/api/v1/users/1" for ::1 at 2020-10-06 12:05:12 -0400
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"email"=>"thesilentsovereign@gmail.com", "profile_photo"=>"C:\\fakepath\\mgs alert.jpg", "username"=>"EmptyE", "id"=>"1", "user"=>{"email"=>"thesilentsovereign@gmail.com", "profile_photo"=>"C:\\fakepath\\mgs alert.jpg", "username"=>"EmptyE"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  â†³ /Users/ajfair/.gem/ruby/2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  â†³ app/controllers/api/v1/users_controller.rb:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  â†³ app/controllers/api/v1/users_controller.rb:26
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "thesilentsovereign@gmail.com"], ["id", 1], ["LIMIT", 1]]
+  â†³ app/controllers/api/v1/users_controller.rb:26
+  [1m[36mCACHE User Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "thesilentsovereign@gmail.com"], ["id", 1], ["LIMIT", 1]]
+  â†³ app/controllers/api/v1/users_controller.rb:26
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  â†³ app/controllers/api/v1/users_controller.rb:26
+Completed 500 Internal Server Error in 104ms (ActiveRecord: 11.1ms)
+
+
+  
+NoMethodError (undefined method `errors' for false:FalseClass):
+  
+app/controllers/api/v1/users_controller.rb:30:in `update'
+Started PATCH "/api/v1/users/1" for ::1 at 2020-10-06 12:05:40 -0400
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"email"=>"thesilentsovereign@gmail.com", "profile_photo"=>"C:\\fakepath\\mgs alert.jpg", "username"=>"EmptyE", "id"=>"1", "user"=>{"email"=>"thesilentsovereign@gmail.com", "profile_photo"=>"C:\\fakepath\\mgs alert.jpg", "username"=>"EmptyE"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  â†³ /Users/ajfair/.gem/ruby/2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  â†³ app/controllers/api/v1/users_controller.rb:23
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  â†³ app/controllers/api/v1/users_controller.rb:26
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "thesilentsovereign@gmail.com"], ["id", 1], ["LIMIT", 1]]
+  â†³ app/controllers/api/v1/users_controller.rb:26
+  [1m[36mCACHE User Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "thesilentsovereign@gmail.com"], ["id", 1], ["LIMIT", 1]]
+  â†³ app/controllers/api/v1/users_controller.rb:26
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  â†³ app/controllers/api/v1/users_controller.rb:26
+Completed 500 Internal Server Error in 43ms (ActiveRecord: 12.1ms)
+
+
+  
+NoMethodError (undefined method `error' for false:FalseClass):
+  
+app/controllers/api/v1/users_controller.rb:30:in `update'
+Started PATCH "/api/v1/users/1" for ::1 at 2020-10-06 12:07:06 -0400
+  
+SyntaxError (/Users/ajfair/Documents/GitHub/GameOn/app/controllers/api/v1/users_controller.rb:30: syntax error, unexpected else, expecting end
+    else
+    ^~~~
+/Users/ajfair/Documents/GitHub/GameOn/app/controllers/api/v1/users_controller.rb:43: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/api/v1/users_controller.rb:30: syntax error, unexpected else, expecting end
+app/controllers/api/v1/users_controller.rb:43: syntax error, unexpected end-of-input, expecting end
+Started PATCH "/api/v1/users/1" for ::1 at 2020-10-06 12:07:26 -0400
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"email"=>"thesilentsovereign@gmail.com", "profile_photo"=>"C:\\fakepath\\mgs alert.jpg", "username"=>"EmptyE", "id"=>"1", "user"=>{"email"=>"thesilentsovereign@gmail.com", "profile_photo"=>"C:\\fakepath\\mgs alert.jpg", "username"=>"EmptyE"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  â†³ /Users/ajfair/.gem/ruby/2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  â†³ app/controllers/api/v1/users_controller.rb:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  â†³ app/controllers/api/v1/users_controller.rb:26
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "thesilentsovereign@gmail.com"], ["id", 1], ["LIMIT", 1]]
+  â†³ app/controllers/api/v1/users_controller.rb:26
+  [1m[36mCACHE User Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "thesilentsovereign@gmail.com"], ["id", 1], ["LIMIT", 1]]
+  â†³ app/controllers/api/v1/users_controller.rb:26
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  â†³ app/controllers/api/v1/users_controller.rb:26
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Completed 422 Unprocessable Entity in 54ms (Views: 8.0ms | ActiveRecord: 9.9ms)
+
+
+Started PATCH "/api/v1/users/1" for ::1 at 2020-10-06 12:07:29 -0400
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"email"=>"thesilentsovereign@gmail.com", "profile_photo"=>"C:\\fakepath\\mgs alert.jpg", "username"=>"EmptyE", "id"=>"1", "user"=>{"email"=>"thesilentsovereign@gmail.com", "profile_photo"=>"C:\\fakepath\\mgs alert.jpg", "username"=>"EmptyE"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  â†³ /Users/ajfair/.gem/ruby/2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  â†³ app/controllers/api/v1/users_controller.rb:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  â†³ app/controllers/api/v1/users_controller.rb:26
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "thesilentsovereign@gmail.com"], ["id", 1], ["LIMIT", 1]]
+  â†³ app/controllers/api/v1/users_controller.rb:26
+  [1m[36mCACHE User Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "thesilentsovereign@gmail.com"], ["id", 1], ["LIMIT", 1]]
+  â†³ app/controllers/api/v1/users_controller.rb:26
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  â†³ app/controllers/api/v1/users_controller.rb:26
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Completed 422 Unprocessable Entity in 10ms (Views: 0.5ms | ActiveRecord: 1.8ms)
+
+
+Started PATCH "/api/v1/users/1" for ::1 at 2020-10-06 12:08:26 -0400
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"email"=>"fair.arthur.iv@gmail.com", "profile_photo"=>"C:\\fakepath\\mgs alert.jpg", "username"=>"EmptyE", "id"=>"1", "user"=>{"email"=>"fair.arthur.iv@gmail.com", "profile_photo"=>"C:\\fakepath\\mgs alert.jpg", "username"=>"EmptyE"}}
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  â†³ /Users/ajfair/.gem/ruby/2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  â†³ app/controllers/api/v1/users_controller.rb:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  â†³ app/controllers/api/v1/users_controller.rb:26
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "fair.arthur.iv@gmail.com"], ["id", 1], ["LIMIT", 1]]
+  â†³ app/controllers/api/v1/users_controller.rb:26
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  â†³ app/controllers/api/v1/users_controller.rb:26
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Completed 422 Unprocessable Entity in 13ms (Views: 0.5ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2020-10-06 12:26:54 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  â†³ /Users/ajfair/.gem/ruby/2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 305ms (Views: 277.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2020-10-06 13:00:27 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  â†³ /Users/ajfair/.gem/ruby/2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 180ms (Views: 155.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2020-10-06 14:24:23 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  â†³ /Users/ajfair/.gem/ruby/2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 638ms (Views: 592.1ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2020-10-06 14:25:12 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  â†³ /Users/ajfair/.gem/ruby/2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 94ms (Views: 90.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2020-10-06 14:26:22 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  â†³ /Users/ajfair/.gem/ruby/2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 280ms (Views: 213.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2020-10-06 14:26:40 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  â†³ /Users/ajfair/.gem/ruby/2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 106ms (Views: 71.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2020-10-06 14:26:50 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  â†³ /Users/ajfair/.gem/ruby/2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 215ms (Views: 137.0ms | ActiveRecord: 0.8ms)
+
+
+Started PATCH "/api/v1/users/1" for ::1 at 2020-10-06 14:26:54 -0400
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"email"=>"", "profile_photo"=>"", "username"=>"EmptyE", "id"=>"1", "user"=>{"email"=>"", "profile_photo"=>"", "username"=>"EmptyE"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  â†³ /Users/ajfair/.gem/ruby/2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  â†³ app/controllers/api/v1/users_controller.rb:23
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  â†³ app/controllers/api/v1/users_controller.rb:26
+  [1m[36mUser Exists (1.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", ""], ["id", 1], ["LIMIT", 1]]
+  â†³ app/controllers/api/v1/users_controller.rb:26
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  â†³ app/controllers/api/v1/users_controller.rb:26
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Completed 422 Unprocessable Entity in 19ms (Views: 0.6ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2020-10-06 14:29:19 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  â†³ /Users/ajfair/.gem/ruby/2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 85ms (Views: 82.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2020-10-06 14:29:27 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  â†³ /Users/ajfair/.gem/ruby/2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 210ms (Views: 205.7ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/api/v1/users/1" for ::1 at 2020-10-06 14:29:41 -0400
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"email"=>"fair.arthur.iv@gmail.com", "profile_photo"=>"C:\\fakepath\\mgs alert.jpg", "username"=>"EmptyE", "id"=>"1", "user"=>{"email"=>"fair.arthur.iv@gmail.com", "profile_photo"=>"C:\\fakepath\\mgs alert.jpg", "username"=>"EmptyE"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  â†³ /Users/ajfair/.gem/ruby/2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  â†³ app/controllers/api/v1/users_controller.rb:23
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  â†³ app/controllers/api/v1/users_controller.rb:26
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "fair.arthur.iv@gmail.com"], ["id", 1], ["LIMIT", 1]]
+  â†³ app/controllers/api/v1/users_controller.rb:26
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  â†³ app/controllers/api/v1/users_controller.rb:26
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Completed 422 Unprocessable Entity in 12ms (Views: 0.5ms | ActiveRecord: 2.8ms)
+
+
+Started PATCH "/api/v1/users/1" for ::1 at 2020-10-06 14:39:56 -0400
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"email"=>"fair.arthur.iv@gmail.com", "profile_photo"=>"C:\\fakepath\\mgs alert.jpg", "username"=>"EmptyE", "id"=>"1", "user"=>{"email"=>"fair.arthur.iv@gmail.com", "profile_photo"=>"C:\\fakepath\\mgs alert.jpg", "username"=>"EmptyE"}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  â†³ /Users/ajfair/.gem/ruby/2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  â†³ app/controllers/api/v1/users_controller.rb:23
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  â†³ app/controllers/api/v1/users_controller.rb:26
+  [1m[36mUser Exists (1.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "fair.arthur.iv@gmail.com"], ["id", 1], ["LIMIT", 1]]
+  â†³ app/controllers/api/v1/users_controller.rb:26
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  â†³ app/controllers/api/v1/users_controller.rb:26
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  â†³ app/controllers/api/v1/users_controller.rb:27
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "fair.arthur.iv@gmail.com"], ["id", 1], ["LIMIT", 1]]
+  â†³ app/controllers/api/v1/users_controller.rb:27
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  â†³ app/controllers/api/v1/users_controller.rb:27
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Completed 422 Unprocessable Entity in 54ms (Views: 6.2ms | ActiveRecord: 18.2ms)
+
+
+Started PATCH "/api/v1/users/1" for ::1 at 2020-10-06 14:40:00 -0400
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"email"=>"fair.arthur.iv@gmail.com", "profile_photo"=>"C:\\fakepath\\mgs alert.jpg", "username"=>"EmptyE", "id"=>"1", "user"=>{"email"=>"fair.arthur.iv@gmail.com", "profile_photo"=>"C:\\fakepath\\mgs alert.jpg", "username"=>"EmptyE"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  â†³ /Users/ajfair/.gem/ruby/2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  â†³ app/controllers/api/v1/users_controller.rb:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  â†³ app/controllers/api/v1/users_controller.rb:26
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "fair.arthur.iv@gmail.com"], ["id", 1], ["LIMIT", 1]]
+  â†³ app/controllers/api/v1/users_controller.rb:26
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  â†³ app/controllers/api/v1/users_controller.rb:26
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  â†³ app/controllers/api/v1/users_controller.rb:27
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "fair.arthur.iv@gmail.com"], ["id", 1], ["LIMIT", 1]]
+  â†³ app/controllers/api/v1/users_controller.rb:27
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  â†³ app/controllers/api/v1/users_controller.rb:27
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Completed 422 Unprocessable Entity in 13ms (Views: 0.5ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2020-10-06 14:40:45 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  â†³ /Users/ajfair/.gem/ruby/2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 189ms (Views: 144.0ms | ActiveRecord: 0.7ms)
+
+
+Started PATCH "/api/v1/users/1" for ::1 at 2020-10-06 14:42:00 -0400
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"email"=>"fair.arthur.iv@gmail.com", "profile_photo"=>"C:\\fakepath\\mgs alert.jpg", "username"=>"EmptyE", "id"=>"1", "user"=>{"email"=>"fair.arthur.iv@gmail.com", "profile_photo"=>"C:\\fakepath\\mgs alert.jpg", "username"=>"EmptyE"}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  â†³ /Users/ajfair/.gem/ruby/2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  â†³ app/controllers/api/v1/users_controller.rb:23
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  â†³ app/controllers/api/v1/users_controller.rb:26
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "fair.arthur.iv@gmail.com"], ["id", 1], ["LIMIT", 1]]
+  â†³ app/controllers/api/v1/users_controller.rb:26
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  â†³ app/controllers/api/v1/users_controller.rb:26
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  â†³ app/controllers/api/v1/users_controller.rb:27
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "fair.arthur.iv@gmail.com"], ["id", 1], ["LIMIT", 1]]
+  â†³ app/controllers/api/v1/users_controller.rb:27
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  â†³ app/controllers/api/v1/users_controller.rb:27
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Completed 422 Unprocessable Entity in 17ms (Views: 0.6ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2020-10-06 14:42:10 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  â†³ /Users/ajfair/.gem/ruby/2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 352ms (Views: 315.8ms | ActiveRecord: 0.8ms)
+
+
+Started PATCH "/api/v1/users/1" for ::1 at 2020-10-06 14:42:42 -0400
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"email"=>"fair.arthur.iv@gmail.com", "profile_photo"=>"C:\\fakepath\\mgs alert.jpg", "username"=>"EmptyE", "id"=>"1", "user"=>{"email"=>"fair.arthur.iv@gmail.com", "profile_photo"=>"C:\\fakepath\\mgs alert.jpg", "username"=>"EmptyE"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  â†³ /Users/ajfair/.gem/ruby/2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  â†³ app/controllers/api/v1/users_controller.rb:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  â†³ app/controllers/api/v1/users_controller.rb:26
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "fair.arthur.iv@gmail.com"], ["id", 1], ["LIMIT", 1]]
+  â†³ app/controllers/api/v1/users_controller.rb:26
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  â†³ app/controllers/api/v1/users_controller.rb:26
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  â†³ app/controllers/api/v1/users_controller.rb:27
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "fair.arthur.iv@gmail.com"], ["id", 1], ["LIMIT", 1]]
+  â†³ app/controllers/api/v1/users_controller.rb:27
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  â†³ app/controllers/api/v1/users_controller.rb:27
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.13ms)
+Completed 422 Unprocessable Entity in 15ms (Views: 1.1ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2020-10-06 14:43:35 -0400
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  â†³ /Users/ajfair/.gem/ruby/2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  â†³ app/controllers/api/v1/users_controller.rb:13
+[active_model_serializers]   [1m[36mPost Load (111.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   â†³ app/controllers/api/v1/users_controller.rb:12
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (388.52ms)
+[active_model_serializers]   [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   â†³ app/controllers/api/v1/users_controller.rb:12
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (3.94ms)
+[active_model_serializers]   [1m[36mComment Load (3.8ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 3]]
+[active_model_serializers]   â†³ app/controllers/api/v1/users_controller.rb:12
+[active_model_serializers]   [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 5]]
+[active_model_serializers]   â†³ app/controllers/api/v1/users_controller.rb:12
+[active_model_serializers]   [1m[36mCACHE Comment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 3]]
+[active_model_serializers]   â†³ app/controllers/api/v1/users_controller.rb:12
+[active_model_serializers]   [1m[36mCACHE Comment Load (0.0ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 5]]
+[active_model_serializers]   â†³ app/controllers/api/v1/users_controller.rb:12
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (454.66ms)
+Completed 200 OK in 762ms (Views: 323.3ms | ActiveRecord: 133.2ms)
+
+
+Started PATCH "/api/v1/users/1" for ::1 at 2020-10-06 14:45:45 -0400
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"email"=>"fair.arthur.iv@gmail.com", "profile_photo"=>"C:\\fakepath\\mgs alert.jpg", "username"=>"EmptyE", "id"=>"1", "user"=>{"email"=>"fair.arthur.iv@gmail.com", "profile_photo"=>"C:\\fakepath\\mgs alert.jpg", "username"=>"EmptyE"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  â†³ /Users/ajfair/.gem/ruby/2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  â†³ app/controllers/api/v1/users_controller.rb:23
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  â†³ (pry):2
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "fair.arthur.iv@gmail.com"], ["id", 1], ["LIMIT", 1]]
+  â†³ (pry):2
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  â†³ (pry):2
+Started PATCH "/api/v1/users/1" for ::1 at 2020-10-06 14:57:31 -0400
+  [1m[35m (21.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  â†³ /Users/ajfair/.gem/ruby/2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"email"=>"fair.arthur.iv@gmail.com", "profile_photo"=>"C:\\fakepath\\mgs alert.jpg", "username"=>"EmptyE", "id"=>"1", "user"=>{"email"=>"fair.arthur.iv@gmail.com", "profile_photo"=>"C:\\fakepath\\mgs alert.jpg", "username"=>"EmptyE"}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  â†³ /Users/ajfair/.gem/ruby/2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  â†³ app/controllers/api/v1/users_controller.rb:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  â†³ app/controllers/api/v1/users_controller.rb:26
+  [1m[36mUser Exists (1.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "fair.arthur.iv@gmail.com"], ["id", 1], ["LIMIT", 1]]
+  â†³ app/controllers/api/v1/users_controller.rb:26
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  â†³ app/controllers/api/v1/users_controller.rb:26
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  â†³ app/controllers/api/v1/users_controller.rb:27
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "fair.arthur.iv@gmail.com"], ["id", 1], ["LIMIT", 1]]
+  â†³ app/controllers/api/v1/users_controller.rb:27
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  â†³ app/controllers/api/v1/users_controller.rb:27
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.2ms)
+Completed 422 Unprocessable Entity in 281ms (Views: 28.5ms | ActiveRecord: 14.1ms)
+
+
+Started PATCH "/api/v1/users/1" for ::1 at 2020-10-06 14:57:35 -0400
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"email"=>"fair.arthur.iv@gmail.com", "profile_photo"=>"C:\\fakepath\\mgs alert.jpg", "username"=>"EmptyE", "id"=>"1", "user"=>{"email"=>"fair.arthur.iv@gmail.com", "profile_photo"=>"C:\\fakepath\\mgs alert.jpg", "username"=>"EmptyE"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  â†³ /Users/ajfair/.gem/ruby/2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  â†³ app/controllers/api/v1/users_controller.rb:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  â†³ app/controllers/api/v1/users_controller.rb:26
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "fair.arthur.iv@gmail.com"], ["id", 1], ["LIMIT", 1]]
+  â†³ app/controllers/api/v1/users_controller.rb:26
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  â†³ app/controllers/api/v1/users_controller.rb:26
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  â†³ app/controllers/api/v1/users_controller.rb:27
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "fair.arthur.iv@gmail.com"], ["id", 1], ["LIMIT", 1]]
+  â†³ app/controllers/api/v1/users_controller.rb:27
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  â†³ app/controllers/api/v1/users_controller.rb:27
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Completed 422 Unprocessable Entity in 20ms (Views: 0.5ms | ActiveRecord: 3.8ms)
+
+
+Started PATCH "/api/v1/users/1" for ::1 at 2020-10-06 14:58:25 -0400
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"email"=>"fair.arthur.iv@gmail.com", "profile_photo"=>"C:\\fakepath\\mgs alert.jpg", "username"=>"EmptyE", "id"=>"1", "user"=>{"email"=>"fair.arthur.iv@gmail.com", "profile_photo"=>"C:\\fakepath\\mgs alert.jpg", "username"=>"EmptyE"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  â†³ /Users/ajfair/.gem/ruby/2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  â†³ app/controllers/api/v1/users_controller.rb:23
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  â†³ app/controllers/api/v1/users_controller.rb:26
+  [1m[36mUser Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "fair.arthur.iv@gmail.com"], ["id", 1], ["LIMIT", 1]]
+  â†³ app/controllers/api/v1/users_controller.rb:26
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  â†³ app/controllers/api/v1/users_controller.rb:26
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  â†³ app/controllers/api/v1/users_controller.rb:27
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "fair.arthur.iv@gmail.com"], ["id", 1], ["LIMIT", 1]]
+  â†³ app/controllers/api/v1/users_controller.rb:27
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  â†³ app/controllers/api/v1/users_controller.rb:27
+Completed 500 Internal Server Error in 48ms (ActiveRecord: 12.0ms)
+
+
+  
+NoMethodError (undefined method `save' for false:FalseClass):
+  
+app/controllers/api/v1/users_controller.rb:27:in `update'
+Started PATCH "/api/v1/users/1" for ::1 at 2020-10-06 14:58:47 -0400
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"email"=>"fair.arthur.iv@gmail.com", "profile_photo"=>"C:\\fakepath\\mgs alert.jpg", "username"=>"EmptyE", "id"=>"1", "user"=>{"email"=>"fair.arthur.iv@gmail.com", "profile_photo"=>"C:\\fakepath\\mgs alert.jpg", "username"=>"EmptyE"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  â†³ /Users/ajfair/.gem/ruby/2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  â†³ app/controllers/api/v1/users_controller.rb:23
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  â†³ app/controllers/api/v1/users_controller.rb:26
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "fair.arthur.iv@gmail.com"], ["id", 1], ["LIMIT", 1]]
+  â†³ app/controllers/api/v1/users_controller.rb:26
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  â†³ app/controllers/api/v1/users_controller.rb:26
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  â†³ app/controllers/api/v1/users_controller.rb:27
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "fair.arthur.iv@gmail.com"], ["id", 1], ["LIMIT", 1]]
+  â†³ app/controllers/api/v1/users_controller.rb:27
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  â†³ app/controllers/api/v1/users_controller.rb:27
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Completed 422 Unprocessable Entity in 72ms (Views: 16.1ms | ActiveRecord: 13.6ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2020-10-06 15:10:45 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  â†³ /Users/ajfair/.gem/ruby/2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 6644ms (Views: 6628.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2020-10-06 15:11:03 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  â†³ /Users/ajfair/.gem/ruby/2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 108ms (Views: 104.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2020-10-06 15:11:58 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  â†³ /Users/ajfair/.gem/ruby/2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 83ms (Views: 78.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2020-10-06 15:12:09 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  â†³ /Users/ajfair/.gem/ruby/2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 62ms (Views: 58.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2020-10-06 15:13:00 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  â†³ /Users/ajfair/.gem/ruby/2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 146ms (Views: 78.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2020-10-06 15:13:45 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  â†³ /Users/ajfair/.gem/ruby/2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 184ms (Views: 117.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2020-10-06 15:15:59 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  â†³ /Users/ajfair/.gem/ruby/2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 374ms (Views: 317.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2020-10-06 15:17:11 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  â†³ /Users/ajfair/.gem/ruby/2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 155ms (Views: 131.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2020-10-06 15:17:32 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  â†³ /Users/ajfair/.gem/ruby/2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 71ms (Views: 66.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2020-10-06 15:18:09 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  â†³ /Users/ajfair/.gem/ruby/2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 72ms (Views: 67.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2020-10-06 15:28:33 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  â†³ /Users/ajfair/.gem/ruby/2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 199ms (Views: 174.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2020-10-07 10:08:37 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  â†³ /Users/ajfair/.gem/ruby/2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 534ms (Views: 303.4ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2020-10-07 10:08:41 -0400
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  â†³ /Users/ajfair/.gem/ruby/2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  â†³ app/controllers/api/v1/users_controller.rb:13
+[active_model_serializers]   [1m[36mPost Load (1.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   â†³ app/controllers/api/v1/users_controller.rb:12
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (1458.06ms)
+[active_model_serializers]   [1m[36mCACHE Post Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   â†³ app/controllers/api/v1/users_controller.rb:12
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (5.37ms)
+[active_model_serializers]   [1m[36mComment Load (75.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 3]]
+[active_model_serializers]   â†³ app/controllers/api/v1/users_controller.rb:12
+[active_model_serializers]   [1m[36mComment Load (0.8ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 5]]
+[active_model_serializers]   â†³ app/controllers/api/v1/users_controller.rb:12
+[active_model_serializers]   [1m[36mCACHE Comment Load (0.0ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 3]]
+[active_model_serializers]   â†³ app/controllers/api/v1/users_controller.rb:12
+[active_model_serializers]   [1m[36mCACHE Comment Load (0.0ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 5]]
+[active_model_serializers]   â†³ app/controllers/api/v1/users_controller.rb:12
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (2198.55ms)
+Completed 200 OK in 6480ms (Views: 1595.4ms | ActiveRecord: 675.4ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2020-10-07 10:23:17 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  â†³ /Users/ajfair/.gem/ruby/2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 92ms (Views: 85.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2020-10-07 10:37:43 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  â†³ /Users/ajfair/.gem/ruby/2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 148ms (Views: 139.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2020-10-07 10:38:57 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  â†³ /Users/ajfair/.gem/ruby/2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 172ms (Views: 166.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2020-10-07 10:39:11 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  â†³ /Users/ajfair/.gem/ruby/2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 133ms (Views: 126.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2020-10-07 10:41:39 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  â†³ /Users/ajfair/.gem/ruby/2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 92ms (Views: 84.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2020-10-07 10:48:48 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  â†³ /Users/ajfair/.gem/ruby/2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 303ms (Views: 275.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2020-10-07 10:50:34 -0400
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  â†³ /Users/ajfair/.gem/ruby/2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by HomesController#index as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  â†³ /Users/ajfair/.gem/ruby/2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 8112ms (Views: 7983.6ms | ActiveRecord: 11.6ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2020-10-07 10:51:27 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  â†³ /Users/ajfair/.gem/ruby/2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 420ms (Views: 387.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2020-10-07 11:03:54 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  â†³ /Users/ajfair/.gem/ruby/2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 477ms (Views: 410.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2020-10-07 11:40:43 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  â†³ /Users/ajfair/.gem/ruby/2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 392ms (Views: 355.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2020-10-07 11:40:57 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  â†³ /Users/ajfair/.gem/ruby/2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 89ms (Views: 84.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2020-10-07 11:43:08 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  â†³ /Users/ajfair/.gem/ruby/2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 785ms (Views: 719.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2020-10-07 11:43:28 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  â†³ /Users/ajfair/.gem/ruby/2.6.5/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 265ms (Views: 146.3ms | ActiveRecord: 2.7ms)
+
+
+Started PATCH "/api/v1/users/1" for ::1 at 2020-10-07 11:48:16 -0400
+Error occurred while parsing request parameters.
+Contents:
+
+------WebKitFormBoundaryB2f2hIyQtCgQ5WBT
+Content-Disposition: form-data; name="email"
+
+fair.arthur.iv@gmail.com
+------WebKitFormBoundaryB2f2hIyQtCgQ5WBT
+Content-Disposition: form-data; name="profile_photo"; filename="mgs alert.jpg"
+Content-Type: image/jpeg
+
+ÿØÿà JFIF  ` `  ÿÛ C 		
+ $.' ",#(7),01444'9=82<.342ÿÛ C			2!!22222222222222222222222222222222222222222222222222ÿÀ " ÿÄ              ÿÄ M 	  !1AQaq"2‘BR¡±#3Cbr’Á$ScÑ%46Us‚&DETƒ“áğ5t²ñÿÄ             ÿÄ /      !1"AQ2#$3BRaq4r±ÿÚ   ? Ó¬%dÇ„}'"]Ä d“ØŠÑÜl@€–   Ã]ì6E«’abP"ÖƒH€µ½¤ÔMİèH%p¹DİÁ&`hÅ˜µ†ˆØi¯2"ùê/­~¦9TQ\ÎIz´ûìDÔ0”*Õ›û0vù›cÍ6j+lœ¥„öRõhØpqfgË7ƒœ¾½FŸÜlØ>Æ§xË2Î9ãÖââlT²Œ÷=<8ÎYZÎ²‹»”ëvcxÊ·74¿ÃÔ»ğ]˜pÆ	©:±]jNèØ0ü=’aÿ U•acëM3%IJÍæ+ñG<ĞÃã1ZPÀãk&Ï]â<Cµ,›¯³©M£¢¨Ñ¥‡V¥B„?‚	]I8´î½Ÿ£¤·›â~£À\W_ÿ „‰´záÙ—KöXúÔ/>òkDçñcsŸYKæO¥ƒ[İu‚ü×qZÕRÂ_ş`¿6\[èáş¡xóÉ}y|ÇŞI+ó?™>–Ü¯(Šœñdîxgo	³ÁW„8¢’¼ò©´¾Âlènş§I1÷óûm’«FKu¾?4ÔÊóœ=ûÜŸ¢·}Ó±ã©Vté©b)?ß…¡•E8¾h©º<Õrì¾º¶#…¨Ÿ$`é‹6Çzšü¢sD14¤¯ŞÓ_LŠqz§7æ‘}ãx'†³iåp§çOÙüwØşSU9eøÚØy¾““’_[ÓıëŞk—hª¹óvèÖƒ¿7²´ô7wdüC„RO²K•¿›5|~Ge-ı7,«E-ä—7à`éh»^¿M.Ï9#ÏD'§3OÂZ!.mÍ~.Âj&[Š÷["?Ñ³)1¢Dbï°‚qòH€\ Ø`¶ Õì    »ğõ»2[ƒ° H `Ø`€€ ÆA#·˜„4	   0°m —A0€,$ €;|Ş@İÕŒpFQ+èÂé¾[Ùù«r²iÙ?ì¾d¤Û1–0I94.ñjî´ŞÛ™òì³2Îë¬>W„©ZOy¸¸Å|K ì~›p­âÜ§õ°ğÒßõ-Íñ­¾Ï?S¸UJÂ|••ÿ [ºÁP©‰©áM]›nSÙ—æV¯‹pÀĞ{÷·S.·%Ërz*–_ƒ§F+Nv®şgÑ½¯¯‹wFõTOİÚéq(ì¯ À%S¾ŸSÆ®Ëän8L-¢¨à°p¥·"299KÛ³kgö]~i$y–_9¼È“”ºÕ»ğ îúÜj{KËAT4y±éRŒ¤‘&´›|rø}ÚGÆÆñeîJ¶cNMn©û_®âû]ÈèÉÇ‡vº»¢<’ì±5“ê&ô£}’øå~~ˆªq}±ãeìá²xÁøº—>E~Ô¸¦¦”åJŠşìG©²ÄvíCø.åNoh?ˆûª½`Š
+¯ñ]m^eúSG–\_Ä•_µšKáR(Ü¶›ßr:»©ıØ:S¿¹c_qïùZ"Pâ®$¦î³Y|Põ¢KÙ®ÿ #¢9ßë¯B..Ok>7âŠnë3OÖ²—i|SJiÏJ¢];´®J¶,Â[MÑéä¼ZqÑ{OÀ$¼teEGµüÚwÙl*.¶’GÖ¡Û&N1Åås‡‹RlŸ8šƒQÑcëmô«`»IáŒm—Ò§FO¤ Í‡™å¸Ø©aqÔj_§:LŸ%ğV•VEóÒ®ÕÓ$çÍIÆJœ½Pwm«¥uäA©Aé|fšögÀü9›S“¯—Ò§UşÒ’ö‘¥fâ \£0uê%ş-k7¬m§P”œ¤Ÿ7´º˜¸£}z›«éœå™dŞHä±ùewûHFñùŸ:eR‚ƒåİ7©Ô*±å©Î/u5ÍsQÏ;4Ès©J­ıõSƒÓäk•hôéŞãb)Nfâš—/‘=KywÙçä¼Õ#ŒÂÇj‘ŞŞ†²ªŞN3R„ã¤£5ÊşıÍ2ƒG¹¦ÕWjÌYš×D.’Mµgóe²æoĞÔZLÈÖ‚ ( \†˜î2ay v‰%s%Ğ=¡y1‰h0  ³jd@µ$ŠÜc°˜ Aô   @ ‹at÷|¶ûÅ)'îûŞäÆRHnVDH¯y´¼Q	Tö•%T­'hÂ
+í³zá~Ë±™’†/;©ôl;ÕQ[ÍyõFèAÈ¥©Ö×DM/…Çg8•†ËğÓÅÖèâ½•êY¼?ÙU
+P…~!¯ßTİa©û‘õFı–eXŸ~)Çv–²ø»İ§£Úå¸Ö’9Nám¯ÚÌX</ °ø<4(áÒÒ4Õ™–RæĞN<ÒÒM?=7E¹«YoÑz™á"ƒy|öc“ú¯DJ1¾‘…ßƒ5œû2<ñ•uˆÄ[Jtİã6W™Çiùæe'Gài=µoæbä‘j­÷|aş;3Ë²ªN¦?G±¹¦æ}­å*’£ƒ¡S.’¬TUêâ±u¥<ez•äİï);|…(«$—ÀÓ+~[O´/ï6ÜË´Ş#Ì$ÕïK§-Ô_Ìs9bóEKïËÙ1¨’¶›#K¹³Ô¯ET8HóGI{]Ú¿Ú[37.–J›^’V[&>h¦¬ï%ï#6YUÆ="6ŠwCµõ¸Ó<‰ÄB×BJÏR^–ù‰ù"Sˆiah@Ü|Çãì,…hô×ƒùoàJcÛöE'}/!ò[Vå0æIë!«opäF"ÌrÃF[©MytğÓ¾´èKÆË ÷Ü•6c(E¬`ú¹q&UgK0x¯«UÜÛ²¾Øª+G6ËTßÚ¤¿Ì®ÚWØN1jÍ#5s(Ù¶Ñgh¾ò®5È3·PÆFWû9¿hûé)+Ç•¯îÙÌŠ–ªñk¬]ŸÜ}Œ¯‹³ü–Q)R_R~Õ×«7FÜöy—ì­s[:«tvkB½É{[ÁWå¥œaå‡›Ó¼©›î…Ìéw¸,E*ÑµÕ¥«õğ6å3Ê²©Õí’3©¤ıç¯Õ–¨×³îÉ8Š2xŒ:£Š¶¢’kâlM;(+­Ñó+-<GŠf¸NPy‹(¾ à,ç‡êÊ½
+_NÂ_IÁ^I~ñ­ÓÄ*ºB§,ºÂ[7)5Gg¼Zº4Î&ìÛ,Ï¯‹Á5ƒÆô”6“4J¤{mŞkÛaM®]ã«ê3Óœä9§âû¬Ê$oìÔÒõ<PŸ3ÒÉı™;hWœ\N†›ál}¦@@ÕÖÁczC¶¢$C õ[PH s/€V¸ŞÂZ0°² A¨ì ‚ öüØ÷ê0f%±!X,F Äö¬$1 Ki	ƒØVÖÊŞŒÅ*‹ºm®z)ï'kÛ1rIe“s²w4zşééÉòlËˆ±/—SöSÖ«[#ïp‡ãø“F/¼Ãekßn>Õ_$¼<ËŸ.Ê°y6	a0T#F‚Ú_}üKP«ìğ5›šOÆ¾M…¸,áº1­R+µİIê“ò¾ÆÔå£oÛ]W€îœ½ŸÀ,ÓÖ)>©=Y½psöÚæıÏ"³m9;[hå“•åe±Øù¹Ö}–ğöâ3DU•ãNşÓôEGÄ}¤fÙÒ•<x<ºğ”×™’Fİ6Ë_GqæMÃêt]U‹Ä­¨Åİ¢«Ï¸ó<Ïå(F¼°˜iit¥o6j”—?4ªM»¹HÌ¡k%sø:=&×\eË0B‚„Ûög'ºkVz9Sé+úD|¥w&ÏV0K„.^Uk«>€ÇËa‘ƒ6@l‘Œyèôe¹^79ÇÇ—Sç¬âå#ë~o8·ÚA\Òvé±Ÿ³Zêa“ÚTf‹Ö£qr³w,×ÑÏkõ÷Uo„JvqÅ¿ù5óD—füZôú,W›±{ßÍƒ~¦ßN?Eİueù³âßî)ü‰®Ì¸±şÊ’ø•ıBş¿1éÇèİ5eù°âËû”~DãÙo=[¢¼¬]×õoQá¡û¦£ì¤ÿ 5œSöè)“óUÄÏzØoä.o_˜¯ê=8‘û¦£ì¥ÿ 4¼K-ëá—ı×d¼GÌ¯‰Ã%ü¹Óób‹ßW¨ôâGîš„û9óˆxc0áŠ˜xcêR›¯~^í[cå-ÿ ¶‰ç™T/îÆFS+Y¥ÁÒhn•´©Ï°Jèv¬ÆieïÕö_M¢6',c%J-ÙÂR¿‡§˜æ9=uW/ÅÎ„×Õmò¿TˆØnd¦ÑªtÂkÜ‹' íbPÃgÔ%BoEˆ‡ºıK‹Ãf4#	ZZR÷esUJJz3Ù”æù—â•\¿*zŞTÛÒkÀßOWµ'™VtjNşÖ¡&¬¯T¶]Q¥ğÏi~t–ş[ßi|ÍÕê“oš/k{¿3zi£ÁvVñ4`Ç`pyXlÃ
+Ô¦·’½Š‹‹;5Äå1–;*ŒñxKŞTïzøø’zûK¥‰BNÜÑÛ¬Y‹‚fÚ/¶™f,æHU»qwæ5f¼Œ±eÁÅ½àsµS—5†Ç¥{ZÊoÀ§±X|F[FTqÑÁ«|câV”0u|/Xù$ÛÈGÍ»?'²ö5’Î 1Á)€-Ä’9l(‰nHb0;Ä‡¨ÈÀ¬ÂÖ Ğ^ƒ° ÔÔŒÇ`Ğ}ÆÎ7dFWŒ’{°ri^×0óó7W¨¦íµr‘1‹oÂRŒcå!Ê¢¼Tbç6í­[~…‹Á›Ï:y¶{{Ôp—ßÍŸKx9|iç9Ä9ñ’W§Eê¢º\±]Üy\”oªkd\xG/¸î.~Úº
+iR¥RŒ)S‚·"_S¼^ïFş¨Úç’²¼’Ûú˜±x¼>	<V*´iR¦¯:’v·¡µ<>Y‹äÌÒ~ÔÚV^Ô¯d‘ qgixL±ÔÁdËé8¯vU¾¬?ÌÕxÇ´^{Rx¶N†\ı™ÔOZˆÒ©ÒPV»”º¥º5NÅğ{Z©Í©XfÅbñy–2x¼}yb''u=¡¿sÔ”bš$£ÊU”›gG]Q­x¤+J[´—‚Ak-¬HÄdŞ’]Ôw0;€ Æ9ê‰²/bH|4}>­ô^8ËgzñûÎˆVÖË¡Í™5NçŠ2Ê¯D«E_Õ'6›ºúÊåÊz9=æ8»&-CQ°òêŒ ¡a€°j0$îÇ×PUíê9)ÎÖæŸa ş¬?¡¥GKú›gjµ;Î8äû×àjqÙú•.~ævbş^$ıF„÷Íõ°6+ˆ¶ƒÜVa|‰¡8·lÿ L:ğbÑ‚tÛÖ’èş·ÌÛ8k´,Ï‡ù(ã±X£‹Öqó¹­Xƒ‹çvÖ£ßÀÎ4W¿MUËÆHè¬§9ÀgX(bpã*rZÇ¬Yìqn7Z8œã”gşÆÇ—V—²ıºmèË³…¸Ë.âl<a*8È{ô$÷e¨X™Ëkvû4ï+”lNRvwI¾¶>ğ–]Å^JğT±P_¡®·OÌû³‹~Õšõ64™J2”^aÁÎyÆS˜ğæbğy•6“v…T´’<ªM7¡ĞœEáx‹+M5õgõ£"‹Ï¸ÂÙ’Âã.àô£_êÍxz•ì©ü.ß¯©B]v®=D§xéaÆû²¹ì¡ŒbˆõìEÚàÓl’’=F>‚ † I Ã êè2CkàW³W¾‹Gäÿ ¨3zÑ‡-I-É~+É˜KÛ)t)ÔwäŒ[©'hÅnÛØ¶ø€¿'Â®kN3ÆÉ^&´‚<p-”sÜâ‡é¦¯‡¡%²ñeœåÍf¥õ¼‹µÖ¢rÛ†âí~œ:#&íeg.·Q›Šiòø£R	^ÊûuĞùüAÄ8>Ëªcq“N|¶§MoQ›éãÂ2“ñ‰,ç9ÀäX	bñÕ” –ZJo¡Gñ?ã¸Ÿj²•Ö¿{Ã˜ñg™æ;‰óŠÆN[Ş•+éy,îÒMûËízí±iÒíÛo¦¼ä¹RV´mm—DN×»{+KsÅ	+Í‰ø$ìEşc   d‹ZêFC&,*Ö?Sìâ şLéj;ü5
+»'MKæs!ò÷rû3Lé\š]çåõ»–r‡ÁÍo‹ñg¨ Ç€     v¸éítN¹ìüId·J´¹óvŠëËN­ÇoSïv5WqítŒÜ|$´E+_¹Ş±DQ&V¸r´i=,’  H€Èh¸-4X€.¢’¾Úyƒc±(`‹ôÛĞÇNu°Øˆbğõ%KMŞ5·ÏÄË°å«2Siš¬‚šñe¯Á} SÍœrüÖq¥Œµ¡U½*‘¿8¸&®ıß3˜6¤”o'xÎ:8²×à>XÎL›8ª–)+R­-ª«{9Çmp÷×ÑbEòÊéë¶§‡8ÈğC–ÔÀã©©Aû²úÑ~LúN.ï_4Bëskäò Úæ<4sÎÃØŞÍ¥ƒÅ^TewF²ZMx?x`ÜÖêëuàtä8^%Êja11MÉ^•N°—‰Af¹f/‡ó9åøø5R7îçÒkÄ­d>QÔmÛ‚±zsì„|	£.erhĞzñ–F&y"H, 	€ÖãĞp¬‘Ú`k=ßHø;Yí/v/Âä%“\Q
+•#í;Kªğ7NÎøAg8ˆçXø8àèKô0’ıcñ>
+pİ^)Ïã…i¼ób*Û}v/ü>N…
+1**Ğ§¢ó.U^9g=ºkäŸ§rº´cr¥dº/´åìég«dvöevõr<¹?”àgŒÅTP¡Ms6İ¹™½ğsñ÷É¥ÙçÎóÌ&C•TÇc$¢’´!Öo¡BçyÖ;‰sic1­­EG¤Ÿ‰8“Å9¬ñUù¾ÕûGÌŠq“ç’÷gâ¼
+ÖÛŸj:m·oPJsì"•¯kÚÜ—ÂÁb²à÷;á
+ÌĞ•„°%q¤a’  @!$† ê ÷ ÔM!±0AåÅ/ìó~
+çEp•e_„2©ß^æ+î9ã¿³Ôşø·guûş	À;û¾ÏÜ\¤ç÷¸ûblìĞt7Ø˜-FÅ@À  "HV îNÎ/ÎäIÑŞ„²19ß‹gŞqÆi/áGÍ^g¯?—yÅ™¤ÿ ~ß‰åŠ¹FÎÙÜèãü$5u°î;Ô]" Á0-GĞb1²(14íÜob:ø‚0k~¬Á:oÙqn./š..Í38=Œ“Á®Èy,>‹K³ş;úzO›T_IŠµ*²ÑMxz–N*×¾ïÀæysF¬'JN5`Ô Öé¢æà.4\A†ú>JúK–MşÑ«QÌn{{®^¥}šzÉ}­ÍŒ8OÄùT©òÅc)&èU[§áælQ{;GGgĞÍ¬Esu¿%ÙÌó¥[‰©ƒÅAÂ½iİZäÓ|©½üW´ü¥†–q—Å,VõÑŠıb*ZsR‡2¿†¾%[!†uû~®7×şÑ›q§¡LÖz9°è	B‚Â×ÄÇ$Œà5¹$‰î.ƒ{‹¥º‚Ÿˆ¨aëæXÊX,ëVj)/õ¾:õ)9=­r×ì»…ó¼l/ˆ¯ú¨¿«şM•Ãœvá©TÖóÙ¶ğÖA‡áŒ–„©kÖŸÛ—SëİÊ)_W¸õrwÓÙ^Qræk~ˆºq“Ÿ–fû(Ó„¤ä£+ÊO¡GqïO‰sá°²¾[‡•’Oß~&ÕÚowüƒ«jµ""Q~âğ¹VQ‚„R‚åŠÙFi¶|`÷v­ Œdìî­£ş„ÒØ•¢´Š´@¦tŠ)t0€ÒØ‰-Åoh
+ÃJÃ²°@ôê1[Q€‹Ø‘„.Éø0×Ö¼™tvSWŸƒ÷kI~3=SV-~Ç«©pş6‹Ş5¤ìY¡òx{ÌsJe…`± Ğ´r¢       ’škn‰˜Ù“™FeáOÁ=³™³9ç™„¼kÍ}ìŒ‚«5S0ÆÉÿ æ'ø“V(O³»Ó,U °YšË(o¡ïb¶ ‘‰ŒM  t ,  -F,ƒNQ”c¤·N#¥ÁÔå¯Iê“ÜÒéÙ¯¼„’q½­&lLÕd<Öï„ø›ÅDq´1ì«ÓêŸùu¥	oÍ´¼|váü÷ÂùÌ3
+/šØŠwÒQëñ:ÃæY}nJTëÅ4—Õ.By8İÃI*,ñ]‹?iKÚM{PñE-Ú'G!ÌVg„ƒY~%ûPĞ—ÿ ë.•Ìª>]jC«êy3|¯e5²úôÔ¡U;Iô‘2Q†—QèZœz9Ê2³JO™ÇŞ~,ÈK–×È³jÙ~"/¼§'_ë/wŠ~%Çìè±NHcÌë¬€€Hâº{èI"de+GÁmq»òŞÆ*®ë–×4’‡œº—ƒ\ä”[gÜàî—q,<£|Õ+Éúû¥ıT¡N”y!Ë¼®ğ7¬‡‡iRœÒñ?¥¯}îÖÆÆåâôÚåèC®ÔÊûøBWløÜYÄT8c!«‹v¹hÃíK§Ş}Çjps¨ÔRM»øx”7qBâ|åÂŒ-…Á¶ ï¤š"Rñ#E¦wØ¾rujâqU1uæç['97ÓÈÉdBy%¾æN…96ÙÚ×TkŠŒz\v†µ0fÌ !´$¬†î@ 
+ã     µ  A}l D^„ E­>(±»©ÿ äè>šŞ¬®º­|Íë±úœ¹şeGíQŒ¾óu‘äî«:v[Ïqh‰lä hC@€    MhC>ëŠŸÙ¤Ù‘<î}ŞK˜ËÂƒ'à˜~g6§ÍˆÄKÆ¼ßŞgG‡µÎüjKñ='ÙßR±JáqZúŒÖn@`°$B°Á RWòŞàlÉ_È I»‘°  ‹Dºƒ#£(§wÍ¬½Mß³^+ü›™<—;áë¿ÑÉ½"Í1û¶Z?^jrJRpœ4Zñ6×<2·O«k=(ßwguı ½º(êÙ¬ğ/.!ÈbªÛéX_bªo©²µ¥¤®¥Øòq“«Ó“‹ìĞ;Qá™f™dsŒ$ÅaÕä–òPÑ­±Nmftì¢«R«N¢R„ãÊÓÚÇ>qnBøw‰ëáb¿ARó¥.nÍ6Ãäö¶}SrUIŸ1jÉÜ‚kGö½ß0Z”ğt©òÑ+ŠşCKQØe¸ô€É}“|‹×Uälığ÷åŞ&XŠ±O‚ö¬úÉìjXš’îæâßy-4ê_\¬ƒ…ğğ’ı=h©Ô}|Qf¨ç“Ãİu^~¶l™9¦í(;§ãƒŠWRµ×iiĞ+×§„ÂÕÄÍ¨Â„¥~©jZÉÊc,Ò;MâIe:Ë°µ?¶b½”ÓÖ+r¥NÜ±ŠIKYyŸG>ÍêçüAˆÇJNPmªWè¯¡àŒ~â’Ë:ı·Ké×Ÿ–;hÚ÷PĞíd£Ñ’4¶zØàÖâhjäî  HÀ]I[@AC°€À‚A@ Aï¸¬€ de±!4J²i#kì²»£Æ³§{w´b­âj®ü¬û¼WºãìE5gç¡²—î<İÆ9ÓÈ¿_R$æ­±]8ÁX-a€ @0 @13Š*w|+›OÂŒ‘ôÏ‹Æ²äàœİ§kĞø3©fq9çú«ø¶ÏIçÃéF‡¡%ÙŞÕø!­†fà¤&HÀ€,;Â[’è XBm€È‹P ÀÜÀ/sí}UÑ–Â·µ~¡ã<_‚sÙpçÓ”êf­.êµŞšıbşŒãVœã$œ_—C˜*Sæ¤•¯¥ş%İÙ·şZÈµN|NÙ’{Û§Ü‹µÏŒÆë¥Ãõ¹-Í?´~Y×¼M/¥a}¨ÊÛÅjÑ¸[TŞİ}İÆ¬%B®°ši¯Í”xµZë±MÃF¯=(É«4ô^hŸGŠò‰pÿ bğj6£Y÷”|nö>tv)ÉaÎÕmjhî%°Yš™a‹c~ñ	ÍÁ9&“Jú“‘œ>O³Á¹D³î/ÃQqNwóğå]”TtŠ´W²—’+ŞÈ²•ƒÉjæu¡j˜¹Ş›fßüï-VşúÖÅî7ú·¿¤(FìÑ;TÏe—e²Ü<ùkâıë}“|¼-ÌôQöŸ¡Ïœ_<ÿ Šq5áşÏF\°ø7„6Ú=mBúGÆ§Ek¾XèdVŞó'bŒŸ'iâ¢ğƒ ×AXLÑ&„ô ' @=|_ º’è ÄİÀ Üâ±%°$AÔL`±  	\,4EîNIÇÉ§sèp¥^ç2‰øÖq#ç½Ñ—.©Üq[Uí÷3«†SÖ,ÔÑÒÕ?X—Š¹µdŞĞŸŒSû‘_8VÀ    0÷Àw´*ßfvëŒÔ;P¨£Á•ïõço¸gƒn™fØ¢¡úªÂ¿:ØÃEZœ=lyò;ºÿ 0Ü´=Ã ‰$mX@ -Æ¸+‘ a€¬ •€   ØšX„Ãì„•­ËõO³Áyëáî+¡^nØLCä¨º6ôGÈhÁ^Pºú®ë×¡¶Ã*ê©WVâtûQåm;ó+¢+{·²±­ğr³ÎÃÉ»Õ ûš«scŞ7[]\ºQÄJiü÷kY/ÒrZµŞ®ûm-ÖÅOIŞ(é,v–c—bğUä«kœİ[W/Ç×ÀÕMT£U¦¼®WµöÍÈ¶Û“wöz+3¡m¡4Û’]71:3ÅV£‡§¬«TQVëª¹–Zùré/6låqÍ8Ò”Üy¨à¢ç/Ú6Õ²¾ºÕ]EÓ•`iå™V	M{ ¢—‹=O«ëáê;¶œ­dİì÷ïâš.£„œœŸ‘¯ñÆn².Ä×ƒµiÅÓ‡›(57İ¾gg'Ìßõ,.Ö³ITÇàò¸Êğ¥:¦‡ò¥àVºXx:½–…]^O¶÷ZÕÇ¡; µµ™í Ğ,€4!(zl;ù@ôµ€Äà
+ãZŠÃ]C tÜÔ€&˜Âã A{M 4&$0C#-›0JN8Œ=E£…H¿½†®Ï&+Ù¤¤¾Úy²¾Í:ˆæê2çÂQŸGN?€lÚ<¹5u‰È°UoïRG­­nzbÃb P  $  |»FíjN!E}ªêÿ #z[•÷l59xkµ^+î1‰gF³|
+šöR]3#5c*(³¹ŠÂ ÜÀÍÀv‰$.  €º× ÃtŒ,6 y…ĞºÀî`   %q  ÓiùjdèEndcœ—e9ÏĞ3ú¹mIµKh/Ş.f¹vë¹Ílò¬ã†ôª)|”£Z8¬Dj¤®½µ<£‘İôş¹_$¯²KâR}©å°Ëxª†.š´q”Û–—½‹¬ÑûVË–3…Ö.4ïWU;øGve(å´6ºìE@—*Q[-Sñ¦*2RŠwÖÉüÌ·(IrvêIÅm+K£w—©iv?–÷Y6/3zN½GWDÊŸÚ¡RŞŸ»êt/à#–ğ®féª“õh±Bã'‰½[ãR‚>Ãm»l­kRP‹›÷agğÙòø£²ÎÆâ³îÜSóeœğsQ””QDñ9æ|OÅIóFUb¯ĞñE^)xzÎœe=g7vzV¬óíygy§­B¨¡ß 	^ã1,1l0´  	$ ô# 0;Äz’èFFôƒÜHd`b{Œ,dlH, €{
+úl0Ğˆ¡ˆ„õ¿‘æÅ+á|îz|L•àâgTùMÁµ{îË'şà}·½_³Šİï`o«ŒZûÙ´+Û^§¡QÀŞ±d¢ÂÁ` aa, ‡`° şÁhÊÏ¶Iÿ ª²Êwı²e™»EUÛ,ı¼²—š—Şc?Ä»·¬ê"WQ÷I¦B*Ñ$?'n†	Ø ƒ"Wòî„ ‘4{ˆ&‰%mD>„7ä c lÔl^à%»   Zƒğp0d‰
+[²yñ
+ôÚ/^Î3/Ê‡U%z´/|ô(é«¢ÄìwÉŠÌ2ÙËõ–”"üÔ³T¾w«ÎŸ/”ZÉô<yÎò†CÂµÌçFI+u=m+¦ú2pwšğkRÇÁÌE¸´Î_…9PÄW¡5íR“…ı§Òâœ²î/Çáä­Í'Q/&|å±Fk“¸ÓOÎ¨³&
+‡Òóœ»{ª¸˜&¼®tµ:1ÃÑ§J;F
+6òEÁ(ãøã/‡JQï~Lè
+’N¬ßÁª^ÓŞæİê"VÕ®ŒĞ»YÇJ‡ÒÂ©ZX‰íãfo‘V“¥IÚş)ÖÍğ;éJ._qœŞ"Ê:yêR4Å¾V´hË¢ØŒ}ı>ÊM-JåÒ]"V£A=ÌLñÈ‰t"Il	"Jã°@ÕÀ	 V¸\.@¹v°°\-pµ‰!…Ø   (@4®;YhašßĞÎÌrW¹’5H¸;'®êğt)·uN¥¬oO.…wØíU,1§ıİUo‘b=“ñ=~'­X¾` PÀ@‘İ‰€0Cè#«*.Ø¤åœå”äôTy¾7-èè×©Nv¿RüU‚‡†ú˜ÍûKûjşf&ú“HŠz’<ó¶ÜLäÀ‘ …€  ÆI8"1è CB²  VC     zê0 ÕĞÁì!m¹ÀXßÉüoƒ¨İ£R.ŸÍØøİ³ÃgY}{Û–¼?mo§«‚2GKÎ:ËÁ=E9’ß§ áR5©Âkİ«MHK_ixX¸ú8|öS­`¾Ä¸LjVúE5ül&/BÓíÏ”åØ«kF£MúèU‹İ¥ÊÖG“­Ùìó¡dİû'Ãóqf*µ¯4œ/ë©s6œ¥?b®ìrŒeK6Äµí:©'ğ-	Esr§±ºÓG¹ÏÏS&8o®¥Ú6%b¸ßíE}ÅïM$Ó}9Ëˆ+<Gæ5$ïíÚş‚ÿ Å6ˆföşZZ+	=GÖåvèb$…r	†+ º ` 	”}F™ ˆĞD   Ğ@ ˜À `!ˆ4L`|
+D'±6AêŒÑ­–GcuRY­êæŸÜZöŠ²*ÊŸæ·4’ø]KÕ~'¸¬jd  2EĞ   !€$<
+Kµ9óñ½5w×Ş]é'b‡í}çÖ_b›Fş'¥´,êQ­SV…ŒˆŠÒè’E±CB0f>¤ºDº   `	5q½ˆÙÜ`d NãJÀ€KQˆw Š   ºÁ1Q‡ŸxòU_QÜô3!^•Hşã3F™¬ÄèÎ¯ôË«}¼<Ü}$ı¤üc³üCÅp^_­Ü=’6g£^eèôØâé#PíGñ‰šWtå÷”sC™õ:‹è}+„36ºäæ_‰ÎÔy¥F«[ï4İÙïìrö²ãìv	pî2¯Ûª¿ÀNí·ãcDì<¼ ·•ÍòÚx[SlW°ñuŸÖ“$ß,j?³šqÓïsŒuOÒüYÒUåË†­/ğÛ9Nø¼Uÿ ¿ŸâkÔtSdYœ™4´$-†SgU‰t#aÜd+† ‘ Ø€ h	\ô#ÔwĞ]AD °u WI$ †GPZ’# Õ…aÜ—Á"d$ìd™ƒFÙÙ]U6©ûJ.ç¿ÆÅÀU;Â_­7›/Ç¥×ï2õ?‰ÆnññÔ7ö „f-u€À c°·“§º9÷ªwœy˜Ùß‘¸×©ÎÜ[¯g2Şõ¿¡®çí=m™1“æ-“&ˆZÉ/H¢v´@@H ®7µÀ ü†˜`1X‚pÜ‰! °bj Âã€»î‰ '°Á€@ÇY^.İSFG¡	ìŒ³É†8ÁsöUW¼à´•¯J´‘ºZü¥Øûo…±q¿ıæl°/²ğ/G¤pš¥ã|qO½È±ğÿ 	ş5a_%_	?ÄéÜdy²Übñ¥/ÀæKßVúÌÕqëìO™D»{'·úûÆñ%²ñ4^ÉÚ|MuçI›Ûèü±º?ãë?­#1ÿ ««ÿ Êg4oZ»ÿ ‰Òø¸ß/®–ıÓG4µË^ºğ­?ÿ ¦iÔtgbü¤M’°¬¬I-
+léĞ¬0¤¨jH®£ ö À…ÔÒÒà€ØHêHVÔ®¢ ` ‰[A  èE’bÏoÔtø×-šÓš¢ŞtlÕ¤íâsNSS¸â<ª¦ÖÄFÿ 3¥[RJKªL½Gâr[Ü `Øxß" $ (»]ø&Îoâ‹Å™­Dôuÿ ¡ÑÓÒGáøÑŸ>q˜Ôêë®üOkd_Å‘Ş#[‚[Ñ”´`0 ‰.d`NÂ­H @ `Ô,Ô‘€tnA   hk`Zî6­±#  CB1Ôş¨Èc©°ù1—³Ø÷û³Œÿ ö&X/s@ì~-p®*^8™›ÿ Ög¡‘Âk¿¯/úGşÁ‰ÿ “/ÁœÉIk?â‰ÓX§l·ÿ ÁŸàÎcÃ¶ÔÛûOñ5Zz»'õ$\}‘Jü1Z?b¢_q¿Ë{y•ÇcÕ/”æ^ñªŸÜYÖş&Øsf¾>:‰ ’æ¥Z?ºÑÍ…ËÅÇÂ¼ÿ ¦iìüÎnÍèıˆqôº÷²—Í³]ü£ÒØŸñ$Œa­„=.RgT†(, ‰¡Ø +€ ‚#µ  ;	»‚ØØR } @÷‰kÀÕÅ`H2,‰1f(Ï¹Ç`juxş'KáeŞ`°óŞô¢ïğ9“ù åàîtK.|ƒ/ï|<?íŒ¾ü±(Èöƒ 6ìC  ÷}fH!]òàë¿
+rüÌ’—>'?µQ³¦1¯“+ÅËÂ”¿™(-$üdÿ Eï÷¶%å93Ò·^€÷ı›¦u@ 0FáqØ$@H@ 7°$ˆÒÜ’Ø=BÚ—Ô–€Å‘ {€ i©.„A–Ga1­ˆ‚§¸ı1’•GÓ•™G–bùÉröGpsk3zkÚ5NÍpï	Á8}=ù9¯Š6¤ï'#ĞŠá#Õst™‡%£ß÷RüdÃÍr?â‰ÑœMˆXnÌ*·kA¯™Íô`ç‡§ììş¦›—'±²/ÊE¡Ù!¬Ã3Ã½.ïolYÙ.º”—fX—…ã^êOLE7ërï·¶Ñ²§ÁKv¥ÿ ±Cêùnsÿ Ğxn7Ì!k]FKâtZÛ)Õ0¯ÅX|M´¯7èˆ»ñ3Ú'ã¨ÇÙ§'vJÚŠ)Jm:YÙÄ•„HD € $€„;…À 	îH:ÜcĞL  Æ1‚ÈH`kMÓz‰¶I‹<¸È·†Ÿ)Ñ<)YVáLµ§{QŠsÎ&-áçü½»9­ßğVMëÇäYÓœöû×m¨sÉÌ®D Hn1-]»<yİEO ÇÊûR—às^Z	øÉÅ•UÌgµ¡c°Ÿìô—¦IÑl1âG¦Á`İ\kr¡Ó.€î :!7¨×ºG© wÄ0HšÄöPæCCqH7 jáo1€ FèW‚Ä­„IlFÚ‚™åÆI:3V¬TŒ1‚«ÂQµûÊğÂæÈ.M‰xE¿ôt?
+Òú7åTífèEµçcêÛ•¤ú˜ğÔV…¢½ÚpQûŒ—Õ_tËİ`à§,Í¿újı¤Öú7c¬í~_Ä¢h{4’–å»Úş.T¸f?×Ô·ÉÜ©cÅzn|FÇ_ğ›>Çb>…Å™mdÿ h©¿FÎˆm9JIî“G2J£¡Š§ˆôê©¯Dt~WˆXÌ£	‰Nüô¢şáKà£¾WïŒÏSÒ	¿kø7,•Õ6âş%õI÷åï2àü]8«Ê|56Ø³fÏNÈÈ¢!£QûÌ¶¾§›.z)½Ş‡¡=çµÉßFIÅ4HAp#äÌ1É$G©5°à;€   A¸ -æ +ô Wèê0@^Áp H%Ğ‰$ª¯k¥¬\“Öï¸"[’´×ŞSmh¯Ôµû¯ÍÃxšb´ŸŞX ğw´İğ± :håP  $/¸´æ%vA­ñôù80·Kñ(<2µ
+zû¾Ézö™Sºà,r]y?Œ£¥+|JÚÎ—c ÙšÖö~ ´ßP*
+ã ¾‚ëp¹ØÖ¡`ØÛÌMÃ Ù‡Ä]I ÃpjÀ·¸#" è d@;‰¨0@÷ €¸€ObPÙô¸GùKŒğm¥7Ş?ƒ¹òÛ²»7~Èğ_HÏq¸÷Õò'æÑº¥–yÛ¾7ò\³‹¾‹m„•Û¸s7g}–£µ'äÑtâpT=°â»ì×.Á©iI95êŠşÍììlY—â§xQ‚‚õ[Ÿ
++B²äí6¸zt"UaŞSœWXÙg9å¡Í+Ê‹tş¥/ÊÔ¿vßÀì‡Ü×Æå2z$ªGÕ“C4ïTæœı­šd1T+^ƒÕT§(üÑ•èìºwèZ9//sV+,¿3Å`¥§qUÆÄz?i9äş+Uàš†.7Û«f¯Í¡BÈâGu¢·Ô¦,˜ Ì}€ @X. 	   0{ E!ö ´Áì !;H    Q4†·H1Éë´H±»©wšĞOÙ¤—«+©´âùzÏd{®!Ìèt•(?Ä±Gg¼Ç:v[şAÔ%¤˜Î=ö  @Vñ"=}¯"P4Õ*rğF"ëÊ+ï)šiİ.–-Î×jrğµ(/¯2¢M®UäUÔVÈ¿‚Ù•Y+B*é]…ÊÇºHl È]IlEî$ˆ½I-„•À#d2V"÷ ,‚èëÀ€Âã{oA @€l@  ¡­õ%`° V"ÕşÈ;êJ!˜ªµÉ(íutü‹²œ­àøKémrÕÄÍÉß­‘NºÆâhàéß¼ÄMBé,»	K.Ë°¸xEF©¤Ò]lZÓ¯“Ş¬Æ zek¦µ‹V1âqÁàqX©»Bœ\şHÈ½UçsVí3ü•Áx„¥]w+âolç«f¢Qõk¼fa‹ÅIİÖ¯9'å{’³0ááÉB’ğW#5Ï>o“¼¢¿¢Œú_›£>‡fO%â¼!¿Ñ9rÉúèxöymñ0U‹äM?jI|5&jkõ©u7tâ¥}º(İ½vz3âp~h³Áâ¥+Ôäö—ƒØû]Ûn¥ø<£ƒœ\&àşµ,§éü.ñt£úlçMoàS´¥S+º·Şt¦/K‚­B¬o
+‘å’9Ç1ÀTÉólV
+¤y])½=uE{£—“ ØïÎidbµºó$µ*³£@ë¨ìˆ2B@ÈW@kQX–d €Ú  Af0 C  @%pÚÀ‚Ö ¸ &AÙÜğz'èm–â>6©½JI|‘ª5e¯‰÷»=—uÚì¦¤¾ãmMùvçè—ü/µìó[kKô#³·}äáÖ>  	Ã€îµô˜Ó\î=R#‘²·íid¸/­Q•e5kzgl²¾)‚{Ô–Ÿ´†şV*jÉ×lxT4Ilqt¹\ö=É$Ä     _¼Hîà‚K¨†+€ Ch m\V#r 0Çf	˜ ¹	9&œwØm˜kÍÂ”¤·IèL{#),³iìÛ+Y§*òè°Qï/Óšåèí{­²ìe¼-ôÊ°å«Œ}â}lÍŞrÕ_®ˆ¿„púë}[›Ô¨û[Ì'6ÁePštéÁÔª“Ù¦[®q£J¥I»(E½}mÍñóÎx‹˜9>J•=”ú%¡ŒŞ»k§Ô·?GššM¹EZ+Bv@—D­·˜ş%7ÙÙµíHÎİÌr6Ù3#"ÓÜ‡ÇD?ôo½•fÒÃã±yEY%
+Ÿ¥¦›û‹bWJï¢9»/ÇO*Îpxø7jU#Ì¼bt^v
+"œ'-µK(ã÷m;®ß%òfRqI¥£*nÖ²g†Æá³ª0ı½Š¾mírÙ»z'ªè|¾"Ê£œdXœÒ|Ñ¼n¶‘²I4SÒ\é¹M3¢ï[®Äâctjà«ÕÂWMU£'çn¦HìyòXgu	©$Ñ&IlDw17.…k…‚ö`îØ `¶¨t Æ Àô ;t¨ ·¸lÁê ºn! ¶‚¸ Œ·>‡âéeüa—âëÔ:0ošrvJèğ=cbŠkU{lg	áš¯¥Y\¢Ëî§pÜ%iæ¸køs‘ÿ N¸jÚæ¸uß(‡§+óÁ6úøèô×Ô_"ËÔv(µœşœğÌUŞo‡şré÷?üZó”"£M«:q¬5>Š^„~¡“û>d_/¸kş-KùŒo´>^ÊÍ)ËK_˜¢¾Kû¸(}¿UåAj–Å_Ù¼v‘Ÿe¹ôòÕ€ÄB¯räß+¿CK„aJ4ÛäŠIô±3E–ù3ÔÒéc§‡ŠD®`[Ã"[ÌÀ>°€€/@ @ `°  +&®®HÜ c$å¸7b-¾›ƒÃÀöZ™òL¶yç`òúQæ„çÍ7m’ÔòNv„¯ºĞ´»%Èû¬.#8­j»µ$Ö±K™º¨åvå¨TÔşË•xl=<5¨Ó¤’Il‰èä¥¿7£KwÔ²ÓvÖ¥¼aVr³òj£g3ÊxVµ8Ë—‹|”ü¼~â‘£ï¹·v¬ßŠ~	^†Yx9ìşãVQW*[.pu»FŸÓ£Í®X-Áî;+…G°K°ºÂ±ƒ2’IäÅRœ\e³7Ë¡kv]ÄMËjåUåjÔ=ËõEZ×³ñ¹èÉ³J™y†Ìi»EO–¢]S7U,3ÌÜ´Šú;:.NÑƒ÷³Ú²óÔÅ†ÄÓÅáéW¢Ô©ÔŠš’2mu½ö.®QÅ<áÇè¨»PáçÌã›á¡ú*éF¥–ÏÄÑbît^s”RÍòª˜*ñæR‹ùœñÂWÊ³,NªPŸ.«ß^(­}(ê¶}b•j¹v„†&ìôwM|ƒ¡T÷›5¸YDÑ.„z€ -CP +rVÕìH"A± ‹Z…ƒ¨À€{‚ :ê9\KÌ’ O`m-µ¾Â¾šŞş0á<4 jÛ1sy0²KipMYè‡7¨)Écôdº˜Ü‡QÉ+¾	=„.xøKä= ”“Œ­{²Lœ¹àÆÕ¬¼·‰–~ÂÁ`¸]€0{ ;X-À è HÄ    CùPFI°»"bm­·%§:Mh–¬ÃR¬iAÉË®†Ie˜7…æÏfQ•UÏóœ>S‡MÆ«R©4ıØu:'ƒ§—`háh¥T ¢’ò4Ëøie¹SÍ±ùqµÍ½á}¶º½RìÆn:§u¸Ï¾§ÇâÌæCÃ˜¬\¥ËRPp§üMh}”·vÛ§‰Kö¡Ä_•³¸eiß…Ö¥¶”·DÎXEmİzÁ¥R”êJU«7*µ[œ›ûOsĞˆÅZ{´ìı	¢Œ¥–wP­V¼à7¸äÚ‘œÃ#mu)©ÁÆ[3+ÛMú0Xİ—q$ªQ«‘â*7Z‚æ¤äş®Ö,Ø¤ÕÓ¼kÃâëeXÚYõ”œ’êt&G›ĞÎ²¼>:„”¡8ûit}KÔÉ4qÛ¦•Óg”Wú+_yûeqÚ}3³œ$-‰Â«UK¬:–/K¿ykğ#Rœ+R•9ÁJ5š{XÜÒk“Í¢×UhæŠS‹„\uRû™‘w8f\;º” Ö_[Ú¦×Õ—SàSœmÌö}O:Èáæ—QëR‰f½:ÜÀµ’]±€`°ŞÄ@  @@½€. \Áq .£ Kq€k‘–„ˆHäû\+ÃU8¯Z‚Äw×µ~g¦¯Í›=|Ùäìÿ ¯3åı€½\"ÖNSs×ê#{Š—ª3¯ş,şl”{×Í§åfËPŠ1ú(½ÇSşEYù›¥ÿ «üÌœ{Ã[ÚÌê·üL´qã¢?pÔÿ ‘Wşfğ¿ñ*ßÌÉ®Æòÿ ø–+ùÙf\1ú#õú–ÿ "¶c¹bi¼ÇÒÿ ×ø¿€pœ3”ÏO^­¥ÉËRW.¥º4Õ•ø.o÷ÿ ¡Œ|z7iu×Êè§.Êré¤Õ’ih*_«ƒòFcÏ}¤k‘ \.Æ$îÆ1"VXHÃ   %±¹$0 ½ÄÁ	î Å'¡8ˆÍ½–ªúŸs‚8z\MŸG¼¦ş†jU‹>,6#0ÅÓÀa çZ»PŠ^os 8W"¡Ã™¹½ê’]eÔßT>YáîÚÏNœ{>Ê…8(BšåŠ\¼¾ÿ ¶¹“ôÿ  ê9J4á)ÊJ1Œ\›{$·,œ·ÿ §Àã> ‡ğıLM×5ËB/ëH aÍ9N¤Û•ZÒsœŸ©°ñÆ>$Ïê*S¾ûºZéuõˆ“¶¥[§ğ³iÒzuù¾Ø£û»lMØ‘\ö—@÷ S=tŒH¸–]†¹)ƒKäöñ6~Ïx‘ä»Áâ&ş…‰_R^´Ñ†¤n¼5ßÌÎqemM+QS„—'M^.Í5%>«ÃÄ^Öš£BìçŠã˜á?%cd–2„mß¿†úâú‚’’àám¦UXá#çgùEû)­ƒÄAZQöµ‹(Ã-Äd¹\»MÁ©^úÈé´ÕÙš§ğ•.$ËyèÅCI^œº¿&ctT‘{lÖ~šÌK¦R¼×·‡Aõ1T†#‰©‡ÄÃ»­iE“OK·sÏqqàìab’ÌI ^ú€6®FÈŒ"@4 ˆ»Üo` ZŒ,0"B$ 
+ä$É5© `nı‘¿ûA˜ÇÆ7_"âkTS}’¼˜ïùoğEÊú…_‰Äî¿ú¤+ Á™£Ïb£ ¨ä„÷A’»½Í+µåÁ|¥wò7U¹§ö›oô'§ÿ lD¿v“úĞÿ ¥#Gõ0ôFta£ú¨
+üÈóßg}ƒ@²  Ø ‚Ø€KA6†¶"À@€  0`#zd›!°!¤'£K«!VVöV¯¢]}	T¨£NJRQƒİù›¿g|<Ïï1ƒ‹ı&½çãènª¿"–·W<2Í‡³®yNY¾aôÚ¾äìãàXRJ2ºÚJöó¬´TöI
+Éîôè[u®Ùú’¥¼ö+îÓø³ò~ò>§öªúTiû±ÿ äÚxˆhpæMWˆ·y%jTºÊ]@bñŒÇ2­ÆÔukÕ|×{Et_]’Â/íz'tüä¸1P¥Tãm}Q™7k1Y_M†÷)¶v5ÅEx¡Ø„È2 ÔÃ£Ğ+FØ’-Á!«jé4–ÄÙ‘œölV#.ÆÑÆa¦á^”®¥â¼{ğ·áx+"‹Q­j”ïªe×1ìÈs¼OfğÆĞ¿u?×ÒéËÕú›é³“ÇÜô¼|£ÙĞîïÔz»_~§)Ì°ùÆ/R3£$­mÓó=’ò/pú98ËÂ_“Æ¼G:’ÇaŸw‰„_2Q÷ÑMÔqˆ©E©)BM8½Î™wi5«ğ+î:àæù®Ulu©¿X¿ÌÑmyäööÍÇÒ—§gEXš²ÔhÃÉIÂ¥9Bqv”^–hÊ“’Ñ”ÚÁÕBiû—CÉ\3å‘¸ÓÖ ‘5qí ;ù¿Ç ‰1A‰˜°'âBdúÄ˜¯dşÒãWŒà\¯{xÏd¿ï67øô.gï?CĞ«ğ8­×ÿ T…pÜ#4yìv Â°À0#Rí*)ğ>)ø#n5>Ñõà|_£"_‰»MÅÑ(ÚOôPşøS0Ò£‚ıÔeGû;è~( mã^ +ê@&E…À ÃÜ  ¹$n27ƒ,µÛŸ7»¯ô°æï¢ß{›p'ŠñÑÄV§*9]'í6µ©äl…~L­©ÔÂšÜ¤ÏOğmN$ÆCŠ„¡—ÂW×ö­m
+4°Ô#F”iÓ\±Kdˆápt088á°±TèÁr¨¤eµ”`—Ä¹â°/Wª–ª|¾JÜ·³qÙz˜q¸êYvxŒL”iR4õÑy\ôO–4Üå5¥í_Ky”§q|ø‡,³9G/¡&§;ş²DJJ+“.šZ‰ø¥Áñ¸§ˆ±<MOåË‡ ùhÃuê|ÎUfŞdaMFšŒUœI¿k^¥9Ë,íôôF¸(ÇŒ
+şC[C5–@´¨ 2a²o AêÀÄC 1 míJogÑ’ÓÒz ™M®¯Â|S‰álrG)`êËÛî—™yàq´3%<Nj¥*‘ºqg98ó)s¾hÛEâ}ŞãWbáF¼›ËªÊÒMş¨µMŸ¹íjqó¯²øJÚ^öê5-w<ø^ƒ†#R3£5tÑ–ÚÜ´ŞN_ÇœKàÑ8×€©æ«˜eŠ4±Ö¼¢¶¨T’UhW½)S¯MÚq–àº0ÛV´nº¿QãÂq-/¤aíGcUiâñ4Î”Ïgnİ%Sôìæ%.šnÉëæ4×£_xñø<fQúeIÓ«{)%£ø‘Rm¸Úéu*5ƒª¦å5”É€®4îbmù@†@@ €!2d$dŒ×²m8ŸçM—#ñ)ÎÉ¿ŞœWü¶\bı_‰Ån¿ú¤ Ø Í{ˆ`€  Ã¹«ö‰ø+0_f£h5?WàÌËø—ânÓÿ V%CZPo~UøÒ0ĞıT?…~tyÏ³¿‡â†EÜ’Ø6
+:ƒJâ‰&@#d0  , Ù ˜$‚â½‘-¼ƒVØÇR¤iÓsrÓªğ	Uw²z½´½ß½pogóJ±Ì³ÈºXXëN‡Yzùyk­É”uºØiã–|îàÜGVïñ0•<ºo§z]¸,†§„ÂSŒ(ÓVJ#ÃÑ£…¡
+zq…(«%dŒ¾QÓÌ¸¢—ä5Z¹ê¤Ûè\ÜÒåû„äÚrIZ;]Úş åÉE«u¿‰VñïÉÔ©“dÕuÚ¾"/İòL7Íz}4®ŸŒL]¡qÔñU*d™EGİ¤ã‰¯H¯)ÓŠŠOè¼ïÕŠ•>ïXNÒ~ó[ÔÊ£Ë¢VGÕ²–yG<<WcÕ´ú ×¨Yø¯¤]YAĞob/`d¤o $Q‹¨Á¢ÁbVA¡€˜ÃC D	h‘ÜÉd+%°%
+É-]ŒU#j7Œô¹•ú]İN7¼z™‹Y>Çñn3…1œµfë`&ı¨§~RîË³6m‚§‹ÂÕU)TWM?¹œê ¯{zój¾GÔáş$ÇpÆ+½ÃJSÃÉş–“wMyx+µ.áî[W¨½Jû:G­Æ||‡‰0A‚l%EÍoj›İ3ëİ[ËbÊy9iÁÖñ%ÉòsîËø‹<>:Œ\­¥Dµ‹òe/Ä|!™ğ½VÜgˆÁ_Ù«v½KõEìõ]‡©
+Ô!‹„©V„gïFJé‹+R-é5öi¥íèæ˜TRWV·Ù¿3*wWÙtE‹Å—)N¦7"n^² ş·§[Ö…|ya±tgB´¥	GÔ©:\N¯K¯ªô°ù2ZàAMü	+¶ÍMà¿”ú$!_KŒŒäa®À ,Ğ l †cDÙÏ²÷§ÿ -ÿ BåèS]”û<M‹nÊÔÚÕ—*Ûuó/Òı§º¯æ[@!üWÌ\Ñ[Ê+â‰v dyéõ©æAŞÓşöÌ‰ÀÃ$+”Tyœ¢—‹h‹¯A~Ş—ó¢#$sõà¼Ñ/î¤lH¡ıı/çF»Ç©TáÆ«MÊtä¢”–¡ş&İ<¬™CPV£û¨ô-Œ4¢û¸ú‘ç>Ï Vó  `lpL$.¹v¯ĞV¹‘‹mØÚ²ŒmÕÜ%±†¤ãOY_ç¿ÀÉG&2XYdÛQºÚêÇ„Ââó\pX½y»Z)¸¯âğ>ßğ&oÄ³U– ßë%£çÈ¸g-áÜ'Ñğ4Teoj¬µ“7ÂœòÏ[»WRğ­åšÇvs‡Éçnk%ˆÆ­a^4ıÿ {(Ç–1"¹—º’^c»“÷•‹ÍÖÎÉ9M‘“M¿)J0„§Rqj¹7¢F,v:†]†•zõcJœÜå­×¡Mñb3ú“Àe­áòø»Jkz¾X‚É³K¥³Q,Ep}.9í	â%<«%•Ô½šµÓÓàÊê•%K<×’wç¾äá8%eâ÷2$´²Ñtñ)Yg›;Šxû{†·gàk/[   [d–ÄZ`Øz OP«À€v·A· Zäç€Daa¥ +y‘°$õ$ BÚ2r´Ñ‘ÇÌ‹Še`xv;(Æ,N_^Tª'ué5à[Ü#ÇØ,ö’ÂcZÃc£¤¡'ngäSí]Yê¾ôA¦¤ªE¸Õ±œ]š6ÂÆ/Y·W¨_LévÚí¿T5kó[Ì¨8c´¼N¤0¹Ô]ZOEˆ_äZØ<Ç	™a£ˆÂW…X4Ÿ²ïoRÜlLäõ:k4ïÆHôİKyY£ãgœ3—gÔ;¼e(ó%hT¼±)Yû{y+‚Z:.†]•ë›‡1e#Äæù4§S|^úF*óKÌÔeR<ıÔÔ©Õ‡ìç¡Ó©'{¤Ûñ5Ì÷ƒ2\òœ¾•†P¨ö«MYßàjIô{zMêuûlE§d¥&¹şÊØ’fÑöm›äó•LöÊÍ•G<=NëJtj}šŠÅiVÑĞÓª¦Õå‚äÓÒêşL|Ëkû^	ğZD˜ŞÄTek´½.>d„!€Á	a±XŒupx‰P«5fé½OKÏsÛYg8Í7ZFîõKm²·‰œfâR¦OÊi‡gëœc>h‹Í³™oœbŸ«FjÈ•tŒ?KVzFIf¤½üÛüÈ_KÌšÍ1.Ú­H^Ş!u'Õ‘?¥¯éB¿gu°+,Â·"ê§Îïño|}™$”_4nŸ›¸­~ˆVX¥«å".®)­qõŸ—19TÄTƒŒ±5%N[¦ÅËÿ Û—†šGuâO©&¹%QT^TB>Q´Vˆ’Ü4J×²è„™¯ç$I‘l|É¶–ä¾Z‘”Oa=U‘-.®×‘‰ÖŒnï{tëò2Q’]™\îí²!*±‚m>V¶’İü§‡3¬ı÷x<¡I¿×Tömó,®ì¯‚j®m[é•Uœ`—*‹ş¦èÔÏ7Q¹ÑJ|å•S‘æ™ş"4òì$§í,K^ÇÅ–§öc–e|¸œÊK‹ZÚ~ì‘ºáğ˜|%5OJ ¶Œ"‘•İíkõi#sW¹_w	áŒc
+j1ŠJ>êè†ØZîîÎK¯@œãJu%AjäŞˆÏ?G™ØŞ‘»Lø¼CÄùoà»ü]_kêQ‹ö¤ü[‹;PÂàğYGéñ/ö«İù•^#‹Ìq51˜êÒ¯ˆ¨ïÌıÕèº§5ÖÑmV\ü§Ñôx‹‰³^'ÆÊuê:UîQ‹ÙyŸ&§
+j4ôêdQ²Ñ½w¸íÕY|
+’²R|e:xB
+1XÀ­}F‘&õ¼l]Aéæ    À	 7±ÆİÁ" ì{%f'cö\0Ø4 \d0ìFŞd„I &6" „ãr@dŒL2Œ$œ^’{·Ôõå¾cÃÕÕ\º´©Å;Ê”Ş“ô1}[YX‹JÛFm¬ªÇ"Şá®ÑòìÚqÂã_Ğ±fzs3tƒHóBQiëtÎi(Ê-ŠzüÏ·ñ–wÃÓŒ)Õxœ/÷S{|K0·=œî¯fåÊ—ÿ Ñ~Ø²ü<ÍK‡ûBÊ3¾ZUj,.&ÚÓŠşLÛa%RPjK£Né›”“èğí„àñ%¹>çª>VkÃ¹FsM¼n•Y¿®£ª>«¾ÊİUÁ[¦ˆ—Ì"Úæ%W›öFÔL£é©kÉUßàiy—gÙL¤ñ8®ı­5£:%'à­ãqJ1Ÿ³8©/	jk•I½ôğŞN_h¶ù¹”¾µÖ¿:wZ8ò™p–Iš¯í8?8û?§fåÓ”§—ã*aÛú»¯¼×*>Z­î©~K«¹’Ø9³Ùoa[xZôñ0[s>VÏƒ‹á¾ ÀËûFW6—÷W‘©Ó$zîÍq#ÇÌ#Ö"“ı6Jİ]6cúU(ûÒ·ñhcâËJäşO@™‰b¨½ªSşaºÔí~òŸó"0Ìü¢dÕh=§ÿ P:ĞJîqùŒÄ˜îŒ=ı'ûJÌAâh§nñ_ËQâÃñûÁê½È·©U›W§J¥ODõÑË³LS]Æ]‹•ö½&—Ì•	e¨®È‚hRmod‹Ùçã’“ÃQ¡ÖU5ù±êµ–ašTqëÃO™²4É•mİ4ğ]å•´ëÃ™ÅÕ„mÕõùpxlne>L]øÒ_æ]¹_f¼7–Æ3–¾¨¾¼äõøF†ÁÅG†§J+nX$mZ³Ì·}kğE1”ö_f1Œñµ#‚£Ö.üæù’vqÃÙO%IÓú]h}jÚênë~¡ÌÛÙ}4º<‹u×İÜˆÆœ(SP£N*¥ƒn¯Ğ/g«—ÁGW¥×©’*pß/ZŠË[É¯(õõ>&wÅ¹>CñX¸:‹öPiËäV\AÚniš©PËi¬&èªŞò’ô1”’-iô7Üı«‚Çâ3Éøz”–&¬jV¶˜zoÚeMÄ|mšñIS‹–·s$×™®¸9Õsœ¥Rrwu&ï™•D¯;¾—I´W_º|³
+P‚j*ëÏúo}	+¦w,´"¢°ˆAd=±G{€ú``{€¯mƒ]Ù `KÄ {éb@ @¤b6$ÂÌÏW5Ñkr@b ŠÜ` d 2Ä[’E€ZãØ 9# !óÙ“ÜN—K·äÉ½ÅĞr0—F
+´UK7)GiCI#íäüad|ª3é—Ô©weà”'›#6Šöiê±{ÖK_'íS*ÅÊs(K	RÖr›¼[øÎ…ÆPU0ÕáV/]Í’}<&/—MOŠ©Bk¤Ñbı&£dËÍOKsEµ£Lm®WÚvup†>„+ÓZ9·©¹å¨äxÙ*x—W7ıäm›7©¦x÷m·Õı¦ì‡o$ş	šåøõÍ†ÆPªº(Îö=–¾«S2“‹OÜ¹ÚÏK.‚Rvné/	jŞ1¿…Ãew¿îêcŒpa©—á1ôØZ5WœO~Èq¬Ê°­ÿ ËG×¾Ğõè®†ø&6Í|³W¯À7[ÿ §àŠGóaÃM¿ìÕ?™›^BØx¯£oêl_ÜÍ-öYÃm~¢²ôG²î¿EYù9¥Ãr0¾‡ê­ÿ &j”û9áª[`#/âW>áêæS†“ó¦µf	Xx¯¢¢o¹3Ã—+¥në.ÃBßá£ÙN„ycºGA¿®ÆÚÉßÀœy7ó’WkMmê'¶÷ôiÙ;¯€Ú·ºƒ0ÂlI$®ï¹o±‹‹Ãái¹â+ÂœVînÆ³švÃ¹MÔ±=ü¼(ûDycLçø¬›g)“¥FUg¥ã$Š‹3íoˆRU€…8¿ÚWn2_LÌ³Œ×;©|vcV¤wpZ%ò5;/Ñµ[c÷p\yçhù&NåMVúMuû:]
+ë9í#=Í”éáÔpXg¢å_¤U§FÛWâÌœ¬Õ+ŸG¹§Ùè‡2å˜çNUj÷Õ¦ëÔ“»•WÍ/™7N1ÑÆNşz|‡`¶¦—&Ï^ºÕkè|®ÜŠÒòŒÃXBKP{ŒV#‰,œ’¾„–À2Âk@ ŠĞ’w0Çn pöØL{†¾#{†$Ô c M«ØrV@2€Ddà†	B°ö¸=Æ	 œ0°!€a-É-ĞÁiÜ[{‘`¸´`4Iˆµ-¤Óó„¾°O‰[lõıíHÎŒ%º»óØÉÔOr|™­À…'[Ü¨W©J_¹+[Å¼E—Êôñîilª{GËKpi+¤ÓW5îFí‚í_5¡o¦à©×]\-Ÿw	ÚşYSL^¦Í»•_*Q¹S·DmW²œö]<ùÁxáûJáŒCÿ nå~phúX~/Èq6î³}î¢äÓØ‹ÂQÛ•ëælõÚ)Ëd«í%ë,ª½œ}ÿ Z2¬Ã-±tş¢9™a¡ìó/ú˜û·v¤×£'õg²Å¿lšúfÿ 3Gÿ q	ã0{¼UıÄs=ª}Sù„ã'½I¿‹#×±Éõ#¥ešeñßEÖ^(Èğÿ ¬Ì)iàîs·Ñâ÷rEá(ÆIòjü[%^lÅî‘|b;Eá|=ù³µÒ0gÅÄö»‘Ñ“Xz5+¾küÊ’
+i("|‘ß”ÁŞËpØ©ùlßñİ¯cªi€Ë;¥ö§$Ïãş(Ì"á<U:0})ÂÍ|MyxYQHÁÚÚ,ÃnÒÖü|rÇWÅ§ô¬v"¢}%Q´a†İãßÅ£(edB­4ö¢*Ÿµí6×¤”yuVKÂÃúÃ‘
+LØü~oĞœ„¸€`·  À Ğ@„l0 WDÄRÔ±"LŠÜ0°À ·Ø cI‰ô$¶ {Ø9E-gâÿÙ
+------WebKitFormBoundaryB2f2hIyQtCgQ5WBT
+Content-Disposition: form-data; name="username"
+
+EmptyE
+------WebKitFormBoundaryB2f2hIyQtCgQ5WBT--
+
+  
+ActionDispatch::Http::Parameters::ParseError (767: unexpected token at '------WebKitFormBoundaryB2f2hIyQtCgQ5WBT
+Content-Disposition: form-data; name="email"
+
+fair.arthur.iv@gmail.com
+------WebKitFormBoundaryB2f2hIyQtCgQ5WBT
+Content-Disposition: form-data; name="profile_photo"; filename="mgs alert.jpg"
+Content-Type: image/jpeg
+
+ÿØÿà'):
+  
+actionpack (5.2.4.2) lib/action_dispatch/http/parameters.rb:117:in `rescue in parse_formatted_parameters'
+actionpack (5.2.4.2) lib/action_dispatch/http/parameters.rb:111:in `parse_formatted_parameters'
+actionpack (5.2.4.2) lib/action_dispatch/http/request.rb:381:in `block in POST'
+rack (2.2.2) lib/rack/request.rb:69:in `fetch'
+rack (2.2.2) lib/rack/request.rb:69:in `fetch_header'
+actionpack (5.2.4.2) lib/action_dispatch/http/request.rb:380:in `POST'
+actionpack (5.2.4.2) lib/action_dispatch/http/parameters.rb:55:in `parameters'
+actionpack (5.2.4.2) lib/action_controller/metal/params_wrapper.rb:290:in `_wrapper_enabled?'
+actionpack (5.2.4.2) lib/action_controller/metal/params_wrapper.rb:244:in `process_action'
+activerecord (5.2.4.2) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.4.2) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.4.2) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.4.2) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.4.2) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.4.2) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.4.2) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.4.2) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.4.2) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.4.2) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.4.2) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.2.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.2) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.2) lib/rack/head.rb:12:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.4.2) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+webpacker (3.6.0) lib/webpacker/dev_server_proxy.rb:22:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'

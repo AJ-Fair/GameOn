@@ -40,7 +40,7 @@ class Api::V1::CommentsController < ApplicationController
       comment.delete
       render json: post
     else
-      ender json: {error: "You are not authorized to delete this comment!"}
+      render json: {error: "You are not authorized to delete this comment!"}
     end
   end
 
