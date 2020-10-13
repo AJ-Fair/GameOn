@@ -17,10 +17,10 @@ const ProfileEditForm = props => {
     event.preventDefault()
 
     let body = new FormData()
-    body.append("email", userEditForm.email)
-    body.append("profile_photo", userEditForm.profile_photo)
-    body.append("username", userEditForm.username)
-    
+    body.append("user[email]", userEditForm.email)
+    body.append("user[profile_photo]", userEditForm.profile_photo)
+    body.append("user[username]", userEditForm.username)
+
     fetch(`/api/v1/users/${props.match.params.id}`, {
       credentials: "same-origin",
       method: "PATCH",

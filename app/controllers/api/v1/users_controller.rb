@@ -21,10 +21,9 @@ class Api::V1::UsersController < ApplicationController
 
   def update
     user = User.find(params[:id])
-    profile_user = user.id
+    profile_user == user.id
     if profile_user === current_user.id
-      user.update_attributes(user_params)
-      if user.save
+      if user.update
         render json: user
       else
         render json: { errors: user.errors.full_messages.to_sentence }, status: :unprocessable_entity
